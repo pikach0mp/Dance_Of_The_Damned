@@ -6,7 +6,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float stepSize = 1;
+    private Quaternion target_rot;
+    private Vector3 target_pos;
     //private BeatHitDetector bhd;
+
+    void Start()
+    {
+        target_rot = transform.rotation;
+        target_pos = transform.position;
+    }
 
     void Awake()
     {
@@ -20,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
             //bhd.PressButton(KeyCode.Space);
             OnBeatHit(KeyCode.Space);
         }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .25f);
+        transform.position = Vector3.Lerp(transform.position, target_pos, .25f);
     }
 
     public void OnBeatHit(KeyCode key)
@@ -28,19 +39,19 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W) && !Physics.Raycast(transform.position, transform.forward, stepSize))
             {
-                transform.position += transform.forward * stepSize;
+                target_pos += transform.forward * stepSize;
             }
             else if (Input.GetKey(KeyCode.S) && !Physics.Raycast(transform.position, -transform.forward, stepSize))
             {
-                transform.position -= transform.forward * stepSize;
+                target_pos -= transform.forward * stepSize;
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                transform.rotation = Quaternion.AngleAxis(90, Vector3.up) * transform.rotation;
+                target_rot = Quaternion.AngleAxis(90, Vector3.up) * transform.rotation;
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                transform.rotation = Quaternion.AngleAxis(-90, Vector3.up) * transform.rotation;
+                target_rot = Quaternion.AngleAxis(-90, Vector3.up) * transform.rotation;
             }
         }
     }
