@@ -16,8 +16,8 @@ public class BeatVisuals : MonoBehaviour
 
 
     public RawImage IndicatorPrefab;                                    //The column game object.
-    public int IndicatorPoolSize = 5;                                    //How many columns to keep on standby.
-    public float spawnRate = .5f;                                    //How quickly columns spawn.
+    public int IndicatorPoolSize = 10;                                    //How many columns to keep on standby.
+    public float spawnRate = 1f;                                    //How quickly columns spawn.
 
     private RawImage[] Indicators;                                    //Collection of pooled columns.
     private int currentIndicator = 0;                                    //Index of the current column in the collection.
