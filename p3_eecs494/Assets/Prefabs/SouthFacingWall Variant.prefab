@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4482472897736708969, guid: 4a795afc7d3984ba3b48dcf96754321b,
         type: 3}
       propertyPath: m_Name
-      value: SouthFacingWall
+      value: SouthFacingWall Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3604883812722796876, guid: 4a795afc7d3984ba3b48dcf96754321b,
         type: 3}
