@@ -9,7 +9,9 @@ public class BeatAnimations : MonoBehaviour
     bool pressed = false;
     bool missed = false;
     bool dissolving = true;
+	public bool moving = false;
     float dissolve = .1f;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,15 @@ public class BeatAnimations : MonoBehaviour
         if(pressed)
         {
             gameObject.transform.localScale *= 1.10f;
+
         }
+
+        //If the indicator is moving
+        if (moving)
+		{
+            Vector3 new_pos = new Vector3(transform.position.x - 10 * speed, transform.position.y, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, new_pos, .1f);
+		}
 
         //Dissolving animation when beat spawns
         if (dissolving)

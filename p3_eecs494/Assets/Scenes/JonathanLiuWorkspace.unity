@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -491,6 +491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   base_material: {fileID: 0}
+  moving: 0
+  speed: 6
 --- !u!54 &668419910
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -550,9 +552,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  indicator: {fileID: 668419905}
+  indicator: {fileID: 0}
   speed: 5
-  transparent_indicator: {fileID: 1034431057}
+  transparent_indicator: {fileID: 0}
 --- !u!4 &977947764
 Transform:
   m_ObjectHideFlags: 0
@@ -1011,6 +1013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   base_material: {fileID: 2100000, guid: fd720f1d46013497cbf3cc9ba0667d25, type: 2}
+  moving: 0
+  speed: 0
 --- !u!1 &1431030788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,9 +1172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 654404259}
-  indicator: {fileID: 668419905}
+  indicator: {fileID: 668419907}
   speed: 150
-  transparent_indicator: {fileID: 1034431057}
+  transparent_indicator: {fileID: 1034431059}
 --- !u!1 &1827392146
 GameObject:
   m_ObjectHideFlags: 0
