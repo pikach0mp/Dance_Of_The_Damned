@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeatAnimations : MonoBehaviour
 {
@@ -31,15 +32,15 @@ public class BeatAnimations : MonoBehaviour
         if (moving)
 		{
             Vector3 new_pos = new Vector3(transform.position.x - 10 * speed, transform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, new_pos, .1f);
+            transform.position = Vector3.Lerp(transform.position, new_pos, Time.deltaTime);
 		}
 
         //Dissolving animation when beat spawns
-        if (dissolving)
-        {
-            dissolve -= .025f;
-            GetComponent<Renderer>().material.SetFloat("Vector1_B0ED71B0", dissolve);
-        }
+        //if (dissolving)
+        //{
+        //    dissolve -= .025f;
+        //    GetComponent<Renderer>().material.SetFloat("Vector1_B0ED71B0", dissolve);
+        //}
     }
 
     //Animation for correct beat
@@ -48,7 +49,11 @@ public class BeatAnimations : MonoBehaviour
     {
         pressed = true;
         yield return new WaitForSeconds(.1f);
-        Destroy(gameObject);
+        pressed = false;
+        gameObject.GetComponent<RawImage>().enabled = false;
+        yield return new WaitForSeconds(1.0f);
+        gameObject.transform.localScale = Vector3.one;
+        gameObject.GetComponent<RawImage>().enabled = true;
     }
 
     //Animation for missed beat
@@ -59,10 +64,10 @@ public class BeatAnimations : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public IEnumerator changeMaterial()
-    {
-        yield return new WaitForSeconds(1.5f);
-        GetComponent<Renderer>().material = base_material;
-    }
+    //public IEnumerator changeMaterial()
+    //{
+    //    yield return new WaitForSeconds(1.5f);
+    //    GetComponent<Renderer>().material = base_material;
+    //}
 }
 

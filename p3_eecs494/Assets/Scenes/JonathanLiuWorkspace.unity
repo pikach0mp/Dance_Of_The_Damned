@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 668419910}
   - component: {fileID: 668419909}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: IndicatorPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   base_material: {fileID: 0}
   moving: 0
-  speed: 6
+  speed: 15
 --- !u!54 &668419910
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -538,7 +538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &977947763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,9 +552,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  indicator: {fileID: 0}
-  speed: 5
   transparent_indicator: {fileID: 0}
+  IndicatorPrefab: {fileID: 0}
+  IndicatorPoolSize: 5
+  spawnRate: 0.5
 --- !u!4 &977947764
 Transform:
   m_ObjectHideFlags: 0
@@ -604,9 +605,9 @@ RectTransform:
   m_Father: {fileID: 654404260}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -40}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -220, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034431059
@@ -1172,9 +1173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 654404259}
-  indicator: {fileID: 668419907}
-  speed: 150
   transparent_indicator: {fileID: 1034431059}
+  IndicatorPrefab: {fileID: 668419907}
+  IndicatorPoolSize: 10
+  spawnRate: 1
 --- !u!1 &1827392146
 GameObject:
   m_ObjectHideFlags: 0
