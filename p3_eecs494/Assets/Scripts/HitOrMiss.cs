@@ -33,7 +33,7 @@ public class HitOrMiss : MonoBehaviour
         if(Input.GetKeyDown(key))
         {
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            StartCoroutine(other.gameObject.GetComponent<BeatAnimations>().hit());
+            // StartCoroutine(other.gameObject.GetComponent<BeatAnimations>().hit());
         }
     }
 
@@ -41,7 +41,7 @@ public class HitOrMiss : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         rend.material.SetColor("_Color", Color.red);
-        StartCoroutine(other.gameObject.GetComponent<BeatAnimations>().miss());
+        // StartCoroutine(other.gameObject.GetComponent<BeatAnimations>().miss());
     }
 
     //Changes indicator color when pressing the key

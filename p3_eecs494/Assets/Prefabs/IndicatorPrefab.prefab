@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5779427274635346361}
   - component: {fileID: 5779427274635346360}
   - component: {fileID: 5779427274635346363}
+  - component: {fileID: 2992502099102295508}
   m_Layer: 5
   m_Name: IndicatorPrefab
   m_TagString: Untagged
@@ -114,6 +115,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19eab78056e43439faddff9e6bff45d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  base_material: {fileID: 0}
-  moving: 0
-  speed: 15
+--- !u!114 &2992502099102295508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779427274635346367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b014afacdfcad4665ac0c01ca8922c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1000

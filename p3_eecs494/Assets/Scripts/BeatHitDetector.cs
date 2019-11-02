@@ -6,31 +6,34 @@ using UnityEngine.Events;
 [System.SerializableAttribute]
 public class UnityEventKeyCode : UnityEvent<KeyCode> {}
 
+[System.SerializableAttribute]
+public class UnityEventKeyCodeBeatInfo : UnityEvent<(KeyCode, BeatInfo)> {}
+
+
 public class BeatHitDetector : MonoBehaviour {
 	public float leeway = 0.1F;
 
-	public UnityEventKeyCode OnBeatHit;
+	public UnityEventKeyCodeBeatInfo OnBeatHit;
 	public UnityEventKeyCode OnBadInput;
-	public UnityEvent OnBeatMissed;
-	public UnityEvent OnBeatIgnored;
+	public UnityEventBeatInfo OnBeatMissed;
 
 	private (KeyCode, float) lastHit;
 	private bool lastHitResolved;
 
 	private bool lastBeatAvailable;
-	private float lastBeat;
+	private (BeatInfo, float) lastBeat;
 
 	void Awake() {
 		lastHitResolved = true;
 		lastBeatAvailable = false;
 	}
 
-	public void OnBeat() {
+	public void OnBeat(BeatInfo info) {
 		if(!lastHitResolved) {
-			OnBeatHit.Invoke(lastHit.Item1);
+			OnBeatHit.Invoke((lastHit.Item1, info));
 			lastHitResolved = true;
 		} else {
-			lastBeat = Time.timeSinceLevelLoad;
+			lastBeat = (info, BeatGenerator.GetTime());
 			lastBeatAvailable = true;
 		}
 	}
@@ -44,25 +47,25 @@ public class BeatHitDetector : MonoBehaviour {
 		if(lastBeatAvailable) {
 			lastBeatAvailable = false;
 
-			OnBeatHit.Invoke(key);
+			OnBeatHit.Invoke((key, lastBeat.Item1));
 			lastHitResolved = true;
 		} else {
 			lastHitResolved = false;
-			lastHit = (key, Time.timeSinceLevelLoad);
+			lastHit = (key, BeatGenerator.GetTime());
 		}
 	}
 
 	void Update() {
 		// Checks if some past input didn't hit anything
-		if(!lastHitResolved && Time.timeSinceLevelLoad - lastHit.Item2 > leeway) {
+		if(!lastHitResolved && BeatGenerator.GetTime() - lastHit.Item2 > leeway) {
 			lastHitResolved = true;
 			OnBadInput.Invoke(lastHit.Item1);
 		}
 
 		// Checks if last beat was ever hit
-		if(lastBeatAvailable && Time.timeSinceLevelLoad - lastBeat > leeway) {
+		if(lastBeatAvailable && BeatGenerator.GetTime() - lastBeat.Item2 > leeway) {
 			lastBeatAvailable = false;
-			OnBeatMissed.Invoke();
+			OnBeatMissed.Invoke(lastBeat.Item1);
 		}
 	}
 }

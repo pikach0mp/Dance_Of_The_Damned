@@ -5,18 +5,27 @@ using UnityEngine.Events;
 
 using UnityEngine.UI;
 
-[System.SerializableAttribute]
-public class UnityEventQueueFloat : UnityEvent<Queue<float>> {}
+public struct BeatInfo {
 
+}
+
+[System.SerializableAttribute]
+public class UnityEventBeatInfo : UnityEvent<BeatInfo> {}
+[System.SerializableAttribute]
+public class UnityEventBeatInfoFloat : UnityEvent<(BeatInfo, float)> {}
 
 public class BeatGenerator : MonoBehaviour {
-	public UnityEvent onBeat;
-	public UnityEventQueueFloat onBeatListUpdated;
+	public UnityEventBeatInfo onBeat;
+	public UnityEventBeatInfoFloat onBeatAddedToQueue;
+	private bool running;
 
-    public GameObject indicator;
+	private AudioSource source;
 
 	// Specifies time between beats
 	public float[] pattern;
+
+	// List of good times to sync music to
+	public float[] syncPoints;
 
 	// Cache beats for lookAheadTime seconds
 	public float lookAheadTime;
@@ -25,15 +34,49 @@ public class BeatGenerator : MonoBehaviour {
 	private float lastTimeAdded;
 	private int nextPattern;
 
+	private static float time;
+
+	public static float GetTime() {
+		return time;
+	}
+
 	void Awake() {
+		running = false;
 		times = new Queue<float>();
-		lastTimeAdded = Time.timeSinceLevelLoad;
+		source = GetComponent<AudioSource>();
+	}
+
+	public void StartBeats() {
+		running = true;
+		lastTimeAdded = BeatGenerator.GetTime() + 4;
+		source.Play();
+		source.time = BeatGenerator.GetTime() % source.clip.length;
+		StartCoroutine(sync());
+	}
+
+	private IEnumerator sync() {
+		int currentSyncPoint = 0;
+		while(true) {
+			if( (currentSyncPoint != 0 || (BeatGenerator.GetTime() % source.clip.length) < syncPoints[0] + 0.2F) &&
+				syncPoints[currentSyncPoint] < BeatGenerator.GetTime() % source.clip.length) {
+				source.time = BeatGenerator.GetTime() % source.clip.length;
+				currentSyncPoint++;
+
+				if(currentSyncPoint == syncPoints.Length) {
+					currentSyncPoint=0;
+				}
+			}
+			yield return new WaitForFixedUpdate();
+		}
 	}
 
 	void Update() {
-		bool beatListChanged = false;
-		while(lastTimeAdded < Time.timeSinceLevelLoad + lookAheadTime) {
-			beatListChanged = true;
+		time += Time.deltaTime;
+		if(!running) {
+			StartBeats();
+		}
+
+		while(lastTimeAdded < BeatGenerator.GetTime() + lookAheadTime) {
 			lastTimeAdded += pattern[nextPattern];
 
 			nextPattern++;
@@ -42,27 +85,16 @@ public class BeatGenerator : MonoBehaviour {
 			}
 
 			times.Enqueue(lastTimeAdded);
+			onBeatAddedToQueue.Invoke((new BeatInfo{}, lastTimeAdded));
 		}
 
-		if(beatListChanged) {
-			onBeatListUpdated.Invoke(times);
-		}
-
-		if(times.Peek() < Time.timeSinceLevelLoad) {
+		if(times.Peek() < BeatGenerator.GetTime()) {
 			times.Dequeue();
-			onBeat.Invoke();
+			onBeat.Invoke(new BeatInfo{});
 		}
 	}
 
 	public void PrintBeat() {
-        StartCoroutine(changeColor());
-		Debug.Log(Time.timeSinceLevelLoad);
-    }
-
-    private IEnumerator changeColor()
-    {
-        indicator.GetComponent<RawImage>().color = new Color32(255, 86, 86, 255);
-        yield return new WaitForSeconds(0.1f);
-        indicator.GetComponent<RawImage>().color = new Color32(255, 255, 255, 255);
+		Debug.Log(BeatGenerator.GetTime());
     }
 }

@@ -1,14 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//[RequireComponent(typeof(BeatHitDetector))]
+[RequireComponent(typeof(BeatHitDetector))]
 public class PlayerMovement : MonoBehaviour
 {
     public float stepSize = 1;
     private Quaternion target_rot;
     private Vector3 target_pos;
-    //private BeatHitDetector bhd;
+    private BeatHitDetector bhd;
 
     void Start()
     {
@@ -18,23 +18,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        //bhd = GetComponent<BeatHitDetector>();
+        bhd = GetComponent<BeatHitDetector>();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //bhd.PressButton(KeyCode.Space);
-            OnBeatHit(KeyCode.Space);
-        }
-
+    void Update() {
         transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .25f);
         transform.position = Vector3.Lerp(transform.position, target_pos, .25f);
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            bhd.PressButton(KeyCode.Space);
+        }
     }
 
-    public void OnBeatHit(KeyCode key)
+    public void OnBeatHit((KeyCode key, BeatInfo) info)
     {
+        KeyCode key = info.Item1;
         if (key == KeyCode.Space)
         {
             if (Input.GetKey(KeyCode.W) && !Physics.Raycast(transform.position, transform.forward, stepSize))

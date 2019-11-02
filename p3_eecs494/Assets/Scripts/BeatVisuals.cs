@@ -51,7 +51,6 @@ public class BeatVisuals : MonoBehaviour
 
             //Place Indicators in the right place 
             Indicators[currentIndicator].transform.position = spawn_position;
-            Indicators[currentIndicator].GetComponent<BeatAnimations>().moving = true;
             currentIndicator++;
         }
 

@@ -5,18 +5,11 @@ using UnityEngine.UI;
 
 public class BeatAnimations : MonoBehaviour
 {
-    public Material base_material;
-
     bool pressed = false;
-    bool missed = false;
-    bool dissolving = true;
-	public bool moving = false;
-    float dissolve = .1f;
-    public float speed;
+    private Vector3 initScale;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Awake() {
+        initScale = transform.localScale;
     }
 
     void Update()
@@ -27,20 +20,6 @@ public class BeatAnimations : MonoBehaviour
             gameObject.transform.localScale *= 1.10f;
 
         }
-
-        //If the indicator is moving
-        if (moving)
-		{
-            Vector3 new_pos = new Vector3(transform.position.x - 10 * speed, transform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, new_pos, Time.deltaTime);
-		}
-
-        //Dissolving animation when beat spawns
-        //if (dissolving)
-        //{
-        //    dissolve -= .025f;
-        //    GetComponent<Renderer>().material.SetFloat("Vector1_B0ED71B0", dissolve);
-        //}
     }
 
     //Animation for correct beat
@@ -51,9 +30,8 @@ public class BeatAnimations : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         pressed = false;
         gameObject.GetComponent<RawImage>().enabled = false;
-        yield return new WaitForSeconds(1.0f);
-        gameObject.transform.localScale = Vector3.one;
-        gameObject.GetComponent<RawImage>().enabled = true;
+        // yield return new WaitForSeconds(1.0f);
+        // gameObject.GetComponent<RawImage>().enabled = true;
     }
 
     //Animation for missed beat
@@ -61,13 +39,11 @@ public class BeatAnimations : MonoBehaviour
     {
         //gameObject.GetComponent<Material>().SetColor("_TintColor", Color.red);
         yield return new WaitForSeconds(.5f);
-        Destroy(gameObject);
     }
 
-    //public IEnumerator changeMaterial()
-    //{
-    //    yield return new WaitForSeconds(1.5f);
-    //    GetComponent<Renderer>().material = base_material;
-    //}
+    public void Reset() {
+        transform.localScale = initScale;
+        gameObject.GetComponent<RawImage>().enabled = true;
+    }
 }
 
