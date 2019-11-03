@@ -200,11 +200,10 @@ GameObject:
   - component: {fileID: 4876589587679496597}
   - component: {fileID: 4876589587679496596}
   - component: {fileID: 4876589587679496555}
-  - component: {fileID: 4876589587679496552}
-  - component: {fileID: 5474272975458129125}
-  - component: {fileID: 7999508407251240806}
   - component: {fileID: 1543462088}
-  - component: {fileID: 2042540985}
+  - component: {fileID: 4876589587679496552}
+  - component: {fileID: 7999508407251240806}
+  - component: {fileID: 1382158589}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -253,7 +252,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2f9304b8e0d884aad88a52d266338c3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,65 +287,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4876589587679496552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4876589587679496599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc1a2107f8684675b70b59820b5ab2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stepSize: 1
---- !u!114 &5474272975458129125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4876589587679496599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2427b421c2f45434b933bcdaa1f72a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leeway: 0.1
-  OnBeatHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4876589587679496552}
-        m_MethodName: OnBeatHit
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnBadInput:
-    m_PersistentCalls:
-      m_Calls: []
-  OnBeatMissed:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7999508407251240806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4876589587679496599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ba32facfc7f2534f85ff388e7944d9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
 --- !u!54 &1543462088
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -363,7 +303,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2042540985
+--- !u!114 &4876589587679496552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876589587679496599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc1a2107f8684675b70b59820b5ab2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepSize: 1
+--- !u!114 &7999508407251240806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876589587679496599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba32facfc7f2534f85ff388e7944d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+--- !u!114 &1382158589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

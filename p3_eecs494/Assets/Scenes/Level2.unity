@@ -3636,6 +3636,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8449093550535221671, guid: f0caec96413be421ca5585a34fde61c5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8449093550535221665, guid: f0caec96413be421ca5585a34fde61c5,
         type: 3}
       propertyPath: m_Enabled
@@ -4664,11 +4669,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 937073172}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBeatHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatMissed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 937073172}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatMissed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBeatMissed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
 --- !u!114 &2119601544 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5474272975458129125, guid: 32c621f42332b41a59668b7cc6f8f289,
+  m_CorrespondingSourceObject: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289,
     type: 3}
   m_PrefabInstance: {fileID: 2119601543}
   m_PrefabAsset: {fileID: 0}
