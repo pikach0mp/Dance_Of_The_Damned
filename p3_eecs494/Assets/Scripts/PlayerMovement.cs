@@ -34,26 +34,26 @@ public class PlayerMovement : MonoBehaviour
             bhd.PressButton(KeyCode.Period);
         }
 
-        KeyCode key = KeyCode.Space;
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Input.GetKey(KeyCode.W) && !Physics.Raycast(transform.position, transform.forward, stepSize))
-            {
-                target_pos += transform.forward * stepSize;
-            }
-            else if (Input.GetKey(KeyCode.S) && !Physics.Raycast(transform.position, -transform.forward, stepSize))
-            {
-                target_pos -= transform.forward * stepSize;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                target_rot = Quaternion.AngleAxis(90, Vector3.up) * target_rot;
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                target_rot = Quaternion.AngleAxis(-90, Vector3.up) * target_rot;
-            }
-        }
+        //KeyCode key = KeyCode.Space;
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if (Input.GetKey(KeyCode.W) && !Physics.Raycast(transform.position, transform.forward, stepSize))
+        //    {
+        //        target_pos += transform.forward * stepSize;
+        //    }
+        //    else if (Input.GetKey(KeyCode.S) && !Physics.Raycast(transform.position, -transform.forward, stepSize))
+        //    {
+        //        target_pos -= transform.forward * stepSize;
+        //    }
+        //    else if (Input.GetKey(KeyCode.D))
+        //    {
+        //        target_rot = Quaternion.AngleAxis(90, Vector3.up) * target_rot;
+        //    }
+        //    else if (Input.GetKey(KeyCode.A))
+        //    {
+        //        target_rot = Quaternion.AngleAxis(-90, Vector3.up) * target_rot;
+        //    }
+        //}
     }
 
     public void OnBeatHit((KeyCode key, BeatInfo) info)
