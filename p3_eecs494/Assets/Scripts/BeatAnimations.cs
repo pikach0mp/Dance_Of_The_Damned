@@ -18,7 +18,6 @@ public class BeatAnimations : MonoBehaviour
         if(pressed)
         {
             gameObject.transform.localScale *= 1.10f;
-
         }
     }
 

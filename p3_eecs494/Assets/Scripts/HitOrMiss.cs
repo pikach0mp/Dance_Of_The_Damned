@@ -12,17 +12,17 @@ public class HitOrMiss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        //rend = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(key))
-		{
-            StartCoroutine(presskey());
-		}
+  //      if (Input.GetKeyDown(key))
+		//{
+  //          StartCoroutine(presskey());
+		//}
     }
 
     //Check if they press the key while colliding
@@ -38,23 +38,23 @@ public class HitOrMiss : MonoBehaviour
     //Missed
     private void OnTriggerExit(Collider other)
     {
-        rend.material.SetColor("_Color", Color.red);
+        //rend.material.SetColor("_Color", Color.red);
         // StartCoroutine(other.gameObject.GetComponent<BeatAnimations>().miss());
     }
 
     //Changes indicator color when pressing the key
-    IEnumerator presskey()
-	{
-        var block = new MaterialPropertyBlock();
-        Color current_color = GetComponent<Renderer>().material.color;
-        current_color.a = .5f;
-        Color new_color = new Color(1, .5f, .5f, .5f);
-        block.SetColor("_BaseColor", new_color);
-        rend.SetPropertyBlock(block);
-        yield return new WaitForSeconds(.05f);
-        block.SetColor("_BaseColor", current_color);
-        rend.SetPropertyBlock(block);
+ //   IEnumerator presskey()
+	//{
+ //       var block = new MaterialPropertyBlock();
+ //       Color current_color = GetComponent<Renderer>().material.color;
+ //       current_color.a = .5f;
+ //       Color new_color = new Color(1, .5f, .5f, .5f);
+ //       block.SetColor("_BaseColor", new_color);
+ //       rend.SetPropertyBlock(block);
+ //       yield return new WaitForSeconds(.05f);
+ //       block.SetColor("_BaseColor", current_color);
+ //       rend.SetPropertyBlock(block);
 
 
-    }
+ //   }
 }
