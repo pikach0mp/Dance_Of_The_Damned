@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float stepSize = 1;
+
     private Quaternion target_rot;
     private Vector3 target_pos;
     private BeatHitDetector bhd;
@@ -27,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space)) {
             bhd.PressButton(KeyCode.Space);
+        }
+        else if(Input.GetKeyDown(KeyCode.Period))
+        {
+            bhd.PressButton(KeyCode.Period);
         }
     }
 
@@ -51,6 +56,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 target_rot = Quaternion.AngleAxis(-90, Vector3.up) * transform.rotation;
             }
+        }
+        else if (key == KeyCode.Period)
+        {
+            GetComponent<PlayerAttack>().spinAttack();
         }
     }
 }
