@@ -31,11 +31,13 @@ public class SimpleEnemy : MonoBehaviour
 
         transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .25f);
         transform.position = Vector3.Lerp(transform.position, target_pos, .25f);
+
     }
 
     public void OnBeat()
     {
         original_pos = transform.position;
+
         //always move forward
         if (!Physics.Raycast(transform.position, transform.forward, stepSize, Mask))
         {
@@ -48,11 +50,13 @@ public class SimpleEnemy : MonoBehaviour
     }
 
     //damage player if ran into, bounce back to original after
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.transform.tag == "Player")
+        Debug.Log(collision.gameObject.name);
+
+        if (collision.gameObject.name == "Player")
         {
-            other.gameObject.GetComponent<Health>().update_health(-1);
+            collision.gameObject.GetComponent<Health>().update_health(-1);
             target_pos = original_pos;
         }
     }

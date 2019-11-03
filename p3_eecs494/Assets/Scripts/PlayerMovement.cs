@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (key == KeyCode.Period)
         {
-            GetComponent<PlayerAttack>().spinAttack();
+            StartCoroutine(GetComponent<PlayerAttack>().SpinAttack());
         }
     }
 }

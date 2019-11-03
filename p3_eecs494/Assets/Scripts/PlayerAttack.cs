@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public GameObject spin;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,16 +12,16 @@ public class PlayerAttack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(0, 50 * Time.deltaTime, 0);
-    }
+    //void Update()
+    //{
+    //    transform.Rotate(0, 50 * Time.deltaTime, 0);
+    //}
 
-    public IEnumerator spinAttack()
+    public IEnumerator SpinAttack()
     {
-        gameObject.SetActive(true);
+        spin.SetActive(true);
         yield return new WaitForSeconds(0.25f);
-        gameObject.SetActive(false);
+        spin.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
