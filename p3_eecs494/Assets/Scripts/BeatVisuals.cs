@@ -6,12 +6,8 @@ using UnityEngine.UI;
 public class BeatVisuals : MonoBehaviour
 {
     public Canvas canvas;
-    //public RawImage indicator;    //The indicator for the beat
-    //public float speed = 5;             //Speed indicator moves
     public RawImage transparent_indicator;
     private Vector3 spawn_position;       //Where indicator gets spawned in
-
-	private float t = 0;
 
 
 
@@ -59,18 +55,6 @@ public class BeatVisuals : MonoBehaviour
             currentIndicator = 0;
         }
 
-
-
-
-
-
-
-		//t += Time.deltaTime;
-  //      if (t > 1.0f)
-  //      {
-  //          spawnBeat();
-  //          t = 0;
-  //      }
     }
 
     //Spawns a tile for beat visualization
@@ -85,13 +69,5 @@ public class BeatVisuals : MonoBehaviour
     //    Destroy(temp.gameObject, 4.0f);
     //    t = 0;
     //}
-
-
-    IEnumerator foursec()
-    {
-        yield return new WaitForSeconds(4.0f);
-        Debug.Log(transform.position.x);
-    }
-
     
 }

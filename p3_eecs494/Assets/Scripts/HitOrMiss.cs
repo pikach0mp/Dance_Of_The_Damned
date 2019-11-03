@@ -21,8 +21,6 @@ public class HitOrMiss : MonoBehaviour
 
         if (Input.GetKeyDown(key))
 		{
-            Debug.Log("AA");
-
             StartCoroutine(presskey());
 		}
     }

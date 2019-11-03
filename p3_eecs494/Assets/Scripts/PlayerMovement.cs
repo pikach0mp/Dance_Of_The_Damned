@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update() {
-        transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .25f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .5f);
         transform.position = Vector3.Lerp(transform.position, target_pos, .25f);
 
         if(Input.GetKeyDown(KeyCode.Space)) {
