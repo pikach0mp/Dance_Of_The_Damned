@@ -8,11 +8,8 @@ public class TransitionLevels : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
-        {
-            Debug.Log("Here");
-            
+        {            
             Scene scene = SceneManager.GetActiveScene();
-            Debug.Log(scene.name);
             if(scene.name == "Level0")
             {
                 SceneManager.LoadScene("Level1");
