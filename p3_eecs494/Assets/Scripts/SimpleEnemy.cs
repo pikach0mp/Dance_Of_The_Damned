@@ -5,8 +5,11 @@ using UnityEngine;
 public class SimpleEnemy : MonoBehaviour
 {
     public float stepSize = 1;
+    public LayerMask Mask;
+
     private Quaternion target_rot;
     private Vector3 target_pos;
+    private Vector3 original_pos;
     private BeatHitDetector bhd;
     private Health health;
 
@@ -32,8 +35,9 @@ public class SimpleEnemy : MonoBehaviour
 
     public void OnBeat()
     {
+        original_pos = transform.position;
         //always move forward
-        if (!Physics.Raycast(transform.position, transform.forward, stepSize))
+        if (!Physics.Raycast(transform.position, transform.forward, stepSize, Mask))
         {
             target_pos += transform.forward * stepSize;
         }
@@ -43,11 +47,13 @@ public class SimpleEnemy : MonoBehaviour
         }
     }
 
+    //damage player if ran into, bounce back to original after
     private void OnTriggerEnter(Collider other)
     {
         if(other.transform.tag == "Player")
         {
             other.gameObject.GetComponent<Health>().update_health(-1);
+            target_pos = original_pos;
         }
     }
 }
