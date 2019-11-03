@@ -5,23 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class TransitionLevels : MonoBehaviour
 {
+    public Animator animator;
+    private int levelToLoad;
+
+    public void FadeToLevel (int levelIndex)
+    {
+        levelToLoad = levelIndex;
+        animator.SetTrigger("FadeOut");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
-        {            
+        {
             Scene scene = SceneManager.GetActiveScene();
             if(scene.name == "Level0")
             {
-                SceneManager.LoadScene("Level1");
+                FadeToLevel(1);
+
             }
-            if(scene.name == "Level1")
+            if (scene.name == "Level1")
             {
-                SceneManager.LoadScene("Level2");
+                FadeToLevel(2);
+
             }
-            if(scene.name == "Level2")
+            if (scene.name == "Level2")
             {
 
             }
         }
     }
+
+    public void OnFadeComplete() {
+        string level = "Level" + levelToLoad.ToString();
+        SceneManager.LoadScene(level);
+    }
+
 }
