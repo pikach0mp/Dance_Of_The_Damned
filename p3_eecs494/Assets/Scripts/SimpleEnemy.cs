@@ -52,8 +52,6 @@ public class SimpleEnemy : MonoBehaviour
     //damage player if ran into, bounce back to original after
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
-
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.GetComponent<Health>().update_health(-1);
