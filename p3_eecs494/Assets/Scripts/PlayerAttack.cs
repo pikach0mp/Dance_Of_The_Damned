@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.tag == "enemy")
+        if (other.transform.tag == "enemy")
         {
             other.gameObject.GetComponent<Health>().update_health(-1);
         }

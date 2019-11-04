@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
         bhd = GetComponent<BeatHitDetector>();
     }
 
-    void Update() {
+    void Update()
+    {
         if (GetComponent<Health>().dead())
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -31,10 +32,11 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .3f);
         transform.position = Vector3.Lerp(transform.position, target_pos, .25f);
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             bhd.PressButton(KeyCode.Space);
         }
-        else if(Input.GetKeyDown(KeyCode.Period))
+        else if (Input.GetKeyDown(KeyCode.Period))
         {
             bhd.PressButton(KeyCode.Period);
         }

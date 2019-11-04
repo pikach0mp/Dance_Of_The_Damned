@@ -57,7 +57,7 @@ public class SimpleEnemy : MonoBehaviour
     //damage player if ran into, bounce back to original after
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.tag == "Player")
+        if (other.transform.tag == "Player")
         {
             other.gameObject.GetComponent<Health>().update_health(-1);
             target_pos = original_pos;
