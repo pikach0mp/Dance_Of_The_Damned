@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -200,6 +200,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 22752467}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &48067792
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7764037999925360912, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_Name
+      value: InstructionTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9997985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.020078747
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -177.699
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360918, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764037999925360913, guid: 9fbd9605cf1d7aa4181f71ef360aefce,
+        type: 3}
+      propertyPath: instructions
+      value: 
+      objectReference: {fileID: 867644428}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fbd9605cf1d7aa4181f71ef360aefce, type: 3}
 --- !u!1001 &52183005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -788,8 +862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use WASD (hold) to move forward and change direction, press spacebar on
-    the beat to move. Press r to restart.
+  m_Text: Press '.' on the beat to perform a spin attack!
 --- !u!222 &867644431
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1736,6 +1809,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1958539341}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBeatHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatMissed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1958539341}
+    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
+      propertyPath: OnBeatMissed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBeatMissed
+      objectReference: {fileID: 0}
     - target: {fileID: 219328458180901068, guid: 32c621f42332b41a59668b7cc6f8f289,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -1761,22 +1850,6 @@ PrefabInstance:
       propertyPath: spin
       value: 
       objectReference: {fileID: 2086837429}
-    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
-      propertyPath: OnBeatHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1958539341}
-    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
-      propertyPath: OnBeatHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnBeatHit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
-      propertyPath: OnBeatMissed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1958539341}
-    - target: {fileID: 1382158589, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
-      propertyPath: OnBeatMissed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnBeatMissed
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32c621f42332b41a59668b7cc6f8f289, type: 3}
 --- !u!114 &1757052321 stripped
