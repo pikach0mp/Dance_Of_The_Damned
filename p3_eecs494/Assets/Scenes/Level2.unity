@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6570,11 +6570,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTransitionTrigger
       objectReference: {fileID: 0}
-    - target: {fileID: 8449093550535221670, guid: f0caec96413be421ca5585a34fde61c5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8449093550535221671, guid: f0caec96413be421ca5585a34fde61c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6630,25 +6625,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8449093550535221671, guid: f0caec96413be421ca5585a34fde61c5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 785575622, guid: f0caec96413be421ca5585a34fde61c5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8449093550535221665, guid: f0caec96413be421ca5585a34fde61c5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8449093550535221665, guid: f0caec96413be421ca5585a34fde61c5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
+    - target: {fileID: 1572801962, guid: f0caec96413be421ca5585a34fde61c5, type: 3}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 2100000, guid: 2f9304b8e0d884aad88a52d266338c3e, type: 2}
+      objectReference: {fileID: 2119601545}
+    - target: {fileID: 1572801962, guid: f0caec96413be421ca5585a34fde61c5, type: 3}
+      propertyPath: BeatGenerator
+      value: 
+      objectReference: {fileID: 1810867815}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0caec96413be421ca5585a34fde61c5, type: 3}
 --- !u!1 &1586890954
@@ -6695,13 +6679,14 @@ GameObject:
   - component: {fileID: 1591411545}
   - component: {fileID: 1591411547}
   - component: {fileID: 1591411546}
+  - component: {fileID: 1591411548}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1591411545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6718,7 +6703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -20}
+  m_AnchoredPosition: {x: 0, y: -367.2}
   m_SizeDelta: {x: 800, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1591411546
@@ -6741,19 +6726,19 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Use WASD (hold) to move forward and change direction, press spacebar on
-    the beat to move. Press r to restart.
+  m_Text: 'Oh boy! Looks like this area is loaded with robots! Be careful around corners;
+    they could be anywhere! '
 --- !u!222 &1591411547
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6762,6 +6747,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591411544}
   m_CullTransparentMesh: 0
+--- !u!114 &1591411548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591411544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84016d7360db94a8e9b08c02439175d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 5
 --- !u!1001 &1595171790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8309,7 +8307,7 @@ PrefabInstance:
     - target: {fileID: 4706307697245704018, guid: ae43b92d7a46c4dad928a6f31d1b4bba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.51
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 4706307697245704018, guid: ae43b92d7a46c4dad928a6f31d1b4bba,
         type: 3}
@@ -8648,9 +8646,15 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2119601543}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2119601545}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2427b421c2f45434b933bcdaa1f72a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2119601545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4876589587679496599, guid: 32c621f42332b41a59668b7cc6f8f289,
+    type: 3}
+  m_PrefabInstance: {fileID: 2119601543}
+  m_PrefabAsset: {fileID: 0}

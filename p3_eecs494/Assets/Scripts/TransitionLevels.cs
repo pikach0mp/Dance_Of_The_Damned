@@ -8,7 +8,9 @@ public class TransitionLevels : MonoBehaviour
     public Animator animator;
     private int levelToLoad;
 
-    public void FadeToLevel (int levelIndex)
+    public GameObject gameOverText;
+
+    public void FadeToLevel(int levelIndex)
     {
         levelToLoad = levelIndex;
         animator.SetTrigger("FadeOut");
@@ -19,7 +21,7 @@ public class TransitionLevels : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Scene scene = SceneManager.GetActiveScene();
-            if(scene.name == "Level0")
+            if (scene.name == "Level0")
             {
                 FadeToLevel(1);
 
@@ -31,14 +33,13 @@ public class TransitionLevels : MonoBehaviour
             }
             if (scene.name == "Level2")
             {
-
+                gameOverText.SetActive(true);
             }
         }
     }
 
     public void OnFadeComplete() {
         string level = "Level" + levelToLoad.ToString();
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(level); 
     }
-
 }
