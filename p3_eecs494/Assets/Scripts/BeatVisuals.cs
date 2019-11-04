@@ -40,20 +40,20 @@ public class BeatVisuals : MonoBehaviour
 
     void Update()
     {
-        timeSinceLastSpawned += Time.deltaTime;
-        if(timeSinceLastSpawned >= spawnRate)
-        {
-            timeSinceLastSpawned = 0f;
+        //timeSinceLastSpawned += Time.deltaTime;
+        //if(timeSinceLastSpawned >= spawnRate)
+        //{
+        //    timeSinceLastSpawned = 0f;
 
-            //Place Indicators in the right place 
-            Indicators[currentIndicator].transform.position = spawn_position;
-            currentIndicator++;
-        }
+        //    //Place Indicators in the right place 
+        //    Indicators[currentIndicator].transform.position = spawn_position;
+        //    currentIndicator++;
+        //}
 
-        if(currentIndicator >= IndicatorPoolSize)
-        {
-            currentIndicator = 0;
-        }
+        //if(currentIndicator >= IndicatorPoolSize)
+        //{
+        //    currentIndicator = 0;
+        //}
 
     }
 
