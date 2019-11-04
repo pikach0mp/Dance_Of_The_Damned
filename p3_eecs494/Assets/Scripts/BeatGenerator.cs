@@ -34,13 +34,16 @@ public class BeatGenerator : MonoBehaviour {
 	private float lastTimeAdded;
 	private int nextPattern;
 
-	private static float time;
+	private float time;
+
+	private static BeatGenerator instance;
 
 	public static float GetTime() {
-		return time;
+		return instance.time;
 	}
 
 	void Awake() {
+		instance = this;
 		running = false;
 		times = new Queue<float>();
 		source = GetComponent<AudioSource>();
@@ -48,7 +51,7 @@ public class BeatGenerator : MonoBehaviour {
 
 	public void StartBeats() {
 		running = true;
-		lastTimeAdded = BeatGenerator.GetTime() + 4 - 0.2F;
+		lastTimeAdded = BeatGenerator.GetTime() + 4;
 		source.Play();
 		source.time = BeatGenerator.GetTime() % source.clip.length;
 		StartCoroutine(sync());
