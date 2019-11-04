@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public struct BeatInfo {
 
@@ -33,14 +34,18 @@ public class BeatGenerator : MonoBehaviour {
 	private float lastTimeAdded;
 	private int nextPattern;
 
-	private static float time;
+	private float time;
+
+    private static BeatGenerator instance; 
 
 	public static float GetTime() {
-		return time;
+		return instance.time;
 	}
 
-	void Awake() {
-		running = false;
+	void Awake()
+    {
+        instance = this;
+        running = false;
 		times = new Queue<float>();
 		source = GetComponents<AudioSource>()[0];
         music = GetComponents<AudioSource>()[1];
@@ -50,7 +55,7 @@ public class BeatGenerator : MonoBehaviour {
 
 	public void StartBeats() {
 		running = true;
-		lastTimeAdded = BeatGenerator.GetTime() + 4 - 0.2F;
+		lastTimeAdded = BeatGenerator.GetTime() + 4;
 		source.Play();
         source.time = BeatGenerator.GetTime() % source.clip.length;
 		StartCoroutine(sync());
