@@ -48,7 +48,7 @@ public class BeatGenerator : MonoBehaviour {
 
 	public void StartBeats() {
 		running = true;
-		lastTimeAdded = BeatGenerator.GetTime() + 4;
+		lastTimeAdded = BeatGenerator.GetTime() + 4 - 0.2F;
 		source.Play();
 		source.time = BeatGenerator.GetTime() % source.clip.length;
 		StartCoroutine(sync());
@@ -58,7 +58,8 @@ public class BeatGenerator : MonoBehaviour {
 		int currentSyncPoint = 0;
 		while(true) {
 			if( (currentSyncPoint != 0 || (BeatGenerator.GetTime() % source.clip.length) < syncPoints[0] + 0.2F) &&
-				syncPoints[currentSyncPoint] < BeatGenerator.GetTime() % source.clip.length) {
+				BeatGenerator.GetTime() % source.clip.length > syncPoints[currentSyncPoint]) {
+				Debug.Log("Syncing to" + (BeatGenerator.GetTime() % source.clip.length) + " was " + source.time );
 				source.time = BeatGenerator.GetTime() % source.clip.length;
 				currentSyncPoint++;
 
