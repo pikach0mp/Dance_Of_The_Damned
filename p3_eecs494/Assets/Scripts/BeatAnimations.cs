@@ -17,7 +17,7 @@ public class BeatAnimations : MonoBehaviour
         //Successful press animation
         if(pressed)
         {
-            gameObject.transform.localScale *= 1.10f;
+            gameObject.transform.localScale += new Vector3(.1f, .1f, .1f);
         }
     }
 
