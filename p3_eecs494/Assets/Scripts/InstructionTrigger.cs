@@ -6,11 +6,6 @@ public class InstructionTrigger : MonoBehaviour
 {
     public float detection_distance = 2;
     public GameObject instructions;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -29,7 +24,7 @@ public class InstructionTrigger : MonoBehaviour
     IEnumerator TimedPrompt()
     {
         instructions.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(10f);
         instructions.SetActive(false);
     }
 }

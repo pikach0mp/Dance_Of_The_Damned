@@ -24,12 +24,10 @@ public class TransitionLevels : MonoBehaviour
             if (scene.name == "Level0")
             {
                 FadeToLevel(1);
-
             }
             if (scene.name == "Level1")
             {
                 FadeToLevel(2);
-
             }
             if (scene.name == "Level2")
             {

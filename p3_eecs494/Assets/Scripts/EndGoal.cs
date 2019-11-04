@@ -9,6 +9,9 @@ public class EndGoal : MonoBehaviour
 {
     public GameObject player;
     public GameObject BeatGenerator;
+    public GameObject Canvas;
+
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -24,9 +27,8 @@ public class EndGoal : MonoBehaviour
     {
         if(other.transform.gameObject.tag == "Player")
         {
-            Debug.Log("touched end");
-            player.SetActive(false);
             BeatGenerator.SetActive(false);
+            Canvas.SetActive(false);
         }
     }
 
