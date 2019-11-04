@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BeatHitDetector))]
 public class PlayerMovement : MonoBehaviour
@@ -23,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update() {
+        if (GetComponent<Health>().dead())
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .3f);
         transform.position = Vector3.Lerp(transform.position, target_pos, .25f);
 
@@ -80,7 +85,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (key == KeyCode.Period)
         {
-            GetComponent<PlayerAttack>().spinAttack();
+            //this.gameObject.transform.GetChild(1).gameObject.GetComponent<PlayerAttack>().spinAttack();
+            Debug.Log("attack");
+            StartCoroutine(this.gameObject.transform.Find("Spin").gameObject.GetComponent<PlayerAttack>().spinAttack());
         }
     }
 }

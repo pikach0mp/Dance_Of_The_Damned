@@ -12,10 +12,12 @@ public class SimpleEnemy : MonoBehaviour
     private Vector3 original_pos;
     private BeatHitDetector bhd;
     private Health health;
+    private int turnCount;
 
     // Start is called before the first frame update
     void Start()
     {
+        turnCount = 0;
         health = GetComponent<Health>();
         target_rot = transform.rotation;
         target_pos = transform.position;
@@ -35,15 +37,20 @@ public class SimpleEnemy : MonoBehaviour
 
     public void OnBeat()
     {
-        original_pos = transform.position;
-        //always move forward
-        if (!Physics.Raycast(transform.position, transform.forward, stepSize, Mask))
+        turnCount++;
+
+        if (turnCount % 2 == 0)
         {
-            target_pos += transform.forward * stepSize;
-        }
-        else
-        {
-            target_rot = Quaternion.AngleAxis(180, Vector3.up) * transform.rotation;
+            original_pos = transform.position;
+            //always move forward
+            if (!Physics.Raycast(transform.position, transform.forward, stepSize, Mask))
+            {
+                target_pos += transform.forward * stepSize;
+            }
+            else
+            {
+                target_rot = Quaternion.AngleAxis(180, Vector3.up) * transform.rotation;
+            }
         }
     }
 
