@@ -29,8 +29,8 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, .3f);
-        transform.position = Vector3.Lerp(transform.position, target_pos, .25f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, Time.deltaTime * 18);
+        transform.position = Vector3.Lerp(transform.position, target_pos, Time.deltaTime * 15);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

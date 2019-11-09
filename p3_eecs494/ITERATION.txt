@@ -1,0 +1,8 @@
+1. Added a texture to the floor and walls to help the player know how far they move + whether they can still move forwards
+2. Added leaping for movement and rotation of the player for juice purposes
+3. Added moving beat indicators so that the player has an easier time with movement
+4. Added enemies, health, and player attacks to add more to the gameplay
+5. Added text for guidance for the player controls
+6. Added more levels to help the player acclimate to the controls over time
+7. Added a metronome so the player doesn't only have visual indication of beats
+8. Made levels more intuitive so player doesn't get lost and confused as easily
