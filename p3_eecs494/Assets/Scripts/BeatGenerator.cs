@@ -9,6 +9,19 @@ public struct BeatInfo {
 }
 
 [System.SerializableAttribute]
+public class SongList {
+	public float[] pattern;
+
+	public float getLength() {
+		float len = 0;
+		foreach(float f in pattern) {
+			len += f;
+		}
+		return len;
+	}
+}
+
+[System.SerializableAttribute]
 public class UnityEventBeatInfo : UnityEvent<BeatInfo> {}
 [System.SerializableAttribute]
 public class UnityEventBeatInfoFloat : UnityEvent<(BeatInfo, float)> {}
@@ -16,30 +29,29 @@ public class UnityEventBeatInfoFloat : UnityEvent<(BeatInfo, float)> {}
 public class BeatGenerator : MonoBehaviour {
 	public UnityEventBeatInfo onBeat;
 	public UnityEventBeatInfoFloat onBeatAddedToQueue;
-	private bool running;
+	public float offset;
 
 	private AudioSource source;
     private AudioSource music;
 
     // Specifies time between beats
-    public float[] pattern;
-
-	// List of good times to sync music to
-	public float[] syncPoints;
+    public SongList[] beatList;
+    public int level;
 
 	// Cache beats for lookAheadTime seconds
-	public float lookAheadTime;
+	public double lookAheadTime;
 
 	private Queue<float> times;
 	private float lastTimeAdded;
 	private int nextPattern;
 
-	private float time;
-
     private static BeatGenerator instance; 
 
+    private double startTime;
+    private bool running;
+
 	public static float GetTime() {
-		return instance.time;
+		return (float)(AudioSettings.dspTime - instance.offset - instance.startTime);
 	}
 
 	void Awake()
@@ -48,59 +60,69 @@ public class BeatGenerator : MonoBehaviour {
         running = false;
 		times = new Queue<float>();
 		source = GetComponents<AudioSource>()[0];
-        music = GetComponents<AudioSource>()[1];
-
-        //music.Play();
-	}
-
-	public void StartBeats() {
-		running = true;
-		lastTimeAdded = BeatGenerator.GetTime() + 4;
-		source.Play();
-        source.time = BeatGenerator.GetTime() % source.clip.length;
-		StartCoroutine(sync());
-	}
-
-	private IEnumerator sync() {
-		int currentSyncPoint = 0;
-		while(true) {
-			if( (currentSyncPoint != 0 || (BeatGenerator.GetTime() % source.clip.length) < syncPoints[0] + 0.2F) &&
-				BeatGenerator.GetTime() % source.clip.length > syncPoints[currentSyncPoint]) {
-				Debug.Log("Syncing to" + (BeatGenerator.GetTime() % source.clip.length) + " was " + source.time );
-				source.time = BeatGenerator.GetTime() % source.clip.length;
-				currentSyncPoint++;
-
-				if(currentSyncPoint == syncPoints.Length) {
-					currentSyncPoint=0;
-				}
-			}
-			yield return new WaitForFixedUpdate();
-		}
 	}
 
 	void Update() {
-		time += Time.deltaTime;
-        if (!running)
-        {
-            StartBeats();
-        }
+		if(!running) {
+			running = true;
+			startTime = AudioSettings.dspTime + 2;
+			nextPattern = 0;
+			lastTimeAdded = 0;
+			source.PlayScheduled(startTime);
+		}
 
         while (lastTimeAdded < BeatGenerator.GetTime() + lookAheadTime) {
-			lastTimeAdded += pattern[nextPattern];
 
-			nextPattern++;
-			if(nextPattern == pattern.Length) {
-				nextPattern = 0;
-			}
+			lastTimeAdded += beatList[level].pattern[nextPattern];
 
 			times.Enqueue(lastTimeAdded);
 			onBeatAddedToQueue.Invoke((new BeatInfo{}, lastTimeAdded));
+
+			nextPattern++;
+			if(nextPattern == beatList[level].pattern.Length) {
+				nextPattern = 0;
+			}
 		}
 
-		if(times.Peek() < BeatGenerator.GetTime()) {
+		if(times.Count > 0 && times.Peek() < BeatGenerator.GetTime()) {
 			times.Dequeue();
 			onBeat.Invoke(new BeatInfo{});
 		}
+	}
+
+	public static int GetLevel() {
+		return instance._GetLevel();
+	}
+
+	public static bool SetLevel(int newLevel) {
+		return instance._SetLevel(newLevel);
+	}
+
+	private int _GetLevel() {
+		return level;
+	}
+
+	private bool _SetLevel(int newLevel) {
+		if(newLevel < 0 || newLevel >= beatList.Length) {
+			return false;
+		}
+
+		level = newLevel;
+
+		float time = lastTimeAdded % beatList[level].getLength();
+		float totalTime = 0;
+
+		nextPattern = 0;
+
+		for(int i = 0; i<beatList[level].pattern.Length; ++i) {			
+			if(totalTime >= time || Mathf.Abs(totalTime-time)< 1e-2) {
+				nextPattern = i;
+				break;
+			}
+			totalTime += beatList[level].pattern[i];
+		}
+
+		return true;
 	}
 
 	public void PrintBeat() {

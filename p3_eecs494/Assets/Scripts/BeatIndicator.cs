@@ -9,7 +9,7 @@ public class BeatIndicator : MonoBehaviour
     public float speed = 3;
 
     private float hitTime;
-    private Vector3 targetPosition;
+    private RectTransform targetTransform;
     private BeatAnimations anims;
     private bool hit;
 
@@ -31,12 +31,12 @@ public class BeatIndicator : MonoBehaviour
         this.hitTime = hitTime;
     }
 
-    public void SetTarget(Vector3 targetPosition) {
-        this.targetPosition = targetPosition;
+    public void SetTarget(RectTransform transform) {
+        this.targetTransform = transform;
     }
 
     public void UpdatePos () {
-        trans.position = targetPosition + (hitTime - BeatGenerator.GetTime()) * Vector3.right * speed; 
+        trans.position = targetTransform.position + (hitTime - BeatGenerator.GetTime()) * Vector3.right * speed; 
     }
 
     public void Hit() {

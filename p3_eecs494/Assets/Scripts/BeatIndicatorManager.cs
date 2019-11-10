@@ -27,7 +27,7 @@ public class BeatIndicatorManager : MonoBehaviour
         }
 
         indicator.SetHitTime(info.Item2);
-        indicator.SetTarget(target.position);
+        indicator.SetTarget(target);
         indicator.UpdatePos();
         indicatorsInUse.Enqueue(indicator);
     }
