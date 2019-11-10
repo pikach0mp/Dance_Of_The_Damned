@@ -92,6 +92,5 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     void Controls.IPlayerControlsActions.OnMoveDir(InputAction.CallbackContext context) {
         moveDir = context.ReadValue<Vector2>();
-        Debug.Log(moveDir);
     }
 }

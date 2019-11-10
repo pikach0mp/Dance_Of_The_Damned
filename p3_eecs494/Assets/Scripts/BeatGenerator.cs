@@ -5,12 +5,24 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public struct BeatInfo {
-
+	public int noteInPattern;
+	public float proportionalLocation;
 }
 
 [System.SerializableAttribute]
 public class SongList {
 	public float[] pattern;
+
+	public float noteProportion(int note) {
+		float t = 0;
+		for(int i =0; i < pattern.Length; ++i) {
+			if(note == i) {
+				return t/getLength();
+			}
+			t += pattern[i];
+		}
+		return 1;
+	}
 
 	public float getLength() {
 		float len = 0;
@@ -41,7 +53,7 @@ public class BeatGenerator : MonoBehaviour {
 	// Cache beats for lookAheadTime seconds
 	public double lookAheadTime;
 
-	private Queue<float> times;
+	private Queue<(BeatInfo, float)> times;
 	private float lastTimeAdded;
 	private int nextPattern;
 
@@ -59,7 +71,7 @@ public class BeatGenerator : MonoBehaviour {
     {
         instance = this;
         running = false;
-		times = new Queue<float>();
+		times = new Queue<(BeatInfo, float)>();
 		source = GetComponents<AudioSource>()[0];
 	}
 
@@ -86,8 +98,12 @@ public class BeatGenerator : MonoBehaviour {
 
 			lastTimeAdded += beatList[level].pattern[nextPattern];
 
-			times.Enqueue(lastTimeAdded);
-			onBeatAddedToQueue.Invoke((new BeatInfo{}, lastTimeAdded));
+			BeatInfo info;
+			info.noteInPattern = nextPattern;
+			info.proportionalLocation = beatList[level].noteProportion(nextPattern);
+
+			times.Enqueue((info, lastTimeAdded));
+			onBeatAddedToQueue.Invoke((info, lastTimeAdded));
 
 			nextPattern++;
 			if(nextPattern == beatList[level].pattern.Length) {
@@ -95,9 +111,8 @@ public class BeatGenerator : MonoBehaviour {
 			}
 		}
 
-		if(times.Count > 0 && times.Peek() < BeatGenerator.GetTime()) {
-			times.Dequeue();
-			onBeat.Invoke(new BeatInfo{});
+		if(times.Count > 0 && times.Peek().Item2 < BeatGenerator.GetTime()) {
+			onBeat.Invoke(times.Dequeue().Item1);
 		}
 	}
 
@@ -136,8 +151,8 @@ public class BeatGenerator : MonoBehaviour {
 		return true;
 	}
 
-	public void PrintBeat() {
-		Debug.Log(BeatGenerator.GetTime());
+	public void PrintBeat(BeatInfo info) {
+		Debug.Log(GetTime()+", "+info.noteInPattern+", "+info.proportionalLocation);
     }
 
     public void setAudioVolume(int vol)
