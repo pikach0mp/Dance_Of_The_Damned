@@ -49,6 +49,7 @@ public class BeatGenerator : MonoBehaviour {
 
     private double startTime;
     private bool running;
+    private float prevClipTime;
 
 	public static float GetTime() {
 		return (float)(AudioSettings.dspTime - instance.offset - instance.startTime);
@@ -63,6 +64,16 @@ public class BeatGenerator : MonoBehaviour {
 	}
 
 	void Update() {
+		// There was a loop
+		if(prevClipTime > source.time) {
+			float diff = source.clip.length % beatList[level].getLength();
+			if(diff > beatList[level].getLength()/2) {
+				diff -= beatList[level].getLength();
+			}
+			offset += diff;
+		}
+		prevClipTime = source.time;
+
 		if(!running) {
 			running = true;
 			startTime = AudioSettings.dspTime + 2;

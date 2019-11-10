@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.SerializableAttribute]
-public class UnityEventKeyCode : UnityEvent<KeyCode> {}
+public enum ButtonPress {
+	MOVE, ATTACK
+}
 
 [System.SerializableAttribute]
-public class UnityEventKeyCodeBeatInfo : UnityEvent<(KeyCode, BeatInfo)> {}
+public class UnityEventButtonPress : UnityEvent<ButtonPress> {}
+
+[System.SerializableAttribute]
+public class UnityEventButtonPressBeatInfo : UnityEvent<(ButtonPress, BeatInfo)> {}
 
 
 public class BeatHitDetector : MonoBehaviour {
 	public float leeway = 0.1F;
 
-	public UnityEventKeyCodeBeatInfo OnBeatHit;
-	public UnityEventKeyCode OnBadInput;
+	public UnityEventButtonPressBeatInfo OnBeatHit;
+	public UnityEventButtonPress OnBadInput;
 	public UnityEventBeatInfo OnBeatMissed;
 
-	private (KeyCode, float) lastHit;
+	private (ButtonPress, float) lastHit;
 	private bool lastHitResolved;
 
 	private bool lastBeatAvailable;
@@ -38,7 +42,7 @@ public class BeatHitDetector : MonoBehaviour {
 		}
 	}
 
-	public void PressButton(KeyCode key) {
+	public void PressButton(ButtonPress buttonPress) {
 		// Prevents spamming
 		if(!lastHitResolved) {
 			OnBadInput.Invoke(lastHit.Item1);
@@ -47,11 +51,11 @@ public class BeatHitDetector : MonoBehaviour {
 		if(lastBeatAvailable) {
 			lastBeatAvailable = false;
 
-			OnBeatHit.Invoke((key, lastBeat.Item1));
+			OnBeatHit.Invoke((buttonPress, lastBeat.Item1));
 			lastHitResolved = true;
 		} else {
 			lastHitResolved = false;
-			lastHit = (key, BeatGenerator.GetTime());
+			lastHit = (buttonPress, BeatGenerator.GetTime());
 		}
 	}
 

@@ -10,13 +10,13 @@ public class BeatLevelSystem : MonoBehaviour {
 	private int score;
 	private int streak;
 
-	public void OnBeatHit((KeyCode key, BeatInfo) info) {
+	public void OnBeatHit((ButtonPress press, BeatInfo) info) {
 		score++;
 		streak++;
 		OnUpdated();
 	}
 
-	public void OnBadInput(KeyCode key) {
+	public void OnBadInput(ButtonPress press) {
 		score -= 2;
 		streak = 0;
 		OnUpdated();

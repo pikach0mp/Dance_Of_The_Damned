@@ -32,7 +32,7 @@ public class BeatIndicatorManager : MonoBehaviour
         indicatorsInUse.Enqueue(indicator);
     }
     
-    public void OnBeatHit((KeyCode, BeatInfo) info) {
+    public void OnBeatHit((ButtonPress, BeatInfo) info) {
         BeatIndicator hit = indicatorsInUse.Dequeue();
         hit.Hit();
         // Debug.Log("Hit");
