@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     private BeatHitDetector bhd;
 
     private Vector2 moveDir;
-
+    public LayerMask layerMask;
     private Controls controls;
 
     private bool update;
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         bhd = GetComponent<BeatHitDetector>();
     }
 
-    void OnEnable() {
+    public void OnEnable() {
         if(controls == null) {
             controls = new Controls();
             controls.PlayerControls.SetCallbacks(this);
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         controls.PlayerControls.Enable();
     }
 
-    void OnDisable() {
+    public void OnDisable() {
         controls.PlayerControls.Disable();
     }
 
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
                     target_rot = Quaternion.AngleAxis(90 * Mathf.Sign(moveDir.x), Vector3.up) * target_rot;
                 } else {
                     Vector3 move = transform.forward * stepSize * Mathf.Sign(moveDir.y);
-                    if(!Physics.Raycast(transform.position, move, move.magnitude, ~0, QueryTriggerInteraction.Ignore)) {
+                    if(!Physics.Raycast(transform.position, move, move.magnitude, layerMask, QueryTriggerInteraction.Ignore)) {
                         target_pos += move;
                     }
                     
