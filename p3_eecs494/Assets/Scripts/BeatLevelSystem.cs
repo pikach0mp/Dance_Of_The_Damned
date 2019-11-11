@@ -10,19 +10,34 @@ public class BeatLevelSystem : MonoBehaviour {
 	private int score;
 	private int streak;
 
+	private bool update;
+
+	public void SetUpdate(bool update) {
+		this.update = update;
+	}
+
 	public void OnBeatHit((ButtonPress press, BeatInfo) info) {
+		if(!update) {
+			return;
+		}
 		score++;
 		streak++;
 		OnUpdated();
 	}
 
 	public void OnBadInput(ButtonPress press) {
+		if(!update) {
+			return;
+		}
 		score -= 2;
 		streak = 0;
 		OnUpdated();
 	}
 
 	public void OnBeatMiss(BeatInfo info) {
+		if(!update) {
+			return;
+		}
 		score -= 2;
 		streak = 0;
 		OnUpdated();

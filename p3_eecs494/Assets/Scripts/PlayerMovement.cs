@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     private Controls controls;
 
+    private bool update;
+
     void Start()
     {
         target_rot = transform.rotation;
@@ -41,6 +43,10 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         controls.PlayerControls.Disable();
     }
 
+    public void SetUpdate(bool update) {
+        this.update = update;
+    }
+
     void Update()
     {
         if (GetComponent<Health>().dead())
@@ -53,6 +59,10 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     public void OnBeatHit((ButtonPress, BeatInfo) info)
     {
+        if(!update) {
+            return;
+        }
+
         ButtonPress press = info.Item1;
         if (press == ButtonPress.MOVE)
         {

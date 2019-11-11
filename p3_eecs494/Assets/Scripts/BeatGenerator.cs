@@ -37,10 +37,13 @@ public class SongList {
 public class UnityEventBeatInfo : UnityEvent<BeatInfo> {}
 [System.SerializableAttribute]
 public class UnityEventBeatInfoFloat : UnityEvent<(BeatInfo, float)> {}
+[System.SerializableAttribute]
+public class UnityEventBool : UnityEvent<bool> {}
 
 public class BeatGenerator : MonoBehaviour {
 	public UnityEventBeatInfo onBeat;
 	public UnityEventBeatInfoFloat onBeatAddedToQueue;
+	public UnityEventBool onPausePlay;
 	public float offset;
 
 	private AudioSource source;
@@ -126,6 +129,10 @@ public class BeatGenerator : MonoBehaviour {
 
 	private int _GetLevel() {
 		return level;
+	}
+
+	public static void ToggleBeatSystem(bool play) {
+		instance.onPausePlay.Invoke(play);
 	}
 
 	private bool _SetLevel(int newLevel) {
