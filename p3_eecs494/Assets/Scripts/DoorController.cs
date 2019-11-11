@@ -42,7 +42,7 @@ public class DoorController : MonoBehaviour
     private IEnumerator MoveToPosition()
     {
         float elapsedTime = 0f;
-        float time = 5f;
+        float time = 2.5f;
         Vector3 startingPos = transform.position;
         while (elapsedTime < time)
         {
