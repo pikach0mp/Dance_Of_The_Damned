@@ -1,0 +1,10 @@
+1. Added a horror theme to add tension
+2. Switched to 1st POV to restrict vision even more and to feel more like a traditional horror game
+3. Added tense music
+4. Created one big interconnected level to creat cohesiveness
+5. Added different beats that change based on combos
+6. Added an enemy that chases you after stepping on trigger
+7. Added cutscene to guide player to next section
+8. Added footsteps to enemy to increase tension.
+9. Changed texture and lighting to increase spooky factor
+
