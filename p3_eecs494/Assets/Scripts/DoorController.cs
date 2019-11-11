@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
 
-    private bool isLerp = false;
+    private bool isLerp;
     Vector3 target_pos;
 
     // Start is called before the first frame update
@@ -56,8 +56,4 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    //private void MoveToPosition()
-    //{
-    //    transform.position = Vector3.Lerp(transform.position, target_pos, 5f * Time.deltaTime);
-    //}
 }

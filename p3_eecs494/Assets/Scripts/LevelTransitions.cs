@@ -12,11 +12,10 @@ public class LevelTransitions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		//this.transform.position = player.transform.position;
-		target_pos = player.transform.position;
-		target_pos.y = 0.65f;
+        //transform.position = player.transform.position;
+        //transform.position.y += 1;
 	}
-
+	
     public void TransitionFrom(int level)
     {
         switch (level)
