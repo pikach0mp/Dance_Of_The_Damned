@@ -1,1 +1,1835 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Draw",
+				"DrawRay(Vector3 start, Vector3 dir)\tvoid"
+			],
+			[
+				"On",
+				"onPausePlay\tUnityEventBool"
+			],
+			[
+				"ite",
+				"Item1\tBeatInfo"
+			],
+			[
+				"Item",
+				"Item2\tfloat"
+			],
+			[
+				"BeatI",
+				"BeatInfo\tBeatInfo"
+			],
+			[
+				"Beat",
+				"BeatInfo\tBeatInfo"
+			],
+			[
+				"Get",
+				"getLength()\tfloat"
+			],
+			[
+				"M",
+				"MoveDir\tInputAction"
+			],
+			[
+				"Ve",
+				"Vector3\tVector3"
+			],
+			[
+				"Vec",
+				"Vector3\tVector3"
+			],
+			[
+				"Cont",
+				"Controls()\tControls()"
+			],
+			[
+				"In",
+				"InputSystem\tInputSystem"
+			],
+			[
+				"Unit",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"streak",
+				"streakNeeded\tint"
+			],
+			[
+				"level",
+				"levelUpScore\tint"
+			],
+			[
+				"Clamp",
+				"Clamp(int value, int min, int max)\tint"
+			],
+			[
+				"Wait",
+				"WaitForSeconds(float seconds)\tWaitForSeconds(float seconds)"
+			],
+			[
+				"G",
+				"getLength()\tfloat"
+			],
+			[
+				"loc",
+				"localScale\tVector3"
+			],
+			[
+				"Wai",
+				"WaitForSeconds(float seconds)\tWaitForSeconds(float seconds)"
+			],
+			[
+				"Beati",
+				"BeatIndicator\tBeatIndicator"
+			],
+			[
+				"P",
+				"Push(BeatIndicator item)\tvoid"
+			],
+			[
+				"indi",
+				"indicatorsInUse\tQueue<GameObject>"
+			],
+			[
+				"hi",
+				"hitTime\tfloat"
+			],
+			[
+				"Instan",
+				"Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)\tObject"
+			],
+			[
+				"Beatin",
+				"BeatInfo\tBeatInfo"
+			],
+			[
+				"mi",
+				"miss()\tIEnumerator"
+			],
+			[
+				"H",
+				"hit()\tIEnumerator"
+			],
+			[
+				"Upda",
+				"UpdatePos()\tvoid"
+			],
+			[
+				"time",
+				"timeSinceLevelLoad\tfloat"
+			],
+			[
+				"Req",
+				"RequireComponent(Type requiredComponent)\tRequireComponent(Type requiredComponent)"
+			],
+			[
+				"It",
+				"Item1\tBeatInfo"
+			],
+			[
+				"lastB",
+				"lastBeat\t(BeatInfo, float)"
+			],
+			[
+				"it",
+				"Item2\tfloat"
+			],
+			[
+				"las",
+				"lastBeat\t(BeatInfo, float)"
+			],
+			[
+				"Se",
+				"SerializableAttribute\tSerializableAttribute"
+			],
+			[
+				"pl",
+				"Play()\tvoid"
+			],
+			[
+				"Audio",
+				"AudioClip\tAudioClip"
+			],
+			[
+				"Ang",
+				"AngleAxis(float angle, Vector3 axis)\tQuaternion"
+			],
+			[
+				"GetK",
+				"GetKey(KeyCode key)\tbool"
+			],
+			[
+				"Requ",
+				"RequireComponent\tRequireComponent"
+			],
+			[
+				"lastHi",
+				"lastHit\t(KeyCode, float)"
+			],
+			[
+				"last",
+				"lastHit\t(KeyCode, float)"
+			],
+			[
+				"lastH",
+				"lastHitResolved\tbool"
+			],
+			[
+				"lasH",
+				"lastHitResolved\tbool"
+			],
+			[
+				"OnBeat",
+				"OnBeatEmpty\tUnityEventKeyCode"
+			],
+			[
+				"timeS",
+				"timeSinceLevelLoad\tfloat"
+			],
+			[
+				"Ite",
+				"Item2\tfloat"
+			],
+			[
+				"Ev",
+				"Events\tEvents"
+			],
+			[
+				"onB",
+				"OnBeatHit\tOnBeatHit"
+			],
+			[
+				"OnB",
+				"OnBeatIgnored\tOnBeatIgnored"
+			],
+			[
+				"OnBea",
+				"OnBeatIgnored\tOnBeatIgnored"
+			],
+			[
+				"OnBe",
+				"OnBeatMissed\tOnBeatMissed"
+			],
+			[
+				"UnityEve",
+				"UnityEvent<T0>\tUnityEvent<T0>"
+			],
+			[
+				"Onb",
+				"OnBeatListUpdated\tUnityEvent<Queue<float>>"
+			],
+			[
+				"E",
+				"Events\tEvents"
+			],
+			[
+				"timse",
+				"timeSinceLevelLoad\tfloat"
+			],
+			[
+				"tim",
+				"timeSinceLevelLoad\tfloat"
+			],
+			[
+				"Que",
+				"Queue<float>\tQueue<float>"
+			],
+			[
+				"appl",
+				"apply_colors"
+			],
+			[
+				"color",
+				"color_to_hex_str"
+			],
+			[
+				"colo",
+				"color_to_hex_str"
+			],
+			[
+				"grid-",
+				"grid-template-rows"
+			],
+			[
+				"texta",
+				"text-align"
+			],
+			[
+				"ch",
+				"change\t.change()"
+			],
+			[
+				"grid-temp",
+				"grid-template-columns"
+			],
+			[
+				"Fin",
+				"FindObjectOfType<T>()\tT"
+			],
+			[
+				"credi",
+				"creditsButton\tGameObject"
+			],
+			[
+				"curr",
+				"currentSelectedGameObject\tGameObject"
+			],
+			[
+				"cre",
+				"credits\tGameObject"
+			],
+			[
+				"cur",
+				"currentSelectedGameObject\tGameObject"
+			],
+			[
+				"cu",
+				"currentSelectedGameObject\tGameObject"
+			],
+			[
+				"Even",
+				"EventSystems\tEventSystems"
+			],
+			[
+				"grav",
+				"gravity\tVector3"
+			],
+			[
+				"playon",
+				"PlayOneShot(AudioClip clip, float volumeScale)\tvoid"
+			],
+			[
+				"col",
+				"collision\tCollision"
+			],
+			[
+				"Pl",
+				"Play()\tvoid"
+			],
+			[
+				"AudiSo",
+				"AudioSource\tAudioSource"
+			],
+			[
+				"press",
+				"pressSound\tAudioClip"
+			],
+			[
+				"PlayOn",
+				"PlayOneShot(AudioClip clip, float volumeScale)\tvoid"
+			],
+			[
+				"Pla",
+				"PlayOneShot(AudioClip clip)\tvoid"
+			],
+			[
+				"get",
+				"GetLookDirection()\tVector3"
+			],
+			[
+				"Insta",
+				"Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)\tObject"
+			],
+			[
+				"Lo",
+				"LoadScene(string sceneName)\tvoid"
+			],
+			[
+				"LoadSc",
+				"LoadScene(string sceneName, LoadSceneMode mode)\tvoid"
+			],
+			[
+				"star",
+				"startColor\tColor"
+			],
+			[
+				"st",
+				"startColor\tMinMaxGradient"
+			],
+			[
+				"trans",
+				"transition(float x)\tfloat"
+			],
+			[
+				"an",
+				"angularVelocity\tVector3"
+			],
+			[
+				"ac",
+				"activeSelf\tbool"
+			],
+			[
+				"spaw",
+				"spawnObject\tGameObject"
+			],
+			[
+				"spawnO",
+				"spawnObjectCollider\tCollider"
+			],
+			[
+				"spa",
+				"spawnObject\tGameObject"
+			],
+			[
+				"Line",
+				"LineRenderer\tLineRenderer"
+			],
+			[
+				"en",
+				"endColor\tColor"
+			],
+			[
+				"vE",
+				"Vector2\tVector2"
+			],
+			[
+				"ma",
+				"mainTextureScale\tVector2"
+			],
+			[
+				"V",
+				"Vector3\tVector3"
+			],
+			[
+				"main",
+				"mainTextureOffset\tVector2"
+			],
+			[
+				"Dictiona",
+				"Dictionary<TKey, TValue>\tDictionary<TKey, TValue>"
+			],
+			[
+				"Valu",
+				"ContainsValue(bool value)\tbool"
+			],
+			[
+				"AndG",
+				"AndGateInput\tAndGateInput"
+			],
+			[
+				"g",
+				"gravity\tVector3"
+			],
+			[
+				"GraviC",
+				"GravityChangeEvent\tGravityChangeEvent"
+			],
+			[
+				"gra",
+				"grabbed\tbool"
+			],
+			[
+				"gr",
+				"gravity\tVector3"
+			],
+			[
+				"L",
+				"LookRotation(Vector3 forward)\tQuaternion"
+			],
+			[
+				"e",
+				"Enable()\tvoid"
+			],
+			[
+				"I",
+				"IPlayerActions\tIPlayerActions"
+			],
+			[
+				"Ign",
+				"IgnoreCollision(Collider collider1, Collider collider2, bool ignore)\tvoid"
+			],
+			[
+				"Uni",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"GetScene",
+				"GetSceneByPath(string scenePath)\tScene"
+			],
+			[
+				"Scene",
+				"SceneManager\tSceneManager"
+			],
+			[
+				"Scen",
+				"SceneManager\tSceneManager"
+			],
+			[
+				"LoadS",
+				"LoadScene(int sceneBuildIndex)\tvoid"
+			],
+			[
+				"s",
+				"SetActive(bool value)\tvoid"
+			],
+			[
+				"Loa",
+				"LoadScene(int sceneBuildIndex)\tvoid"
+			],
+			[
+				"Sc",
+				"SceneManagement\tSceneManagement"
+			],
+			[
+				"GetComp",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"lo",
+				"localScale\tVector3"
+			],
+			[
+				"IEnum",
+				"IEnumerator\tIEnumerator"
+			],
+			[
+				"GetC",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"Has",
+				"HashSet<T>\tHashSet<T>"
+			],
+			[
+				"gravi",
+				"gravityIgnoringParticlesPrefab\tGameObject"
+			],
+			[
+				"Inst",
+				"Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)\tObject"
+			],
+			[
+				"Alp",
+				"Alpha6\tKeyCode"
+			],
+			[
+				"GetKe",
+				"GetKeyDown(string name)\tbool"
+			],
+			[
+				"i",
+				"IgnoreGravityEffects()\tvoid"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/Scripts/PlayerMovement.cs",
+			"settings":
+			{
+				"buffer_size": 3155,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Controls/Controls.cs",
+			"settings":
+			{
+				"buffer_size": 10772,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/BeatIndicatorManager.cs",
+			"settings":
+			{
+				"buffer_size": 1767,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/BeatIndicator.cs",
+			"settings":
+			{
+				"buffer_size": 1183,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/BeatGenerator.cs",
+			"settings":
+			{
+				"buffer_size": 3817,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 21 files for \"KeyCode\"\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatLevelSystem.cs:\n   11  \tprivate int streak;\n   12  \n   13: \tpublic void OnBeatHit((KeyCode key, BeatInfo) info) {\n   14  \t\tscore++;\n   15  \t\tstreak++;\n   ..\n   17  \t}\n   18  \n   19: \tpublic void OnBadInput(KeyCode key) {\n   20  \t\tscore -= 2;\n   21  \t\tstreak = 0;\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/EndGoal.cs:\n   18      {\n   19          //press r to restart game\n   20:         if (Input.GetKeyDown(KeyCode.R))\n   21          {\n   22              LoopGame();\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/HitOrMiss.cs:\n    8      Color colorEnd = Color.green;\n    9      //float duration = 1.0f;\n   10:     public KeyCode key;\n   11      private Renderer rend;\n   12      // Start is called before the first frame update\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/PlayerMovement.cs:\n   52      }\n   53  \n   54:     public void OnBeatHit((KeyCode key, BeatInfo) info)\n   55      {\n   56:         KeyCode key = info.Item1;\n   57:         if (key == KeyCode.Space)\n   58          {\n   59:             if (Input.GetKey(KeyCode.W) && !Physics.Raycast(transform.position, transform.forward, stepSize))\n   60              {\n   61                  target_pos += transform.forward * stepSize;\n   62              }\n   63:             else if (Input.GetKey(KeyCode.S) && !Physics.Raycast(transform.position, -transform.forward, stepSize))\n   64              {\n   65                  target_pos -= transform.forward * stepSize;\n   66              }\n   67:             else if (Input.GetKey(KeyCode.D))\n   68              {\n   69                  target_rot = Quaternion.AngleAxis(90, Vector3.up) * target_rot;\n   70              }\n   71:             else if (Input.GetKey(KeyCode.A))\n   72              {\n   73                  target_rot = Quaternion.AngleAxis(-90, Vector3.up) * target_rot;\n   74              }\n   75          }\n   76:         else if (key == KeyCode.Period)\n   77          {\n   78              //this.gameObject.transform.GetChild(1).gameObject.GetComponent<PlayerAttack>().spinAttack();\n\n12 matches across 4 files\n",
+			"settings":
+			{
+				"buffer_size": 2233,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Assets/Scripts/EndGoal.cs",
+			"settings":
+			{
+				"buffer_size": 783,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/BeatLevelSystem.cs",
+			"settings":
+			{
+				"buffer_size": 1127,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remov p",
+				"Package Control: Remove Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remov",
+				"Package Control: Remove Channel"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 118.0,
+		"history":
+		[
+			"git status",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/Controls"
+	],
+	"file_history":
+	[
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeginChase.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatGenerator.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatHitDetector.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatLevelSystem.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/Controls/Controls.cs",
+		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/HitOrMiss.cs",
+		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/BeatIndicatorManager.cs",
+		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/BeatHitDetector.cs",
+		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/PlayerController.cs",
+		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/BeatAnimations.cs",
+		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/BeatWasHit.cs",
+		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/BeatGenerator.cs",
+		"/Users/Brown/Desktop/rgb-web-control/public/index.html",
+		"/Users/Brown/Desktop/rgb-web-control/server.js",
+		"/Users/Brown/Desktop/rgb-web-control/.gitignore",
+		"/Users/Brown/Desktop/rgb-web-control/README.md",
+		"/Users/Brown/Desktop/rgb-web-control/server.py",
+		"/Users/Brown/Desktop/rgb-web-control/index.html",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/GravityObject.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/BackgroundMusic.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/LevelLoader.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/Room.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/WireColorEvent.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/PointTowardsGravity.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/PressurePlate.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/Interactable.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/Button.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/AndGateEvent.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/TextureNormalizer.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/TogglePlatformEvent.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/Spawner.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/AutoSpawner.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/AndGateInput.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/PlayerController.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/CameraTilt.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/GravityCameraRotation.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/Controls.cs",
+		"/Users/Brown/Library/Application Support/Sublime Text 3/Packages/User/OmniSharpSublime.sublime-settings",
+		"/Users/Brown/Library/Application Support/Sublime Text 3/Packages/OmniSharp/OmniSharpSublime.sublime-settings",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/ResetGame.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/Goal.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/GravityChangeEvent.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/Grabbable.cs",
+		"/Users/Brown/Desktop/School/EECS494/project2/Assets/Scripts/AttatchObject.cs",
+		"/Users/Brown/Desktop/School/EECS494/portfolio/index.html",
+		"/Users/Brown/metroid/Assets/Scripts/DestroyOnTriggerEnter.cs",
+		"/Users/Brown/metroid/Assets/Scripts/Projectile.cs",
+		"/Users/Brown/metroid/Assets/Scripts/PlayerRun.cs",
+		"/Users/Brown/metroid/Assets/Scripts/PlayerInventory.cs",
+		"/Users/Brown/metroid/Assets/Scripts/PlayerState.cs",
+		"/Users/Brown/metroid/Assets/Scripts/PlayerWeapon.cs",
+		"/Users/Brown/metroid/Assets/Scripts/Zoomer.cs",
+		"/Users/Brown/metroid/Assets/Scripts/PlayerMovements.cs",
+		"/Users/Brown/Space Hunter/Assets/InGame/Player/GUI/ChargeDisplay.cs",
+		"/Users/Brown/Desktop/fft/fund_freq_finder.cpp",
+		"/Users/Brown/Space Hunter/Assets/InGame/Player/Gun/Missiles/IceMissile.cs",
+		"/Users/Brown/Space Hunter/Assets/InGame/Room Components/Environment/ObjectScripts/PowerupWorld.cs",
+		"/Users/Brown/Space Hunter/Assets/InGame/Player/PlayerController.cs",
+		"/Users/Brown/Metroidvania MKII/Assets/Scripts/WorldObjectConnectivity.cs",
+		"/Users/Brown/Metroidvania MKII/Assets/Scripts/WorldObject.cs",
+		"/Users/Brown/Metroidvania MKII/Assets/Scenes/_game/_scripts/WorldObject.cs",
+		"/Users/Brown/go/src/temp/rational_fit",
+		"/Users/Brown/Metroidvaniaish/Assets/Scripts/PizzleElements/Gear.cs",
+		"/Users/Brown/Metroidvaniaish/Assets/Scripts/Turn.cs",
+		"/Users/Brown/Desktop/script.py",
+		"/Users/Brown/Metroidvaniaish/metroidvaniaish.sublime-project",
+		"/Users/Brown/Metroidvaniaish/Assets/PuzzleElements/Gear/Gear.cs",
+		"/Users/Brown/Metroidvaniaish/Assets/EditorTools/RangeStepAttribute/RangeStepDrawer.cs",
+		"/Users/Brown/Metroidvaniaish/Assets/EditorTools/OptionsAttribute/OrderedListDrawer.cs",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/base_station/gui/src/components/PidTune.vue",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/base_station/gui/src/components/SATask.vue",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/rover_msgs/Microscope.lcm",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/ansible/roles/base_station_services/tasks/main.yml",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/onboard/microscope/src/__main__.py",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/base_station/gui/src/components/Video.vue",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/rover_msgs/TakePicture.lcm",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/rover_msgs/ESCThrottle.lcm",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/pi_zeroes/video/src/__main__.py",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/.git/COMMIT_EDITMSG",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/rover_msgs/ESCToggle.lcm",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/.git/rebase-merge/git-rebase-todo",
+		"/Users/Brown/Desktop/School/EECS 483/pp5/mips.cc",
+		"/Users/Brown/Desktop/School/EECS 483/pp5/samples/t2.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp5/samples/t1.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp5/mips.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp5/codegen.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp5/samples/badlink.decaf",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/base_station/gui/src/components/SAControls.vue",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/onboard/teleop/src/__main__.py",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/base_station/gui/src/components/Cameras.vue",
+		"/Users/Brown/Desktop/Vagrant/mrover-workspace/base_station/gui/src/components/ArmControls.vue",
+		"/Users/Brown/Desktop/School/EECS 483/pp2/runtest.sh",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/runtest.sh",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast_decl.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast_decl.cc",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/basic_class.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast_stmt.cc",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast_expr.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/t3.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast_stmt.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/codegen.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/tmp.asm",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/t2.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/stack.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/hashtable.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/t8.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast_type.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/run",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/t1.decaf",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/string.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/ast_expr.cc",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/tac.cc",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/t7.decaf",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/tac.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/codegen.cc",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/list.h",
+		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/t3.s",
+		"/Users/Brown/Desktop/School/EECS 445/P2/train_autoencoder_classifier.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/train_autoencoder.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/evaluate_cnn.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/train_challenge.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/train_cnn.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/config.json",
+		"/Users/Brown/Desktop/School/EECS 445/P2/evaluate_autoencoder.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/dataset.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/model/autoencoder.py",
+		"/Users/Brown/Desktop/School/EECS 445/P2/evaluate_autoencoder_classifier.py"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"layerMask",
+			"Queue",
+			"times.deque",
+			"key",
+			"KeyCode",
+			"key",
+			"KeyCode",
+			"lastTimeAdded",
+			"OnScoreUpdated",
+			"OnBeatMiss",
+			"private",
+			"offset",
+			"songList",
+			"nextPattern",
+			"startTime",
+			"Play",
+			"offset",
+			"5",
+			"offset",
+			"lastTimeAdded",
+			"dsp",
+			"loops",
+			"source"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/PlayerMovement.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								995,
+								1009
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"oops":
+							{
+								"0,5": "Unnecessary using directive.",
+								"1774,1781": "No overload for method 'Raycast' takes 3 arguments",
+								"26,31": "Unnecessary using directive."
+							},
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Controls/Controls.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 6.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/BeatIndicatorManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1073,
+								1073
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/BeatIndicator.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								394
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"oops":
+							{
+								"0,5": "Unnecessary using directive.",
+								"26,31": "Unnecessary using directive.",
+								"79,84": "Unnecessary using directive.",
+								"860,861": "'RectTransform' does not contain a definition for 'p' and no accessible extension method 'p' accepting a first argument of type 'RectTransform' could be found (are you missing a using directive or an assembly reference?)"
+							},
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/BeatGenerator.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3134,
+								3134
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"oops":
+							{
+								"0,5": "Unnecessary using directive.",
+								"105,110": "Unnecessary using directive.",
+								"3134,3141": "The name 'playing' does not exist in the current context"
+							},
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1454.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2233,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										194,
+										201
+									],
+									[
+										317,
+										324
+									],
+									[
+										550,
+										557
+									],
+									[
+										793,
+										800
+									],
+									[
+										1048,
+										1055
+									],
+									[
+										1105,
+										1112
+									],
+									[
+										1157,
+										1164
+									],
+									[
+										1225,
+										1232
+									],
+									[
+										1456,
+										1463
+									],
+									[
+										1688,
+										1695
+									],
+									[
+										1870,
+										1877
+									],
+									[
+										2060,
+										2067
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								931,
+								931
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Scripts/EndGoal.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/Scripts/BeatLevelSystem.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 106.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 106.0
+	},
+	"pinned_build_system": "",
+	"project": "p3_eecs494.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"grav",
+				"GravityObject.cs"
+			],
+			[
+				"spa",
+				"Spawner.cs"
+			],
+			[
+				"wir",
+				"WireColorEvent.cs"
+			],
+			[
+				"Event",
+				"TogglePlatformEvent.cs"
+			],
+			[
+				"destr",
+				"DestroyOnTriggerEnter.cs"
+			],
+			[
+				"inven",
+				"PlayerInventory.cs"
+			],
+			[
+				"ene",
+				"Enemy.cs"
+			],
+			[
+				"wea",
+				"PlayerWeapon.cs"
+			],
+			[
+				"Ri",
+				"Ripper.cs"
+			],
+			[
+				"proj",
+				"Projectile.cs"
+			],
+			[
+				"Zoom",
+				"Zoomer.cs"
+			],
+			[
+				"ChargeD",
+				"InGame/Player/GUI/ChargeDisplay.cs"
+			],
+			[
+				"missi",
+				"InGame/Player/GUI/MissileDisplay.cs"
+			],
+			[
+				"weap",
+				"InGame/Player/Gun/Weapon.cs"
+			],
+			[
+				"play",
+				"InGame/Player/PlayerController.cs"
+			],
+			[
+				"morphnall",
+				"InGame/Player/MorphBall/BallController.cs"
+			],
+			[
+				"roompo",
+				"InGame/Room Components/RoomPool.cs"
+			],
+			[
+				"projec",
+				"InGame/Player/Gun/Projectile.cs"
+			],
+			[
+				"Missile",
+				"InGame/Player/Gun/Missiles/Missile.cs"
+			],
+			[
+				"icem",
+				"InGame/Player/Gun/Missiles/IceMissile.cs"
+			],
+			[
+				"player",
+				"InGame/Player/PlayerController.cs"
+			],
+			[
+				"satas",
+				"base_station/gui/src/components/SATask.vue"
+			],
+			[
+				"video",
+				"base_station/gui/src/components/Video.vue"
+			],
+			[
+				"video.p",
+				"pi_zeroes/video/src/__main__.py"
+			],
+			[
+				"pipic",
+				"rover_msgs/PiPicture.lcm"
+			],
+			[
+				"microscope",
+				"rover_msgs/Microscope.lcm"
+			],
+			[
+				"__main",
+				"pi_zeroes/video/src/__main__.py"
+			],
+			[
+				"pipc",
+				"rover_msgs/PiPicture.lcm"
+			],
+			[
+				"ESC",
+				"rover_msgs/ESCToggle.lcm"
+			],
+			[
+				"esc",
+				"rover_msgs/ESCThrottle.lcm"
+			],
+			[
+				"video.",
+				"base_station/gui/src/components/Video.vue"
+			],
+			[
+				"SAContr",
+				"base_station/gui/src/components/SAControls.vue"
+			],
+			[
+				"onboard/tel",
+				"onboard/teleop/src/__main__.py"
+			],
+			[
+				"mips",
+				"mips.cc"
+			],
+			[
+				"Mip",
+				"mips.h"
+			],
+			[
+				"t2",
+				"samples/t2.decaf"
+			],
+			[
+				"t1.",
+				"samples/t1.decaf"
+			],
+			[
+				"code",
+				"codegen.h"
+			],
+			[
+				"mip",
+				"mips.h"
+			],
+			[
+				"ta",
+				"tac.cc"
+			],
+			[
+				"codege",
+				"codegen.h"
+			],
+			[
+				"tac",
+				"tac.h"
+			],
+			[
+				"video/",
+				"pi_zeroes/video/src/__main__.py"
+			],
+			[
+				"onboard/tele",
+				"onboard/teleop/src/__main__.py"
+			],
+			[
+				"sacontrol",
+				"base_station/gui/src/components/SAControls.vue"
+			],
+			[
+				"runtes",
+				"runtest.sh"
+			],
+			[
+				"decl",
+				"ast_decl.cc"
+			],
+			[
+				"dec",
+				"ast_decl.h"
+			],
+			[
+				"stmt",
+				"ast_stmt.cc"
+			],
+			[
+				"stm",
+				"ast_stmt.h"
+			],
+			[
+				"expr",
+				"ast_expr.cc"
+			],
+			[
+				"de",
+				"ast_decl.h"
+			],
+			[
+				"",
+				"samples/basic_class.decaf"
+			],
+			[
+				"exp",
+				"ast_expr.h"
+			],
+			[
+				"expr.",
+				"ast_expr.h"
+			],
+			[
+				"tmp.as",
+				"tmp.asm"
+			],
+			[
+				"t1",
+				"samples/t1.decaf"
+			],
+			[
+				"ast_de",
+				"ast_decl.h"
+			],
+			[
+				"hash",
+				"hashtable.h"
+			],
+			[
+				"decl.c",
+				"ast_decl.cc"
+			],
+			[
+				"ast_decl",
+				"ast_decl.h"
+			],
+			[
+				"type",
+				"ast_type.h"
+			],
+			[
+				"ast_dec",
+				"ast_decl.cc"
+			],
+			[
+				"ast_ep",
+				"ast_expr.h"
+			],
+			[
+				"typ",
+				"ast_type.h"
+			],
+			[
+				"train",
+				"train_challenge.py"
+			],
+			[
+				"challen",
+				"model/challenge.py"
+			],
+			[
+				"tra",
+				"train_cnn.py"
+			],
+			[
+				"Drive",
+				"base_station/gui/src/components/DriveControls.vue"
+			],
+			[
+				"err",
+				"errors.h"
+			],
+			[
+				"has",
+				"hashtable.h"
+			],
+			[
+				"12",
+				"samples/t12.decaf"
+			],
+			[
+				"stmt.cc",
+				"ast_stmt.cc"
+			],
+			[
+				"ex",
+				"ast_expr.cc"
+			],
+			[
+				"bad4",
+				"samples/bad4.out"
+			],
+			[
+				"st",
+				"ast_stmt.h"
+			],
+			[
+				"ast_st",
+				"ast_stmt.h"
+			],
+			[
+				"ty",
+				"ast_type.h"
+			],
+			[
+				"AstEx",
+				"ast_expr.cc"
+			],
+			[
+				"teleop main",
+				"onboard/teleop/src/__main__.py"
+			],
+			[
+				"rover.env",
+				"ansible/roles/onboard_services/files/rover.env"
+			],
+			[
+				".env",
+				"ansible/roles/base_station_services/files/rover.env"
+			],
+			[
+				"lcmecho",
+				"base_station/gui/src/components/LCMEcho.vue"
+			],
+			[
+				"meson.bu",
+				"onboard/talon/meson.build"
+			],
+			[
+				"meson.",
+				"onboard/cv/meson.build"
+			],
+			[
+				"blender_rout",
+				"base_station/blender_router/src/__main__.py"
+			],
+			[
+				"contro",
+				"base_station/gui/src/components/Controls.vue"
+			],
+			[
+				"blender_ro",
+				"base_station/blender_router/src/__main__.py"
+			],
+			[
+				"pidtune",
+				"base_station/gui/src/components/PidTune.vue"
+			],
+			[
+				"control",
+				"base_station/gui/src/components/Controls.vue"
+			],
+			[
+				"controls",
+				"base_station/gui/src/components/Controls.vue"
+			],
+			[
+				"onboard/ra/sr",
+				"onboard/ra/src/__main__.py"
+			],
+			[
+				"blender_rou",
+				"base_station/blender_router/src/__main__.py"
+			],
+			[
+				"decl.",
+				"ast_decl.cc"
+			],
+			[
+				"swi",
+				"samples/switch.decaf"
+			],
+			[
+				"expr.h",
+				"ast_expr.h"
+			],
+			[
+				"dppma",
+				"dppmain.cc"
+			],
+			[
+				"man",
+				"main.cc"
+			],
+			[
+				"badp",
+				"samples/badpre.frag"
+			],
+			[
+				"main.cc",
+				"main.cc"
+			],
+			[
+				"serv",
+				"server.cpp"
+			],
+			[
+				"pager.cpp",
+				"pager.cpp"
+			],
+			[
+				"pager",
+				"pager_pte.cpp"
+			],
+			[
+				"swappa",
+				"swap_pager_pte.h"
+			],
+			[
+				"swap",
+				"swap_space_manager.cpp"
+			],
+			[
+				"swapm",
+				"swap_space_manager.cpp"
+			],
+			[
+				"Process",
+				"process_pager.cpp"
+			],
+			[
+				"pager.",
+				"pager.cpp"
+			],
+			[
+				"phy",
+				"physical_memory_manager.cpp"
+			],
+			[
+				"pa",
+				"pager.cpp"
+			],
+			[
+				"proc",
+				"process_pager.cpp"
+			],
+			[
+				"talon__main.py",
+				"onboard/talon/src/__main__.py"
+			],
+			[
+				"__",
+				"base_station/blender_router/src/__main__.py"
+			],
+			[
+				"spec",
+				"test_spec.4.cpp"
+			],
+			[
+				"swapscp",
+				"swap_space_manager.h"
+			],
+			[
+				"page",
+				"pager.h"
+			],
+			[
+				"p",
+				"physical_memory_manager.h"
+			],
+			[
+				"pager.c",
+				"pager.cpp"
+			],
+			[
+				"clock",
+				"clock.cpp"
+			],
+			[
+				"swp",
+				"swap_space_manager.cpp"
+			],
+			[
+				"clo",
+				"clock.h"
+			],
+			[
+				"cl",
+				"clock.h"
+			],
+			[
+				"memo",
+				"memory_manager.h"
+			],
+			[
+				"proces",
+				"process_pager.cpp"
+			],
+			[
+				"file",
+				"file_pager_pte.cpp"
+			],
+			[
+				"pager_pte",
+				"pager_pte.cpp"
+			],
+			[
+				"fil",
+				"file_pager_pte.cpp"
+			],
+			[
+				"pag",
+				"pager.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 740.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 178.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

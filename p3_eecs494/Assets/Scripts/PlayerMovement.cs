@@ -18,10 +18,13 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     public LayerMask layerMask;
     private Controls controls;
 
+    private bool update;
+
     void Start()
     {
         target_rot = transform.rotation;
         target_pos = transform.position;
+        update = true;
     }
 
     void Awake()
@@ -41,6 +44,10 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         controls.PlayerControls.Disable();
     }
 
+    public void SetUpdate(bool update) {
+        this.update = update;
+    }
+
     void Update()
     {
         if (GetComponent<Health>().dead())
@@ -53,6 +60,10 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     public void OnBeatHit((ButtonPress, BeatInfo) info)
     {
+        if(!update) {
+            return;
+        }
+
         ButtonPress press = info.Item1;
         if (press == ButtonPress.MOVE)
         {
