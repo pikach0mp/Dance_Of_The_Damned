@@ -34,6 +34,8 @@ public class LevelTransitions : MonoBehaviour
 
     public void OnDisable()
     {
+    	Debug.Log("END");
+        BeatGenerator.ToggleBeatSystem(true);
         this.gameObject.SetActive(false);
     }
 }

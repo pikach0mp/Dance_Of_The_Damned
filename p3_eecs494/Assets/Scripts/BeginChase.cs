@@ -21,8 +21,9 @@ public class BeginChase : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // Disable Player Controls
-            PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
-            movement.OnDisable();
+            // PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
+            // movement.OnDisable();
+            BeatGenerator.ToggleBeatSystem(false);
 
             door.SetActive(true);
 
@@ -30,9 +31,8 @@ public class BeginChase : MonoBehaviour
             Camera.SetActive(true);
             transitions.TransitionFrom(level);
             nextDoor.GetComponent<DoorController>().OpenDoor();
-
             //Re - Enable Player Controls
-            movement.OnEnable();
+            // movement.OnEnable();
         }
     }
 }

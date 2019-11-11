@@ -12,7 +12,12 @@ public class BeatLevelSystem : MonoBehaviour {
 
 	private bool update;
 
+	void Start() {
+		update = true;
+	}
+
 	public void SetUpdate(bool update) {
+		Debug.Log(update);
 		this.update = update;
 	}
 

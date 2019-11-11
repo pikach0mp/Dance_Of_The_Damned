@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     {
         target_rot = transform.rotation;
         target_pos = transform.position;
+        update = true;
     }
 
     void Awake()
