@@ -8,9 +8,11 @@ public class BeginChase : MonoBehaviour
     public GameObject nextDoor;
     public GameObject Camera;
     public List<GameObject> chaseEnemies;
+    public float TimeB4Enemy = 1;
 
     private LevelTransitions transitions;
     public int level = 1;
+    private bool first = true;
 
     private void Start()
     {
@@ -19,8 +21,9 @@ public class BeginChase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && first)
         {
+            first = false;
             // Disable Player Controls
             // PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
             // movement.OnDisable();
@@ -37,10 +40,16 @@ public class BeginChase : MonoBehaviour
             // movement.OnEnable();
 
             //enable enemies
-            foreach(var enemy in chaseEnemies)
-            {
-                enemy.GetComponent<ChaseEnemy>().trigger(true);
-            }
+            StartCoroutine(startEnemies());
+        }
+    }
+
+    IEnumerator startEnemies()
+    {
+        yield return new WaitForSeconds(TimeB4Enemy);
+        foreach(var enemy in chaseEnemies)
+        {
+            enemy.GetComponent<ChaseEnemy>().trigger(true);
         }
     }
 }

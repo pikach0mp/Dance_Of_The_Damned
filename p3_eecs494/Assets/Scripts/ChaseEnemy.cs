@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BeatHitDetector))]
 public class ChaseEnemy : MonoBehaviour
 {
     public AudioClip thump;
@@ -30,18 +31,18 @@ public class ChaseEnemy : MonoBehaviour
         triggered = onOff;
         if (triggered)
         {
-            GetComponent<Renderer>().materials[0] = active;
+            GetComponent<Renderer>().material = active;
         }
         else
         {
-            GetComponent<Renderer>().materials[0] = not_active;
+            GetComponent<Renderer>().material = not_active;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().materials[0] = not_active;
+        GetComponent<Renderer>().material = not_active;
         lastSeen.y = 999;
         audioS = GetComponent<AudioSource>();
         target_pos = transform.position;
@@ -87,10 +88,37 @@ public class ChaseEnemy : MonoBehaviour
             }
         }
     }
-
-    public void OnBeat()
+    public void OnBeatMissed(BeatInfo info)
     {
-        Debug.LogWarning("direction" + travelDir.ToString());
+        if (info.noteInPattern != 0 && info.noteInPattern != 2)
+        {
+            return;
+        }
+
+        original_pos = transform.position;
+
+        if (triggered)
+        {
+            audioS.Play();
+        }
+
+        if (!Physics.Raycast(transform.position, travelDir, stepSize))
+        {
+            target_pos += travelDir * stepSize;
+        }
+        else
+        {
+            travelDir *= -1;
+            target_pos += travelDir * stepSize;
+        }
+    }
+
+    public void OnBeatHit((ButtonPress, BeatInfo) info)
+    {
+        if(info.Item2.noteInPattern != 0 && info.Item2.noteInPattern != 2)
+        {
+            return;
+        }
 
         original_pos = transform.position;
 
@@ -145,8 +173,6 @@ public class ChaseEnemy : MonoBehaviour
         {
             travelDir = new Vector3(0, 0, diff.z/ Math.Abs(diff.z));
         }
-        Debug.Log("Setting direction to: " + travelDir.ToString());
-        Debug.Log("diff is: " + diff.ToString());
     }
 
     private void patrol()
@@ -187,6 +213,8 @@ public class ChaseEnemy : MonoBehaviour
             other.gameObject.GetComponent<Health>().update_health(-1);
             target_pos = original_pos;
         }
+
+        Debug.Log(other.transform.name);
     }
 
 }
