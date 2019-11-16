@@ -71,11 +71,14 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
                 if(Mathf.Abs(moveDir.x) > Mathf.Abs(moveDir.y)) {
                     target_rot = Quaternion.AngleAxis(90 * Mathf.Sign(moveDir.x), Vector3.up) * target_rot;
                 } else {
-                    Vector3 move = transform.forward * stepSize * Mathf.Sign(moveDir.y);
-                    if(!Physics.Raycast(transform.position, move, move.magnitude, layerMask, QueryTriggerInteraction.Ignore)) {
-                        target_pos += move;
+                    if(moveDir.y > 0) {
+                        Vector3 move = transform.forward * stepSize;
+                        if(!Physics.Raycast(transform.position, move, move.magnitude, layerMask, QueryTriggerInteraction.Ignore)) {
+                            target_pos += move;
+                        }
+                    } else {
+                        target_rot = Quaternion.AngleAxis(180 * Mathf.Sign(moveDir.x), Vector3.up) * target_rot;
                     }
-                    
                 }
             }
         }
