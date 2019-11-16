@@ -66,6 +66,8 @@ public class BeatGenerator : MonoBehaviour {
     private bool running;
     private float prevClipTime;
 
+    private bool generateBeats;
+
 	public static float GetTime() {
 		return (float)(AudioSettings.dspTime - instance.offset - instance.startTime);
 	}
@@ -74,6 +76,7 @@ public class BeatGenerator : MonoBehaviour {
     {
         instance = this;
         running = false;
+        generateBeats = true;
 		times = new Queue<(BeatInfo, float)>();
 		source = GetComponents<AudioSource>()[0];
 	}
@@ -105,9 +108,10 @@ public class BeatGenerator : MonoBehaviour {
 			info.noteInPattern = nextPattern;
 			info.proportionalLocation = beatList[level].noteProportion(nextPattern);
 
-			times.Enqueue((info, lastTimeAdded));
-			onBeatAddedToQueue.Invoke((info, lastTimeAdded));
-
+			if(generateBeats) {
+				times.Enqueue((info, lastTimeAdded));
+				onBeatAddedToQueue.Invoke((info, lastTimeAdded));
+			}
 			nextPattern++;
 			if(nextPattern == beatList[level].pattern.Length) {
 				nextPattern = 0;
@@ -156,6 +160,14 @@ public class BeatGenerator : MonoBehaviour {
 		}
 
 		return true;
+	}
+
+	public void ToggleBeats(bool play) {
+		generateBeats = play;
+
+		if(!play) {
+			times.Clear();
+		}
 	}
 
 	public void PrintBeat(BeatInfo info) {

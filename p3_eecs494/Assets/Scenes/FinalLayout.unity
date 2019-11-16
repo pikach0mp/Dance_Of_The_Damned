@@ -2451,6 +2451,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d34d1f24630542d79bc4f9a93725ef2, type: 3}
+--- !u!114 &1436543916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+    type: 3}
+  m_PrefabInstance: {fileID: 2140023860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b8180c06b64ffbaa0f64b98e6e265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1458013379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 796891918506173026, guid: b182fd8db5f9e49559bf776aa3a08503,
@@ -4319,7 +4331,7 @@ PrefabInstance:
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
@@ -4454,6 +4466,56 @@ PrefabInstance:
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: onBeat.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1436543916}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ToggleBeats
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1239204612}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: ToggleBeats
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onPausePlay.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6904408545989408084, guid: d3c839d041a3f48e89df0143232c8088,

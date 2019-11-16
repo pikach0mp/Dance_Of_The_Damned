@@ -47,6 +47,17 @@ public class BeatIndicatorManager : MonoBehaviour
         StartCoroutine(addToAvailable(missed));
     }
 
+    public void ToggleBeats(bool play) {
+        if(!play) {
+            while(indicatorsInUse.Count > 0) {
+                BeatIndicator indicator = indicatorsInUse.Dequeue();
+                indicator.gameObject.SetActive(false);
+                indicator.Reset();
+                availableIndicators.Push(indicator);
+            }
+        }
+    }
+
     private IEnumerator addToAvailable(BeatIndicator indicator) {
         yield return new WaitForSeconds(2);
         indicator.gameObject.SetActive(false);
