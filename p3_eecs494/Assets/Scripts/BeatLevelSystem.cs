@@ -49,18 +49,18 @@ public class BeatLevelSystem : MonoBehaviour {
 	}
 
 	private void OnUpdated() {
-		// bool resetScore = false;
-		// if(score <= scoreToLevelDown) {
-		// 	resetScore = BeatGenerator.SetLevel(BeatGenerator.GetLevel() - 1);
-		// }
-		// if(streak == streakNeeded) {
-		// 	resetScore = BeatGenerator.SetLevel(BeatGenerator.GetLevel() + 1);
-		// }
-		// if(resetScore) {
-		// 	score = capScore;
-		// 	streak = 0;
-		// } else {
-		// 	score = Mathf.Clamp(score, scoreToLevelDown, capScore);
-		// }
+		bool resetScore = false;
+		if(score <= scoreToLevelDown) {
+			resetScore = BeatGenerator.SetLevel(BeatGenerator.GetLevel() - 1);
+		}
+		if(streak == streakNeeded) {
+			resetScore = BeatGenerator.SetLevel(BeatGenerator.GetLevel() + 1);
+		}
+		if(resetScore) {
+			score = capScore;
+			streak = 0;
+		} else {
+			score = Mathf.Clamp(score, scoreToLevelDown, capScore);
+		}
 	}
 }
