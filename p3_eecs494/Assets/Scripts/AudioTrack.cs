@@ -48,8 +48,6 @@ public class AudioTrack : ScriptableObject
     		BeatInfo info = beats[i].Item2;
     		info.proportionalLocation = (beats[i].Item1 - measureStartT)/(measureEndT - measureStartT);
     		beats[i].Item2 = info;
-
-    		Debug.Log(i+": "+beats[i].Item2.noteInPattern+", "+beats[i].Item2.proportionalLocation);
     	}
 
     	Debug.Assert(i == beats.Length);
