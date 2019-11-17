@@ -74,8 +74,6 @@ public class BeatGenerator : MonoBehaviour {
 			source.PlayScheduled(startTime);
 		}
 
-		Debug.Log(lastTimeAdded);
-
         while (lastTimeAdded < BeatGenerator.GetTime() + lookAheadTime) {
 
 			(float, BeatInfo) next = track.Get(level, nextPattern);

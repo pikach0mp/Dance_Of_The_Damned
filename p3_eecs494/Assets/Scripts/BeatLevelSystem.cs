@@ -3,12 +3,9 @@ using UnityEngine;
 
 public class BeatLevelSystem : MonoBehaviour {
 
-	public int streakNeeded = 20;
-	public int scoreToLevelDown;
-	public int capScore = 0;
-
-	private int score;
-	private int streak;
+	public int healthCap = 30;
+	public int healthNeeded = 20;
+	private int health;
 
 	private bool update;
 
@@ -25,8 +22,7 @@ public class BeatLevelSystem : MonoBehaviour {
 		if(!update) {
 			return;
 		}
-		score++;
-		streak++;
+		health++;
 		OnUpdated();
 	}
 
@@ -34,8 +30,7 @@ public class BeatLevelSystem : MonoBehaviour {
 		if(!update) {
 			return;
 		}
-		score -= 2;
-		streak = 0;
+		health -= 3;
 		OnUpdated();
 	}
 
@@ -43,24 +38,12 @@ public class BeatLevelSystem : MonoBehaviour {
 		if(!update) {
 			return;
 		}
-		score -= 2;
-		streak = 0;
+		health -= 3;
 		OnUpdated();
 	}
 
 	private void OnUpdated() {
-		bool resetScore = false;
-		if(score <= scoreToLevelDown) {
-			resetScore = BeatGenerator.SetLevel(BeatGenerator.GetLevel() - 1);
-		}
-		if(streak == streakNeeded) {
-			resetScore = BeatGenerator.SetLevel(BeatGenerator.GetLevel() + 1);
-		}
-		if(resetScore) {
-			score = capScore;
-			streak = 0;
-		} else {
-			score = Mathf.Clamp(score, scoreToLevelDown, capScore);
-		}
+		BeatGenerator.SetLevel(health >= healthNeeded ? 1 : 0);
+		health = Mathf.Clamp(health, 0, healthCap);
 	}
 }
