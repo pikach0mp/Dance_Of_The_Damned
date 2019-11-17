@@ -12,6 +12,7 @@ public class ChaseEnemy : MonoBehaviour
     public int turnsbeforemoving = 1;
     public Material active;
     public Material not_active;
+    public GameObject Cylinder;
 
     private bool triggered = false;
 
@@ -31,18 +32,18 @@ public class ChaseEnemy : MonoBehaviour
         triggered = onOff;
         if (triggered)
         {
-            GetComponent<Renderer>().material = active;
+            Cylinder.GetComponent<Renderer>().material = active;
         }
         else
         {
-            GetComponent<Renderer>().material = not_active;
+            Cylinder.GetComponent<Renderer>().material = not_active;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material = not_active;
+        Cylinder.GetComponent<Renderer>().material = not_active;
         lastSeen.y = 999;
         audioS = GetComponent<AudioSource>();
         target_pos = transform.position;
@@ -210,6 +211,7 @@ public class ChaseEnemy : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
+            Debug.LogWarning("change from " + target_pos.ToString() + " to " + original_pos.ToString());
             other.gameObject.GetComponent<Health>().update_health(-1);
             target_pos = original_pos;
         }

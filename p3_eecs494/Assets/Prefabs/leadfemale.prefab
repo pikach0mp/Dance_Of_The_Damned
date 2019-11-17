@@ -542,8 +542,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0.7, z: 0}
+  m_Size: {x: 0.5, y: 1.1522783, z: 0.5}
+  m_Center: {x: 0, y: 0.6238609, z: 0}
 --- !u!54 &6101478420304651072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -587,12 +587,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6101478420304651134}
+        m_MethodName: OnBeatHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnBadInput:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6101478420304651134}
+        m_MethodName: OnBadInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnBeatMissed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6101478420304651134}
+        m_MethodName: OnBeatMiss
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6101478420304651074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,6 +657,7 @@ MonoBehaviour:
   health: 3
   healthDisplay: {fileID: 4075978190691944957, guid: fe6e337a8be1bf447934b99bb9ca86ca,
     type: 3}
+  cam: {fileID: 0}
 --- !u!114 &6101478420304651134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,8 +670,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad981993428944ef86c8e5d9e3d8548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streakNeeded: 20
-  scoreToLevelDown: 0
+  streakNeeded: 10
+  scoreToLevelDown: -10
   capScore: 0
 --- !u!1 &6887857324642795117
 GameObject:
