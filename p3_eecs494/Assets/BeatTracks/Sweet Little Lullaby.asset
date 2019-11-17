@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Sweet Little Lullaby
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: 3d7f8d8eb74b5474583b3833cea88fe1, type: 3}
-  beatData: {fileID: 4900000, guid: e874f205f291f485db1302dfec10eae2, type: 3}
+  beatData:
+  - {fileID: 4900000, guid: c7d973d9dca414ac1bef704fd9685209, type: 3}
+  - {fileID: 4900000, guid: e874f205f291f485db1302dfec10eae2, type: 3}

@@ -44,6 +44,8 @@ public class BeatGenerator : MonoBehaviour {
 
     private bool generateBeats;
 
+    private int level;
+
 	public static float GetTime() {
 		return (float)(AudioSettings.dspTime - instance.offset - instance.startTime);
 	}
@@ -56,6 +58,9 @@ public class BeatGenerator : MonoBehaviour {
 		times = new Queue<(BeatInfo, float)>();
 		source = GetComponent<AudioSource>();
 		source.clip = track.audio;
+		level = 0;
+
+		offset = PlayerPrefs.GetFloat("AudioOffset", 0);
 	}
 
 	void Update() {
@@ -69,9 +74,12 @@ public class BeatGenerator : MonoBehaviour {
 			source.PlayScheduled(startTime);
 		}
 
+		Debug.Log(lastTimeAdded);
+
         while (lastTimeAdded < BeatGenerator.GetTime() + lookAheadTime) {
 
-			(float, BeatInfo) next = track.Get(nextPattern);
+			(float, BeatInfo) next = track.Get(level, nextPattern);
+			Debug.Assert(next.Item1 != -1);
 			lastTimeAdded = next.Item1 + track.audio.length * loops;
 
 
@@ -81,7 +89,7 @@ public class BeatGenerator : MonoBehaviour {
 			}
 
 			nextPattern++;
-			if(nextPattern == track.NumBeats()) {
+			if(nextPattern == track.NumBeats(level)) {
 				loops++;
 				nextPattern = 0;
 			}
@@ -92,44 +100,43 @@ public class BeatGenerator : MonoBehaviour {
 		}
 	}
 
-	// public static int GetLevel() {
-	// 	return instance._GetLevel();
-	// }
+	public static void SwitchTrack(AudioTrack track) {
+		instance.source.Stop();
+		instance.running = false;
+		instance.track = track;
 
-	// public static bool SetLevel(int newLevel) {
-	// 	return instance._SetLevel(newLevel);
-	// }
+		// Reset using a toggle off and on
+		ToggleBeatSystem(false);
+		ToggleBeatSystem(true);
+	}
 
-	// private int _GetLevel() {
-	// 	return level;
-	// }
+	public static int GetLevel() {
+		return instance._GetLevel();
+	}
+
+	public static bool SetLevel(int newLevel) {
+		return instance._SetLevel(newLevel);
+	}
+
+	private int _GetLevel() {
+		return level;
+	}
+
+	private bool _SetLevel(int newLevel) {
+		if(newLevel < 0 || newLevel >= track.NumLevels() || newLevel == level) {
+			return false;
+		}
+
+
+		level = newLevel;
+		nextPattern = track.FindNextBeat(level, lastTimeAdded % track.audio.length);
+
+		return true;
+	}
 
 	public static void ToggleBeatSystem(bool play) {
 		instance.onPausePlay.Invoke(play);
 	}
-
-	// private bool _SetLevel(int newLevel) {
-	// 	if(newLevel < 0 || newLevel >= beatList.Length) {
-	// 		return false;
-	// 	}
-
-	// 	level = newLevel;
-
-	// 	float time = lastTimeAdded % beatList[level].getLength();
-	// 	float totalTime = 0;
-
-	// 	nextPattern = 0;
-
-	// 	for(int i = 0; i<beatList[level].pattern.Length; ++i) {			
-	// 		if(totalTime >= time || Mathf.Abs(totalTime-time)< 1e-2) {
-	// 			nextPattern = i;
-	// 			break;
-	// 		}
-	// 		totalTime += beatList[level].pattern[i];
-	// 	}
-
-	// 	return true;
-	// }
 
 	public void ToggleBeats(bool play) {
 		generateBeats = play;
