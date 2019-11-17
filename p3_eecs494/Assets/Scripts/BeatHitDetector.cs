@@ -46,9 +46,7 @@ public class BeatHitDetector : MonoBehaviour {
 		// Prevents spamming
 		if(!lastHitResolved) {
 			OnBadInput.Invoke(lastHit.Item1);
-		}
-
-		if(lastBeatAvailable) {
+		} else if(lastBeatAvailable) {
 			lastBeatAvailable = false;
 
 			OnBeatHit.Invoke((buttonPress, lastBeat.Item1));
