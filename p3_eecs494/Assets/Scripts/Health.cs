@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public int health;
     public GameObject healthDisplay;
+    public GameObject cam;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class Health : MonoBehaviour
 
     public void update_health(int change)
     {
+        //cam.GetComponent<TakeDamageVisual>().TriggerShake();
         health += change;
         setDisplay();
     }

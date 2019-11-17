@@ -12,6 +12,7 @@ public class ChaseEnemy : MonoBehaviour
     public int turnsbeforemoving = 1;
     public Material active;
     public Material not_active;
+    public GameObject Cylinder;
 
     private bool triggered = false;
 
@@ -22,7 +23,6 @@ public class ChaseEnemy : MonoBehaviour
     private Vector3 original_pos;
     private Vector3 target_pos;
 
-    private bool chasing;
     private Vector3 lastSeen;
     private bool patroling;
 
@@ -31,18 +31,18 @@ public class ChaseEnemy : MonoBehaviour
         triggered = onOff;
         if (triggered)
         {
-            GetComponent<Renderer>().material = active;
+            Cylinder.GetComponent<Renderer>().material = active;
         }
         else
         {
-            GetComponent<Renderer>().material = not_active;
+            Cylinder.GetComponent<Renderer>().material = not_active;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material = not_active;
+        Cylinder.GetComponent<Renderer>().material = not_active;
         lastSeen.y = 999;
         audioS = GetComponent<AudioSource>();
         target_pos = transform.position;
@@ -65,7 +65,6 @@ public class ChaseEnemy : MonoBehaviour
             if (look_for_player())
             {
                 patroling = false;
-                chasing = true;
                 lastSeen = target.transform.position;
 
                 set_direction();
@@ -73,7 +72,6 @@ public class ChaseEnemy : MonoBehaviour
             //did not see player
             else
             {
-                chasing = false;
                 //go to last seen place if previously was chasing
                 if (lastSeen.y!=999)
                 {
@@ -90,6 +88,7 @@ public class ChaseEnemy : MonoBehaviour
     }
     public void OnBeatMissed(BeatInfo info)
     {
+        Debug.LogWarning("Missed: " + info.noteInPattern.ToString());
         if (info.noteInPattern != 0 && info.noteInPattern != 2)
         {
             return;
@@ -115,7 +114,8 @@ public class ChaseEnemy : MonoBehaviour
 
     public void OnBeatHit((ButtonPress, BeatInfo) info)
     {
-        if(info.Item2.noteInPattern != 0 && info.Item2.noteInPattern != 2)
+        Debug.LogWarning(info.Item2.noteInPattern);
+        if (info.Item2.noteInPattern != 0 && info.Item2.noteInPattern != 2)
         {
             return;
         }
@@ -210,6 +210,7 @@ public class ChaseEnemy : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
+            Debug.LogWarning("change from " + target_pos.ToString() + " to " + original_pos.ToString());
             other.gameObject.GetComponent<Health>().update_health(-1);
             target_pos = original_pos;
         }
