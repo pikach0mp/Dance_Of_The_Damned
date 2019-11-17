@@ -23,7 +23,6 @@ public class ChaseEnemy : MonoBehaviour
     private Vector3 original_pos;
     private Vector3 target_pos;
 
-    private bool chasing;
     private Vector3 lastSeen;
     private bool patroling;
 
@@ -66,7 +65,6 @@ public class ChaseEnemy : MonoBehaviour
             if (look_for_player())
             {
                 patroling = false;
-                chasing = true;
                 lastSeen = target.transform.position;
 
                 set_direction();
@@ -74,7 +72,6 @@ public class ChaseEnemy : MonoBehaviour
             //did not see player
             else
             {
-                chasing = false;
                 //go to last seen place if previously was chasing
                 if (lastSeen.y!=999)
                 {
@@ -91,6 +88,7 @@ public class ChaseEnemy : MonoBehaviour
     }
     public void OnBeatMissed(BeatInfo info)
     {
+        Debug.LogWarning("Missed: " + info.noteInPattern.ToString());
         if (info.noteInPattern != 0 && info.noteInPattern != 2)
         {
             return;
@@ -116,7 +114,8 @@ public class ChaseEnemy : MonoBehaviour
 
     public void OnBeatHit((ButtonPress, BeatInfo) info)
     {
-        if(info.Item2.noteInPattern != 0 && info.Item2.noteInPattern != 2)
+        Debug.LogWarning(info.Item2.noteInPattern);
+        if (info.Item2.noteInPattern != 0 && info.Item2.noteInPattern != 2)
         {
             return;
         }
