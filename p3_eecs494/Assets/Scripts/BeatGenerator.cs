@@ -127,7 +127,7 @@ public class BeatGenerator : MonoBehaviour {
 
 
 		level = newLevel;
-		nextPattern = track.FindNextBeat(level, lastTimeAdded % track.audio.length);
+		nextPattern = track.FindNextBeat(level, (lastTimeAdded + 0.3F) % track.audio.length);
 
 		return true;
 	}
