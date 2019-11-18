@@ -26,19 +26,23 @@ public class LevelTransitions : MonoBehaviour
         switch (level)
         {
             case 1:
-                door1.SetActive(true);
                 Level2.SetActive(true);
 
                 GetComponent<Animator>().SetTrigger("Level1Transition");
                 yield return new WaitForSeconds(6.5f);
 
                 door2.GetComponent<DoorController>().OpenDoor();
+                door1.SetActive(true);
                 break;
 
             case 2:
                 Level3.SetActive(true);
+
                 GetComponent<Animator>().SetTrigger("Level2Transition");
-                yield return new WaitForSeconds(6f);
+                yield return new WaitForSeconds(12.75f);
+
+                door3.GetComponent<DoorController>().OpenDoor();
+                door2.SetActive(true);
                 break;
             default:
                 yield return 0;
