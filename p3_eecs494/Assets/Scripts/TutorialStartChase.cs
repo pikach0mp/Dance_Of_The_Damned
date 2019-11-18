@@ -29,7 +29,7 @@ public class TutorialStartChase : MonoBehaviour
             //Cut Scene
             Camera.SetActive(true);
 
-            GetComponent<Animator>().SetTrigger("Level1Transition");
+            Camera.GetComponent<Animator>().SetTrigger("triggered");
             StartCoroutine(WaitForLookingAtDoor());
 
             door.GetComponent<DoorController>().OpenDoor();
