@@ -14,6 +14,8 @@ public class TutorialStartChase : MonoBehaviour
     IEnumerator WaitForLookingAtDoor()
     {
         yield return new WaitForSeconds(4f);
+        door.GetComponent<DoorController>().OpenDoor();
+        door.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,8 +34,6 @@ public class TutorialStartChase : MonoBehaviour
             Camera.GetComponent<Animator>().SetTrigger("triggered");
             StartCoroutine(WaitForLookingAtDoor());
 
-            door.GetComponent<DoorController>().OpenDoor();
-            door.SetActive(true);
 
             //nextDoor.GetComponent<DoorController>().OpenDoor();
 
