@@ -14,7 +14,7 @@ public class ChaseEnemy : MonoBehaviour
     public Material not_active;
     public GameObject Cylinder;
 
-    private bool triggered = false;
+    public bool triggered = false;
 
     private AudioSource audioS;
     private int turnCount;
