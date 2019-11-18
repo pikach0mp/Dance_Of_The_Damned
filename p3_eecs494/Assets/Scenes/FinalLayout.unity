@@ -958,6 +958,7 @@ MonoBehaviour:
   Level2: {fileID: 1855683358}
   Level3: {fileID: 200220268}
   player: {fileID: 1740336059}
+  isTutorial: 0
 --- !u!1 &335464290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3227,6 +3228,11 @@ PrefabInstance:
       propertyPath: layerMask.m_Bits
       value: 790
       objectReference: {fileID: 0}
+    - target: {fileID: 6101478420304651074, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: canv
+      value: 
+      objectReference: {fileID: 1239204613}
     - target: {fileID: 7131335193544003927, guid: 91ab5ff751f210842812d66420915a0f,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     private Vector2 moveDir;
     public LayerMask layerMask;
     private Controls controls;
+    public GameObject canv;
 
     private bool update;
 
@@ -48,10 +49,17 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         this.update = update;
     }
 
+    IEnumerator WaitForFadeOut()
+    {
+        yield return new WaitForSeconds(3f);
+    }
     void Update()
     {
         if (GetComponent<Health>().dead())
         {
+            Animator anim = canv.GetComponent<Animator>();
+            anim.SetTrigger("Die");
+            StartCoroutine(WaitForFadeOut());
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, Time.deltaTime * 18);

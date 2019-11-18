@@ -13,7 +13,6 @@ public class BeginChase : MonoBehaviour
     private LevelTransitions transitions;
     public int level = 1;
     private bool first = true;
-    public bool isTutorial; 
 
     private void Start()
     {
@@ -33,11 +32,6 @@ public class BeginChase : MonoBehaviour
 
             //Cut Scene
             Camera.SetActive(true);
-            if (isTutorial)
-            {
-
-            }
-
             StartCoroutine(transitions.TransitionFrom(level));
             //nextDoor.GetComponent<DoorController>().OpenDoor();
 
