@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class SyncManager : MonoBehaviour {
     public float sync_bpm;
@@ -24,7 +25,9 @@ public class SyncManager : MonoBehaviour {
         float t = (float)(AudioSettings.dspTime - startTime);
         float freq = 60/sync_bpm;
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        Gamepad gp = Gamepad.current;
+
+        if(Input.GetKeyDown(KeyCode.Space) || (gp!=null && gp.buttonSouth.wasPressedThisFrame)) {
             float offset = t % freq;
             if(offset > freq*9/10) {
                 offset -= freq;
