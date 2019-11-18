@@ -52,6 +52,11 @@ public class AudioTrack : ScriptableObject
         }
     }
 
+    private void Awake()
+    {
+        OnValidate();
+    }
+
     public int FindNextBeat(int level, float time) {
         for(int i=0; i<beats[level].Length; ++i) {
             if(beats[level][i].Item1 > time) {
@@ -63,9 +68,8 @@ public class AudioTrack : ScriptableObject
 
     public (float, BeatInfo) Get(int level, int i) {
         if (level >= beats.Length || level < 0 || i >= beats[level].Length || i < 0) {
-            Debug.Log("returning from here");
-            //return (-1,new BeatInfo{});
-    	}
+            return (-1, new BeatInfo { });
+        }
     	return beats[level][i];
     }
 
