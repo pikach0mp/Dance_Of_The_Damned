@@ -88,7 +88,8 @@ public class ChaseEnemy : MonoBehaviour
     }
     public void OnBeatMissed(BeatInfo info)
     {
-        if (info.noteInPattern != 0 && info.noteInPattern != 2)
+        //Debug.LogWarning(info.noteInPattern);
+        if (info.noteInPattern != 1)
         {
             return;
         }
