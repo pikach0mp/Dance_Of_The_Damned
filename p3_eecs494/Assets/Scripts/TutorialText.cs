@@ -5,28 +5,25 @@ using UnityEngine.UI;
 
 public class TutorialText : MonoBehaviour
 {
-    public GameObject directionTextObject;
-    Text directionText;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject can;
+    public Text directions;
+
+    private void Start()
     {
-        directionText = directionTextObject.GetComponent<Text>();
-        directionText.text = "";
+        BeatGenerator.ToggleBeatSystem(false);
+        can.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisplayTextComplete()
     {
-        
+        can.SetActive(true);
+        BeatGenerator.ToggleBeatSystem(true);
     }
 
-    public void DisplayText(string directions)
+
+    public void ChangeText(string text)
     {
-        directionText.text = directions;
+        directions.text = text;
     }
 
-    public void ClearText()
-    {
-        directionText.text = "";
-    }
 }
