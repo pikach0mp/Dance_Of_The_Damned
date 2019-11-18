@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 //create 
 public class EndGoal : MonoBehaviour
 {
-    public BeatGenerator beatGenerator;
     public GameObject Canvas;
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("in here");
         //press r to restart game
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -24,17 +24,16 @@ public class EndGoal : MonoBehaviour
     {
         if(other.transform.gameObject.tag == "Player")
         {
-            Debug.Log("ending game");
-            StartCoroutine(CompleteGame());
             BeatGenerator.ToggleBeatSystem(false);
+            StartCoroutine(CompleteGame());
         }
     }
 
     private IEnumerator CompleteGame()
     {
         Animator anim = Canvas.GetComponent<Animator>();
-        anim.SetTrigger("EndGame");
-        yield return new WaitForSeconds(5.0f);
+        anim.Play("EndGame");
+        yield return new WaitForSeconds(12.5f);
         SceneManager.LoadScene("MainMenu");
     }
 

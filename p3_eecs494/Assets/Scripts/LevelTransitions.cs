@@ -42,11 +42,11 @@ public class LevelTransitions : MonoBehaviour
                 Level3.SetActive(true);
 
                 GetComponent<Animator>().SetTrigger("Level2Transition");
-                yield return new WaitForSeconds(12.75f);
+                yield return new WaitForSeconds(10.5f);
 
                 door3.GetComponent<DoorController>().OpenDoor();
                 door2.SetActive(true);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(5f);
                 door3.SetActive(true);
 
                 break;

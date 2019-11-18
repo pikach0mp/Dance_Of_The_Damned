@@ -29,7 +29,9 @@ public class DoorController : MonoBehaviour
             target_pos.y = 1.25f;
             isLerp = true;
             other.gameObject.GetComponent<Health>().ResetHealth();
+            gameObject.layer = 8;
             StopLevel.SetActive(false);
+
             //AudioSource.PlayClipAtPoint();
         }
     }
@@ -38,6 +40,7 @@ public class DoorController : MonoBehaviour
     {
         isLerp = false;
         target_pos.y = 3.75f;
+        gameObject.layer = 0;
         StartCoroutine(MoveToPosition());
      }
 

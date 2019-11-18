@@ -52,15 +52,17 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     IEnumerator WaitForFadeOut()
     {
         yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
     void Update()
     {
         if (GetComponent<Health>().dead())
         {
+            BeatGenerator.ToggleBeatSystem(false);
             Animator anim = canv.GetComponent<Animator>();
             anim.SetTrigger("Die");
             StartCoroutine(WaitForFadeOut());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, Time.deltaTime * 18);
         transform.position = Vector3.Lerp(transform.position, target_pos, Time.deltaTime * 15);
