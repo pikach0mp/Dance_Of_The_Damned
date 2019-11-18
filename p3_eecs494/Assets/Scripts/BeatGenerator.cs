@@ -34,7 +34,7 @@ public class BeatGenerator : MonoBehaviour {
 
 	private Queue<(BeatInfo, float)> times;
 	private float lastTimeAdded;
-	private int nextPattern;
+	private int nextPattern = 0;
 
     private static BeatGenerator instance; 
 
@@ -42,9 +42,9 @@ public class BeatGenerator : MonoBehaviour {
     private bool running;
     private float prevClipTime;
 
-    private bool generateBeats;
+    private int level = 0;
 
-    private int level;
+    private bool generateBeats;
 
 	public static float GetTime() {
 		return (float)(AudioSettings.dspTime - instance.offset - instance.startTime);
@@ -52,6 +52,8 @@ public class BeatGenerator : MonoBehaviour {
 
 	void Awake()
     {
+        Debug.Log("here");
+
         instance = this;
         running = false;
         generateBeats = true;
@@ -78,8 +80,8 @@ public class BeatGenerator : MonoBehaviour {
 
 			(float, BeatInfo) next = track.Get(level, nextPattern);
 			Debug.Assert(next.Item1 != -1);
-			lastTimeAdded = next.Item1 + track.audio.length * loops;
 
+			lastTimeAdded = next.Item1 + track.audio.length * loops;
 
 			if(generateBeats) {
 				times.Enqueue((next.Item2, lastTimeAdded));

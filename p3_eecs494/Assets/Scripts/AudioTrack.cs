@@ -62,8 +62,9 @@ public class AudioTrack : ScriptableObject
     }
 
     public (float, BeatInfo) Get(int level, int i) {
-    	if (level >= beats.Length || level < 0 || i >= beats[level].Length || i < 0) {
-    		return (-1,new BeatInfo{});
+        if (level >= beats.Length || level < 0 || i >= beats[level].Length || i < 0) {
+            Debug.Log("returning from here");
+            //return (-1,new BeatInfo{});
     	}
     	return beats[level][i];
     }
