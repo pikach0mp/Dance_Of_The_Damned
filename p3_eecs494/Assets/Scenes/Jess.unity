@@ -674,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912f4a2ca2d734c868a1b3e8838e831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopLevel: {fileID: 0}
 --- !u!65 &414201978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2175,6 +2176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912f4a2ca2d734c868a1b3e8838e831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopLevel: {fileID: 0}
 --- !u!65 &1024497803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2964,6 +2966,56 @@ PrefabInstance:
       propertyPath: triggered
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1962007941073110778, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962007941073110778, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962007941073110778, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: Priority
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962007941073110778, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962007941073110778, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 31.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749850262922391697, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 4.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749850262922391697, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749850262922391697, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749850262922391697, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: Priority
+      value: 187
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749850262922391697, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cf9462d2f4013429b72672cbfca31b, type: 3}
 --- !u!1001 &1342776634
@@ -3306,6 +3358,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c747c0adda934b7880a1b7d4f0e0878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door1: {fileID: 0}
+  door2: {fileID: 0}
+  door3: {fileID: 0}
+  Level1: {fileID: 0}
+  Level2: {fileID: 0}
+  Level3: {fileID: 0}
   player: {fileID: 117217869}
 --- !u!95 &1453809464
 Animator:
@@ -4106,6 +4164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912f4a2ca2d734c868a1b3e8838e831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopLevel: {fileID: 0}
 --- !u!65 &1854518461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4471,7 +4530,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 440961482}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
