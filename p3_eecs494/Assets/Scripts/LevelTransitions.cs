@@ -12,13 +12,15 @@ public class LevelTransitions : MonoBehaviour
     public GameObject Level2;
     public GameObject Level3;
 
+    public GameObject player;
+
     private Animator anim;
 	private Vector3 target_pos;
 
+
     void Start()
     {
-        //transform.position = player.transform.position;
-        //transform.position.y += 1;
+        transform.position = player.transform.position;
     }
 	
     public IEnumerator TransitionFrom(int level)
@@ -49,6 +51,9 @@ public class LevelTransitions : MonoBehaviour
                 break;
         }
     }
+
+
+
 
     public void OnDisable()
     {

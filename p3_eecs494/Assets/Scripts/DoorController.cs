@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject StopLevel;
     private bool isLerp;
     Vector3 target_pos;
 
@@ -29,6 +29,7 @@ public class DoorController : MonoBehaviour
             target_pos.y = 1.25f;
             isLerp = true;
             other.gameObject.GetComponent<Health>().ResetHealth();
+            StopLevel.SetActive(false);
             //AudioSource.PlayClipAtPoint();
         }
     }
