@@ -120,6 +120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: heart (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3584171694584642477, guid: b1d2245344f51134e9f66cba115f05f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7216776481219900659, guid: b1d2245344f51134e9f66cba115f05f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -194,6 +199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584171694584642477, guid: b1d2245344f51134e9f66cba115f05f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7216776481219900659, guid: b1d2245344f51134e9f66cba115f05f7,
         type: 3}

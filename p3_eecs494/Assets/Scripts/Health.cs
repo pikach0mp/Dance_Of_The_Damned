@@ -16,9 +16,14 @@ public class Health : MonoBehaviour
 
     public void update_health(int change)
     {
-        //cam.GetComponent<TakeDamageVisual>().TriggerShake();
+        cam.GetComponent<TakeDamageVisual>().TriggerShake();
         health += change;
         setDisplay();
+    }
+
+    public void ResetHealth()
+    {
+        health = 3;
     }
 
     public int get_health()

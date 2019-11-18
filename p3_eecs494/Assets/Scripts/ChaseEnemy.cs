@@ -14,7 +14,7 @@ public class ChaseEnemy : MonoBehaviour
     public Material not_active;
     public GameObject Cylinder;
 
-    private bool triggered = false;
+    public bool triggered = false;
 
     private AudioSource audioS;
     private int turnCount;
@@ -88,8 +88,8 @@ public class ChaseEnemy : MonoBehaviour
     }
     public void OnBeatMissed(BeatInfo info)
     {
-        Debug.LogWarning("Missed: " + info.noteInPattern.ToString());
-        if (info.noteInPattern != 0 && info.noteInPattern != 2)
+        //Debug.LogWarning(info.noteInPattern);
+        if (info.noteInPattern != 1)
         {
             return;
         }
@@ -114,7 +114,6 @@ public class ChaseEnemy : MonoBehaviour
 
     public void OnBeatHit((ButtonPress, BeatInfo) info)
     {
-        Debug.LogWarning(info.Item2.noteInPattern);
         if (info.Item2.noteInPattern != 0 && info.Item2.noteInPattern != 2)
         {
             return;
@@ -210,7 +209,6 @@ public class ChaseEnemy : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            Debug.LogWarning("change from " + target_pos.ToString() + " to " + original_pos.ToString());
             other.gameObject.GetComponent<Health>().update_health(-1);
             target_pos = original_pos;
         }

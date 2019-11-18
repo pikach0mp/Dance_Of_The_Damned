@@ -4,32 +4,56 @@ using UnityEngine;
 
 public class LevelTransitions : MonoBehaviour
 {
-	public GameObject player;
-	private Animator anim;
+    public GameObject door1;
+    public GameObject door2;
+    public GameObject door3;
 
+    public GameObject Level1;
+    public GameObject Level2;
+    public GameObject Level3;
+
+    public GameObject player;
+
+    private Animator anim;
 	private Vector3 target_pos;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        //transform.position = player.transform.position;
-        //transform.position.y += 1;
-	}
+        transform.position = player.transform.position;
+    }
 	
-    public void TransitionFrom(int level)
+    public IEnumerator TransitionFrom(int level)
     {
         switch (level)
         {
             case 1:
+                Level2.SetActive(true);
+
                 GetComponent<Animator>().SetTrigger("Level1Transition");
+                yield return new WaitForSeconds(6.5f);
+
+                door2.GetComponent<DoorController>().OpenDoor();
+                door1.SetActive(true);
                 break;
+
             case 2:
+                Level3.SetActive(true);
+
                 GetComponent<Animator>().SetTrigger("Level2Transition");
+                yield return new WaitForSeconds(12.75f);
+
+                door3.GetComponent<DoorController>().OpenDoor();
+                door2.SetActive(true);
                 break;
             default:
+                yield return 0;
                 break;
         }
     }
+
+
+
 
     public void OnDisable()
     {
