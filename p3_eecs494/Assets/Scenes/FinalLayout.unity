@@ -857,6 +857,7 @@ MonoBehaviour:
   Level1: {fileID: 993913283}
   Level2: {fileID: 1855683358}
   Level3: {fileID: 200220268}
+  player: {fileID: 0}
 --- !u!1 &335464290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,7 +2093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912f4a2ca2d734c868a1b3e8838e831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  StopLevel: {fileID: 0}
 --- !u!65 &945786814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2895,7 +2896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912f4a2ca2d734c868a1b3e8838e831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  StopLevel: {fileID: 0}
 --- !u!65 &1086973327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4951,7 +4952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1725915993}
   nextDoor: {fileID: 1086973325}
-  Camera: {fileID: 0}
+  Camera: {fileID: 322326176}
   chaseEnemies:
   - {fileID: 1194825749}
   TimeB4Enemy: 14
@@ -5174,7 +5175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 945786812}
   nextDoor: {fileID: 1725915993}
-  Camera: {fileID: 0}
+  Camera: {fileID: 322326176}
   chaseEnemies:
   - {fileID: 1352052256}
   TimeB4Enemy: 1
@@ -5270,7 +5271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912f4a2ca2d734c868a1b3e8838e831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  StopLevel: {fileID: 0}
 --- !u!65 &1725915995
 BoxCollider:
   m_ObjectHideFlags: 0
