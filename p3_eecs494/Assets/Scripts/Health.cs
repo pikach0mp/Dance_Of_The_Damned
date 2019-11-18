@@ -21,6 +21,11 @@ public class Health : MonoBehaviour
         setDisplay();
     }
 
+    public void ResetHealth()
+    {
+        health = 3;
+    }
+
     public int get_health()
     {
         return health;

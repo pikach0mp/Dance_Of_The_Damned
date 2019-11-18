@@ -28,13 +28,12 @@ public class BeginChase : MonoBehaviour
             // PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
             // movement.OnDisable();
             BeatGenerator.ToggleBeatSystem(false);
-
             door.SetActive(true);
 
             //Cut Scene
             Camera.SetActive(true);
-            transitions.TransitionFrom(level);
-            nextDoor.GetComponent<DoorController>().OpenDoor();
+            StartCoroutine(transitions.TransitionFrom(level));
+            //nextDoor.GetComponent<DoorController>().OpenDoor();
 
             //Re - Enable Player Controls
             // movement.OnEnable();
