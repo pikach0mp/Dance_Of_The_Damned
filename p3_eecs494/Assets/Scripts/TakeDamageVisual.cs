@@ -11,10 +11,10 @@ public class TakeDamageVisual : MonoBehaviour
     private float shakeDuration = 0f;
 
     // A measure of magnitude for the shake. Tweak based on your preference
-    private float shakeMagnitude = 0.7f;
+    private float shakeMagnitude = 0.1f;
 
     // A measure of how quickly the shake effect should evaporate
-    private float dampingSpeed = 1.0f;
+    private float dampingSpeed = 0.5f;
 
     // The initial position of the GameObject
     Vector3 initialPosition;
@@ -29,7 +29,7 @@ public class TakeDamageVisual : MonoBehaviour
 
     public void TriggerShake()
     {
-        shakeDuration = 2.0f;
+        shakeDuration = 0.3f;
     }
 
     // Update is called once per frame
