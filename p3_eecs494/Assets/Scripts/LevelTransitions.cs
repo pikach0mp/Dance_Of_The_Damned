@@ -16,6 +16,7 @@ public class LevelTransitions : MonoBehaviour
 
     private Animator anim;
 	private Vector3 target_pos;
+    public bool isTutorial;
 
 
     void Start()
@@ -45,15 +46,15 @@ public class LevelTransitions : MonoBehaviour
 
                 door3.GetComponent<DoorController>().OpenDoor();
                 door2.SetActive(true);
+                yield return new WaitForSeconds(2f);
+                door3.SetActive(true);
+
                 break;
             default:
                 yield return 0;
                 break;
         }
     }
-
-
-
 
     public void OnDisable()
     {
