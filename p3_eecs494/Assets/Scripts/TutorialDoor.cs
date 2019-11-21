@@ -24,6 +24,7 @@ public class TutorialDoor : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -31,9 +32,8 @@ public class TutorialDoor : MonoBehaviour
             target_pos.y = 1.25f;
             isLerp = true;
             other.gameObject.GetComponent<Health>().ResetHealth();
-            canv.GetComponent<Animator>().SetTrigger("Die");
+
             SceneManager.LoadScene("FinalLayout");
-            //AudioSource.PlayClipAtPoint();
         }
     }
 

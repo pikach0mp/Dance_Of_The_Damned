@@ -12,25 +12,20 @@ public class TutorialStartChase : MonoBehaviour
 
     private bool first = true;
 
-    IEnumerator WaitForDirections()
+    IEnumerator PerformCutScene()
     {
-        yield return new WaitForSeconds(8f);
         //Cut Scene
         Camera.SetActive(true);
 
         Camera.GetComponent<Animator>().SetTrigger("triggered");
-        StartCoroutine(WaitForLookingAtDoor());
-    }
 
-    IEnumerator WaitForLookingAtDoor()
-    {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         door.GetComponent<TutorialDoor>().OpenDoor();
         door.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
         Camera.SetActive(false);
-        StartCoroutine(startEnemies());
+        StartCoroutine(StartEnemies());
         BeatGenerator.ToggleBeatSystem(true);
     }
 
@@ -41,15 +36,12 @@ public class TutorialStartChase : MonoBehaviour
             first = false;
             canv.GetComponent<Animator>().SetTrigger("StartCutScene");
 
-            // Disable Player Controls
-            // PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
-            // movement.OnDisable();
             BeatGenerator.ToggleBeatSystem(false);
-            StartCoroutine(WaitForDirections());
+            StartCoroutine(PerformCutScene());
         }
     }
 
-    IEnumerator startEnemies()
+    IEnumerator StartEnemies()
     {
         yield return new WaitForSeconds(TimeB4Enemy);
         foreach (var enemy in chaseEnemies)
