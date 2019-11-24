@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(BeatAnimations))]
 public class BeatIndicator : MonoBehaviour
 {
-    public float speed = 3;
+    public float timeOnScreen = 3;
 
     private float hitTime;
     private RectTransform targetTransform;
@@ -36,7 +36,7 @@ public class BeatIndicator : MonoBehaviour
     }
 
     public void UpdatePos () {
-        trans.position = targetTransform.position + (hitTime - BeatGenerator.GetTime()) * Vector3.right * speed; 
+        trans.position = targetTransform.position +  Vector3.right * (Screen.width/2) / timeOnScreen * (hitTime - BeatGenerator.GetTime()); 
     }
 
     public void Hit() {

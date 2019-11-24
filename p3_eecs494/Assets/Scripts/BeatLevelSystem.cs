@@ -4,7 +4,7 @@ using UnityEngine;
 public class BeatLevelSystem : MonoBehaviour {
 
 	public int healthCap = 30;
-	public int healthNeeded = 20;
+	public int healthNeeded = 15;
 	private int health;
 	private bool update;
 
@@ -26,7 +26,7 @@ public class BeatLevelSystem : MonoBehaviour {
 		if(!update) {
 			return;
 		}
-		health++;
+		health += 2;
 		OnUpdated();
 	}
 
@@ -34,7 +34,7 @@ public class BeatLevelSystem : MonoBehaviour {
 		if(!update) {
 			return;
 		}
-		health -= 3;
+		health -= 2;
 		OnUpdated();
 	}
 
@@ -42,7 +42,7 @@ public class BeatLevelSystem : MonoBehaviour {
 		if(!update) {
 			return;
 		}
-		health -= 3;
+		health -= 2;
 		OnUpdated();
 	}
 

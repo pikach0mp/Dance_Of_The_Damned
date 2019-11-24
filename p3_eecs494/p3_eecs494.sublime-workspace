@@ -4,6 +4,122 @@
 		"selected_items":
 		[
 			[
+				"prs",
+				"wasPressedThisFrame\tbool"
+			],
+			[
+				"bu",
+				"buttonSouth\tButtonControl"
+			],
+			[
+				"InputS",
+				"InputSystem\tInputSystem"
+			],
+			[
+				"u",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"Ve",
+				"Vector2\tVector2"
+			],
+			[
+				"Lerp",
+				"LerpUnclamped(float a, float b, float t)\tfloat"
+			],
+			[
+				"heal",
+				"healthCap\tint"
+			],
+			[
+				"tr",
+				"track_num\tint"
+			],
+			[
+				"be",
+				"beats\t(float, BeatInfo)[][]"
+			],
+			[
+				"beat",
+				"beatData\tTextAsset[]"
+			],
+			[
+				"Get",
+				"GetFloat(string key, float defaultValue)\tfloat"
+			],
+			[
+				"St",
+				"SetFloat(string key, float value)\tvoid"
+			],
+			[
+				"var",
+				"variance\tfloat"
+			],
+			[
+				"GetK",
+				"GetKeyDown(string name)\tbool"
+			],
+			[
+				"of",
+				"offMaterial\tMaterial"
+			],
+			[
+				"Audios",
+				"AudioSource\tAudioSource"
+			],
+			[
+				"Si",
+				"Sin(float f)\tfloat"
+			],
+			[
+				"Pl",
+				"PlayScheduled(double time)\tvoid"
+			],
+			[
+				"Aui",
+				"AudioClip\tAudioClip"
+			],
+			[
+				"meas",
+				"measureStartT\tfloat"
+			],
+			[
+				"it",
+				"Item2\tBeatInfo"
+			],
+			[
+				"i",
+				"Item1\tfloat"
+			],
+			[
+				"mea",
+				"measureStartN\tint"
+			],
+			[
+				"I",
+				"Item1\tfloat"
+			],
+			[
+				"p",
+				"Push(BeatIndicator item)\tvoid"
+			],
+			[
+				"indi",
+				"indicator\tBeatIndicator"
+			],
+			[
+				"ind",
+				"indicator\tBeatIndicator"
+			],
+			[
+				"c",
+				"Count\tint"
+			],
+			[
+				"indic",
+				"indicatorsInUse\tQueue<BeatIndicator>"
+			],
+			[
 				"Draw",
 				"DrawRay(Vector3 start, Vector3 dir)\tvoid"
 			],
@@ -28,16 +144,8 @@
 				"BeatInfo\tBeatInfo"
 			],
 			[
-				"Get",
-				"getLength()\tfloat"
-			],
-			[
 				"M",
 				"MoveDir\tInputAction"
-			],
-			[
-				"Ve",
-				"Vector3\tVector3"
 			],
 			[
 				"Vec",
@@ -92,10 +200,6 @@
 				"Push(BeatIndicator item)\tvoid"
 			],
 			[
-				"indi",
-				"indicatorsInUse\tQueue<GameObject>"
-			],
-			[
 				"hi",
 				"hitTime\tfloat"
 			],
@@ -136,10 +240,6 @@
 				"lastBeat\t(BeatInfo, float)"
 			],
 			[
-				"it",
-				"Item2\tfloat"
-			],
-			[
 				"las",
 				"lastBeat\t(BeatInfo, float)"
 			],
@@ -158,10 +258,6 @@
 			[
 				"Ang",
 				"AngleAxis(float angle, Vector3 axis)\tQuaternion"
-			],
-			[
-				"GetK",
-				"GetKey(KeyCode key)\tbool"
 			],
 			[
 				"Requ",
@@ -308,10 +404,6 @@
 				"collision\tCollision"
 			],
 			[
-				"Pl",
-				"Play()\tvoid"
-			],
-			[
 				"AudiSo",
 				"AudioSource\tAudioSource"
 			],
@@ -422,134 +514,16 @@
 			[
 				"gra",
 				"grabbed\tbool"
-			],
-			[
-				"gr",
-				"gravity\tVector3"
-			],
-			[
-				"L",
-				"LookRotation(Vector3 forward)\tQuaternion"
-			],
-			[
-				"e",
-				"Enable()\tvoid"
-			],
-			[
-				"I",
-				"IPlayerActions\tIPlayerActions"
-			],
-			[
-				"Ign",
-				"IgnoreCollision(Collider collider1, Collider collider2, bool ignore)\tvoid"
-			],
-			[
-				"Uni",
-				"UnityEngine\tUnityEngine"
-			],
-			[
-				"GetScene",
-				"GetSceneByPath(string scenePath)\tScene"
-			],
-			[
-				"Scene",
-				"SceneManager\tSceneManager"
-			],
-			[
-				"Scen",
-				"SceneManager\tSceneManager"
-			],
-			[
-				"LoadS",
-				"LoadScene(int sceneBuildIndex)\tvoid"
-			],
-			[
-				"s",
-				"SetActive(bool value)\tvoid"
-			],
-			[
-				"Loa",
-				"LoadScene(int sceneBuildIndex)\tvoid"
-			],
-			[
-				"Sc",
-				"SceneManagement\tSceneManagement"
-			],
-			[
-				"GetComp",
-				"GetComponent<T>()\tT"
-			],
-			[
-				"lo",
-				"localScale\tVector3"
-			],
-			[
-				"IEnum",
-				"IEnumerator\tIEnumerator"
-			],
-			[
-				"GetC",
-				"GetComponent<T>()\tT"
-			],
-			[
-				"Has",
-				"HashSet<T>\tHashSet<T>"
-			],
-			[
-				"gravi",
-				"gravityIgnoringParticlesPrefab\tGameObject"
-			],
-			[
-				"Inst",
-				"Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)\tObject"
-			],
-			[
-				"Alp",
-				"Alpha6\tKeyCode"
-			],
-			[
-				"GetKe",
-				"GetKeyDown(string name)\tbool"
-			],
-			[
-				"i",
-				"IgnoreGravityEffects()\tvoid"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/PlayerMovement.cs",
+			"file": "Assets/Scripts/AudioTrack.cs",
 			"settings":
 			{
-				"buffer_size": 3155,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Controls/Controls.cs",
-			"settings":
-			{
-				"buffer_size": 10772,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/BeatIndicatorManager.cs",
-			"settings":
-			{
-				"buffer_size": 1767,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/BeatIndicator.cs",
-			"settings":
-			{
-				"buffer_size": 1183,
+				"buffer_size": 2384,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -558,35 +532,43 @@
 			"file": "Assets/Scripts/BeatGenerator.cs",
 			"settings":
 			{
-				"buffer_size": 3817,
+				"buffer_size": 3494,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Searching 21 files for \"KeyCode\"\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatLevelSystem.cs:\n   11  \tprivate int streak;\n   12  \n   13: \tpublic void OnBeatHit((KeyCode key, BeatInfo) info) {\n   14  \t\tscore++;\n   15  \t\tstreak++;\n   ..\n   17  \t}\n   18  \n   19: \tpublic void OnBadInput(KeyCode key) {\n   20  \t\tscore -= 2;\n   21  \t\tstreak = 0;\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/EndGoal.cs:\n   18      {\n   19          //press r to restart game\n   20:         if (Input.GetKeyDown(KeyCode.R))\n   21          {\n   22              LoopGame();\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/HitOrMiss.cs:\n    8      Color colorEnd = Color.green;\n    9      //float duration = 1.0f;\n   10:     public KeyCode key;\n   11      private Renderer rend;\n   12      // Start is called before the first frame update\n\n/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/PlayerMovement.cs:\n   52      }\n   53  \n   54:     public void OnBeatHit((KeyCode key, BeatInfo) info)\n   55      {\n   56:         KeyCode key = info.Item1;\n   57:         if (key == KeyCode.Space)\n   58          {\n   59:             if (Input.GetKey(KeyCode.W) && !Physics.Raycast(transform.position, transform.forward, stepSize))\n   60              {\n   61                  target_pos += transform.forward * stepSize;\n   62              }\n   63:             else if (Input.GetKey(KeyCode.S) && !Physics.Raycast(transform.position, -transform.forward, stepSize))\n   64              {\n   65                  target_pos -= transform.forward * stepSize;\n   66              }\n   67:             else if (Input.GetKey(KeyCode.D))\n   68              {\n   69                  target_rot = Quaternion.AngleAxis(90, Vector3.up) * target_rot;\n   70              }\n   71:             else if (Input.GetKey(KeyCode.A))\n   72              {\n   73                  target_rot = Quaternion.AngleAxis(-90, Vector3.up) * target_rot;\n   74              }\n   75          }\n   76:         else if (key == KeyCode.Period)\n   77          {\n   78              //this.gameObject.transform.GetChild(1).gameObject.GetComponent<PlayerAttack>().spinAttack();\n\n12 matches across 4 files\n",
+			"file": "Assets/Scripts/BeatHitDetector.cs",
 			"settings":
 			{
-				"buffer_size": 2233,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "Assets/Scripts/EndGoal.cs",
-			"settings":
-			{
-				"buffer_size": 783,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
+				"buffer_size": 1807,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "Assets/Scripts/BeatLevelSystem.cs",
 			"settings":
 			{
-				"buffer_size": 1127,
+				"buffer_size": 1110,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/ChaseEnemy.cs",
+			"settings":
+			{
+				"buffer_size": 5860,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/SyncManager.cs",
+			"settings":
+			{
+				"buffer_size": 1570,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -690,16 +672,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts",
-		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/Controls"
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts"
 	],
 	"file_history":
 	[
-		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeginChase.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/SyncManager.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/AudioTrack.cs",
 		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatGenerator.cs",
-		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatHitDetector.cs",
 		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatLevelSystem.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatIndicatorManager.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/LevelTransitions.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/PlayerMovement.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeginChase.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/.git/COMMIT_EDITMSG",
 		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/Controls/Controls.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatIndicator.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/EndGoal.cs",
+		"/Users/Brown/Desktop/School/EECS494/p3_eecs494/p3_eecs494/Assets/Scripts/BeatHitDetector.cs",
 		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/HitOrMiss.cs",
 		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/BeatIndicatorManager.cs",
 		"/Users/Brown/Desktop/School/EECS494/robo_rhythm/Robo Rhythm/Assets/Scripts/BeatHitDetector.cs",
@@ -814,15 +803,7 @@
 		"/Users/Brown/Desktop/School/EECS 483/pp4/list.h",
 		"/Users/Brown/Desktop/School/EECS 483/pp4/samples/t3.s",
 		"/Users/Brown/Desktop/School/EECS 445/P2/train_autoencoder_classifier.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/train_autoencoder.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/evaluate_cnn.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/train_challenge.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/train_cnn.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/config.json",
-		"/Users/Brown/Desktop/School/EECS 445/P2/evaluate_autoencoder.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/dataset.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/model/autoencoder.py",
-		"/Users/Brown/Desktop/School/EECS 445/P2/evaluate_autoencoder_classifier.py"
+		"/Users/Brown/Desktop/School/EECS 445/P2/train_autoencoder.py"
 	],
 	"find":
 	{
@@ -841,6 +822,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tr",
+			"score",
+			"generateBeats",
+			"level",
+			"variance",
+			"info",
+			"BeatInfo",
+			"system",
 			"layerMask",
 			"Queue",
 			"times.deque",
@@ -881,24 +870,24 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/PlayerMovement.cs",
+					"file": "Assets/Scripts/AudioTrack.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3155,
+						"buffer_size": 2384,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								995,
-								1009
+								2128,
+								2128
 							]
 						],
 						"settings":
@@ -906,9 +895,7 @@
 							"incomplete_sync": null,
 							"oops":
 							{
-								"0,5": "Unnecessary using directive.",
-								"1774,1781": "No overload for method 'Raycast' takes 3 arguments",
-								"26,31": "Unnecessary using directive."
+								"1942,1951": "The name 'track_num' does not exist in the current context"
 							},
 							"remote_loading": false,
 							"synced": false,
@@ -920,24 +907,62 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Assets/Scripts/Controls/Controls.cs",
+					"file": "Assets/Scripts/BeatGenerator.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10772,
+						"buffer_size": 3494,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								550,
+								506
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"oops":
+							{
+								"0,5": "Unnecessary using directive.",
+								"105,110": "Unnecessary using directive.",
+								"2949,2950": "Invalid expression term ';'"
+							},
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 190.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/BeatHitDetector.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								180
 							]
 						],
 						"settings":
@@ -946,31 +971,68 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 6.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Assets/Scripts/BeatIndicatorManager.cs",
+					"buffer": 3,
+					"file": "Assets/Scripts/BeatLevelSystem.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1767,
+						"buffer_size": 1110,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1073,
-								1073
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"oops":
+							{
+								"0,5": "Unnecessary using directive.",
+								"945,950": "Invalid expression term 'float'",
+								"959,964": "Invalid expression term 'float'"
+							},
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/ChaseEnemy.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3037,
+								2864
 							]
 						],
 						"settings":
@@ -983,27 +1045,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1437.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Assets/Scripts/BeatIndicator.cs",
+					"buffer": 5,
+					"file": "Assets/Scripts/SyncManager.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1183,
+						"buffer_size": 1570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								392,
-								394
+								728,
+								728
 							]
 						],
 						"settings":
@@ -1011,10 +1073,7 @@
 							"incomplete_sync": null,
 							"oops":
 							{
-								"0,5": "Unnecessary using directive.",
-								"26,31": "Unnecessary using directive.",
-								"79,84": "Unnecessary using directive.",
-								"860,861": "'RectTransform' does not contain a definition for 'p' and no accessible extension method 'p' accepting a first argument of type 'RectTransform' could be found (are you missing a using directive or an assembly reference?)"
+								"691,698": "'InputSystem' does not contain a definition for 'gamepad'"
 							},
 							"remote_loading": false,
 							"synced": false,
@@ -1027,200 +1086,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Assets/Scripts/BeatGenerator.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3134,
-								3134
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"oops":
-							{
-								"0,5": "Unnecessary using directive.",
-								"105,110": "Unnecessary using directive.",
-								"3134,3141": "The name 'playing' does not exist in the current context"
-							},
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1454.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2233,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										194,
-										201
-									],
-									[
-										317,
-										324
-									],
-									[
-										550,
-										557
-									],
-									[
-										793,
-										800
-									],
-									[
-										1048,
-										1055
-									],
-									[
-										1105,
-										1112
-									],
-									[
-										1157,
-										1164
-									],
-									[
-										1225,
-										1232
-									],
-									[
-										1456,
-										1463
-									],
-									[
-										1688,
-										1695
-									],
-									[
-										1870,
-										1877
-									],
-									[
-										2060,
-										2067
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								931,
-								931
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"incomplete_sync": null,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Assets/Scripts/EndGoal.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 783,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Assets/Scripts/BeatLevelSystem.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1127,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								279,
-								279
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]

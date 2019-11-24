@@ -69,7 +69,7 @@ public class BeatGenerator : MonoBehaviour {
 
 		if(!running) {
 			running = true;
-			startTime = AudioSettings.dspTime + 2;
+			startTime = AudioSettings.dspTime + 1F;
 			lastTimeAdded = 0;
 			nextPattern = 0;
 			loops = 0;
@@ -100,14 +100,24 @@ public class BeatGenerator : MonoBehaviour {
 		}
 	}
 
-	public static void SwitchTrack(AudioTrack track) {
-		instance.source.Stop();
-		instance.running = false;
-		instance.track = track;
+	public static void SwitchTrack(AudioTrack track, bool dontResetTime) {
+		if(dontResetTime) {
+			Debug.Assert(instance.source.clip.length == track.audio.length);
+			float prevTime = instance.source.time;
+			instance.track = track;
+			instance.source.clip = track.audio;
+			instance.source.Stop();
+			instance.source.Play();
+			instance.source.time = prevTime;
+		}else {
+			instance.source.Stop();
+			instance.running = false;
+			instance.track = track;
 
-		// Reset using a toggle off and on
-		ToggleBeatSystem(false);
-		ToggleBeatSystem(true);
+			// Reset using a toggle off and on
+			ToggleBeatSystem(false);
+			ToggleBeatSystem(true);
+		}
 	}
 
 	public static int GetLevel() {
