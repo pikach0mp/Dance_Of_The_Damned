@@ -14,6 +14,8 @@ public class BeginChase : MonoBehaviour
     public int level = 1;
     private bool first = true;
 
+    public AudioTrack track;
+
     private void Start()
     {
         transitions = Camera.GetComponent<LevelTransitions>();
@@ -40,6 +42,7 @@ public class BeginChase : MonoBehaviour
 
             //enable enemies
             StartCoroutine(startEnemies());
+
         }
     }
 

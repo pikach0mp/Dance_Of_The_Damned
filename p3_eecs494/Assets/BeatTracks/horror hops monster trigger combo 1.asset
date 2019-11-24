@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13936aecf99844b3296939fb1c259fcd, type: 3}
+  m_Name: horror hops monster trigger combo 1
+  m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: 4ce03a747bae74add89139fb99c49977, type: 3}
+  beatData:
+  - {fileID: 4900000, guid: 22fe33f68c35a49df81a94c2a91aaef3, type: 3}
+  - {fileID: 4900000, guid: 8b026183c2d6f4ecbafe35d53543c1d7, type: 3}
