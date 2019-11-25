@@ -161,7 +161,6 @@ public class ChaseEnemy : MonoBehaviour
             //if there are not walls inbetween enemy and player
             if (hit.transform.gameObject.tag == "Player")
             {
-                Debug.LogWarning("first time spotted? " + (!spotted).ToString());
                 if(triggered && !spotted && !scream.isPlaying)
                 {
                     scream.Play();
