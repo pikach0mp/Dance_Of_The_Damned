@@ -8,9 +8,22 @@ public class TutorialStartChase : MonoBehaviour
     public GameObject Camera;
     public GameObject canv;
     public List<GameObject> chaseEnemies;
+    public GameObject chase_enem;
     public float TimeB4Enemy = 1;
 
+    bool activating = false;
+
     private bool first = true;
+
+    private void Update()
+    {
+        if (activating)
+        {
+            Vector3 currentScale = chase_enem.transform.GetChild(11).transform.localScale;
+            chase_enem.transform.GetChild(11).transform.localScale = Vector3.Lerp(currentScale, Vector3.zero, Time.deltaTime * .6f);
+        }
+
+    }
 
     IEnumerator PerformCutScene()
     {
@@ -19,7 +32,13 @@ public class TutorialStartChase : MonoBehaviour
 
         Camera.GetComponent<Animator>().SetTrigger("triggered");
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(2f);
+        activating = true;
+
+        yield return new WaitForSeconds(2.5f);
+        activating = false;
+
+        yield return new WaitForSeconds(2f);
         door.GetComponent<TutorialDoor>().OpenDoor();
         door.SetActive(true);
         yield return new WaitForSeconds(1.5f);

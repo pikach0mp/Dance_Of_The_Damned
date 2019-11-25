@@ -55,8 +55,8 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     {
         yield return new WaitForSeconds(7f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
     }
+
     void Update()
     {
 

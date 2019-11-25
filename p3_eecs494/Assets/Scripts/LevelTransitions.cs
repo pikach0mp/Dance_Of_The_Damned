@@ -36,16 +36,16 @@ public class LevelTransitions : MonoBehaviour
 
     void Start()
     {
-        transform.position = player.transform.position;
+        //transform.position = player.transform.position;
         can_anim = can.GetComponent<Animator>();
     }
+
     private void Update()
     {
         if(activating)
         {
             Vector3 currentScale = enemyLevel1.transform.GetChild(11).transform.localScale;
             enemyLevel1.transform.GetChild(11).transform.localScale = Vector3.Lerp(currentScale, Vector3.zero, Time.deltaTime * .6f);
-
         }
         
     }
