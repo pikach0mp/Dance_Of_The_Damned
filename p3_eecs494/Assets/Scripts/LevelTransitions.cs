@@ -5,8 +5,11 @@ using UnityEngine;
 public class LevelTransitions : MonoBehaviour
 {
     public GameObject door1;
+    public GameObject backdoor1;
     public GameObject door2;
+    public GameObject backdoor2;
     public GameObject door3;
+    public GameObject backdoor3;
 
     public GameObject Level1;
     public GameObject Level2;
@@ -56,6 +59,8 @@ public class LevelTransitions : MonoBehaviour
 
                 door2.GetComponent<DoorController>().OpenDoor();
                 door1.SetActive(true);
+                backdoor1.SetActive(false);
+                backdoor2.SetActive(true);
                 break;
 
             case 2:
@@ -68,8 +73,9 @@ public class LevelTransitions : MonoBehaviour
 
                 door3.GetComponent<DoorController>().OpenDoor();
                 door2.SetActive(true);
+                backdoor2.SetActive(false);
                 yield return new WaitForSeconds(5f);
-                door3.SetActive(true);
+                backdoor3.SetActive(true);
 
                 break;
             default:
