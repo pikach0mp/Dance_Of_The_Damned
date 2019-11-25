@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthCap: 30
-  healthNeeded: 20
+  healthNeeded: 15
   healthTransfrom: {fileID: 0}
 --- !u!1 &6887857324642795117
 GameObject:
