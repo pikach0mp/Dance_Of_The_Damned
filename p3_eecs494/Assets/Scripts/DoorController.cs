@@ -32,9 +32,10 @@ public class DoorController : MonoBehaviour
             target_pos.y = 1.25f;
             isLerp = true;
             other.gameObject.GetComponent<Health>().ResetHealth();
-            gameObject.layer = 8;
             if (!IsBackDoor)
                 StopLevel.SetActive(false);
+            gameObject.layer = 8;
+
         }
     }
 
@@ -66,6 +67,7 @@ public class DoorController : MonoBehaviour
         if(target_pos.y > 1.25f)
         {
             this.gameObject.SetActive(false);
+            gameObject.layer = 0;
         }
 
     }
