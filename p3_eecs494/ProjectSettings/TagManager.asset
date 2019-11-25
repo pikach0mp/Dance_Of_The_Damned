@@ -19,8 +19,8 @@ TagManager:
   - Terrain
   - Enemy
   - Door
-  - 
-  - 
+  - CutsceneCamera
+  - Torches
   - 
   - 
   - 

@@ -12,7 +12,7 @@ public class EndGoal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("in here");
+        //Debug.Log("in here");
         //press r to restart game
         if (Input.GetKeyDown(KeyCode.R))
         {
