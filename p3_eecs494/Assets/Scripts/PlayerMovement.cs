@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     public LayerMask layerMask;
     private Controls controls;
     public GameObject canv;
+    public AudioClip deathnoise;
 
     private bool update;
 
@@ -51,18 +53,22 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     IEnumerator WaitForFadeOut()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(7f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
     void Update()
     {
+
+
         if (GetComponent<Health>().dead())
         {
             BeatGenerator.ToggleBeatSystem(false);
             Animator anim = canv.GetComponent<Animator>();
             anim.SetTrigger("Die");
+            AudioSource.PlayClipAtPoint(deathnoise, transform.position);
             StartCoroutine(WaitForFadeOut());
+            
         }
         transform.rotation = Quaternion.Slerp(transform.rotation, target_rot, Time.deltaTime * 18);
         transform.position = Vector3.Lerp(transform.position, target_pos, Time.deltaTime * 15);
@@ -117,4 +123,5 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     void Controls.IPlayerControlsActions.OnMoveDir(InputAction.CallbackContext context) {
         moveDir = context.ReadValue<Vector2>();
     }
+
 }
