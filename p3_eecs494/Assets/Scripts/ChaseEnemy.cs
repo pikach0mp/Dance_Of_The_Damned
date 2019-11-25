@@ -19,6 +19,7 @@ public class ChaseEnemy : MonoBehaviour
     public AudioSource thumping;
     public AudioSource heartbeat;
     public AudioSource moaning;
+    public AudioSource scream;
 
     private int turnCount;
 
@@ -28,6 +29,7 @@ public class ChaseEnemy : MonoBehaviour
 
     private Vector3 lastSeen;
     private bool patroling;
+    private bool spotted;
 
     public void trigger(bool onOff)
     {
@@ -51,6 +53,7 @@ public class ChaseEnemy : MonoBehaviour
         lastSeen.y = 999;
         target_pos = transform.position;
         original_pos = transform.position;
+        spotted = false;
     }
 
     // Update is called once per frame
@@ -158,9 +161,15 @@ public class ChaseEnemy : MonoBehaviour
             //if there are not walls inbetween enemy and player
             if (hit.transform.gameObject.tag == "Player")
             {
+                if(triggered && !spotted)
+                {
+                    scream.Play();
+                }
+                spotted = true;
                 return true;
             }
         }
+        spotted = false;
         return false;
     }
 
