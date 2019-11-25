@@ -16,7 +16,10 @@ public class ChaseEnemy : MonoBehaviour
 
     public bool triggered = false;
 
-    private AudioSource audioS;
+    public AudioSource thumping;
+    public AudioSource heartbeat;
+    public AudioSource moaning;
+
     private int turnCount;
 
     private Vector3 travelDir;
@@ -32,6 +35,8 @@ public class ChaseEnemy : MonoBehaviour
         if (triggered)
         {
             Cylinder.GetComponent<Renderer>().material = active;
+            heartbeat.Play();
+            moaning.Play();
         }
         else
         {
@@ -44,7 +49,6 @@ public class ChaseEnemy : MonoBehaviour
     {
         Cylinder.GetComponent<Renderer>().material = not_active;
         lastSeen.y = 999;
-        audioS = GetComponent<AudioSource>();
         target_pos = transform.position;
         original_pos = transform.position;
     }
@@ -84,6 +88,11 @@ public class ChaseEnemy : MonoBehaviour
                     patrol();
                 }
             }
+
+            if (moaning.time >= 30)
+            {
+                moaning.time = 0;
+            }
         }
     }
     public void OnBeatMissed(BeatInfo info)
@@ -98,7 +107,7 @@ public class ChaseEnemy : MonoBehaviour
 
         if (triggered)
         {
-            audioS.Play();
+            thumping.Play();
         }
 
         if (!Physics.Raycast(transform.position, travelDir, stepSize))
@@ -123,7 +132,7 @@ public class ChaseEnemy : MonoBehaviour
 
         if (triggered)
         {
-            audioS.Play();
+            thumping.Play();
         }
         
         if (!Physics.Raycast(transform.position, travelDir, stepSize))
