@@ -162,7 +162,7 @@ public class ChaseEnemy : MonoBehaviour
             if (hit.transform.gameObject.tag == "Player")
             {
                 Debug.LogWarning("first time spotted? " + (!spotted).ToString());
-                if(triggered && !spotted)
+                if(triggered && !spotted && !scream.isPlaying)
                 {
                     scream.Play();
                     scream.time = 2.9f;
