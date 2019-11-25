@@ -35,7 +35,6 @@ public class DoorController : MonoBehaviour
             if (!IsBackDoor)
                 StopLevel.SetActive(false);
             gameObject.layer = 8;
-
         }
     }
 

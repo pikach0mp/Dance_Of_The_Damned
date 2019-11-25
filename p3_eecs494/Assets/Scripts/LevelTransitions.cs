@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,9 +21,14 @@ public class LevelTransitions : MonoBehaviour
     public GameObject enemyLevel1;
     public GameObject enemy1Level2;
     public GameObject enemy2Level2;
+    public GameObject enemyLevel3;
+
+
+    public GameObject can;
 
 
     private Animator anim;
+    private Animator can_anim;
 	private Vector3 target_pos;
     public bool isTutorial;
     private bool activating;
@@ -31,6 +37,7 @@ public class LevelTransitions : MonoBehaviour
     void Start()
     {
         transform.position = player.transform.position;
+        can_anim = can.GetComponent<Animator>();
     }
     private void Update()
     {
@@ -64,6 +71,7 @@ public class LevelTransitions : MonoBehaviour
                 break;
 
             case 2:
+                yield return new WaitForSeconds(0.5f);
                 Level3.SetActive(true);
 
                 GetComponent<Animator>().SetTrigger("Level2Transition");
@@ -78,15 +86,29 @@ public class LevelTransitions : MonoBehaviour
                 backdoor3.SetActive(true);
 
                 break;
+
+            case 3:
+                enemyLevel3.transform.GetChild(11).gameObject.SetActive(false);
+                this.gameObject.SetActive(false);
+                break;
+
             default:
                 yield return 0;
                 break;
         }
     }
 
+    //private IEnumerator FadeOutAndIn()
+    //{
+    //    can_anim.SetTrigger("fade_out");
+    //    yield return new WaitForSeconds(5f);
+    //}
+
+
     public void OnDisable()
     {
-    	Debug.Log("END");
+        //StartCoroutine(FadeOutAndIn());
+        Debug.Log("END");
         BeatGenerator.ToggleBeatSystem(true);
         this.gameObject.SetActive(false);
     }
