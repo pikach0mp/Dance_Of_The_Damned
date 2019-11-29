@@ -124,4 +124,17 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         moveDir = context.ReadValue<Vector2>();
     }
 
+    void Controls.IPlayerControlsActions.OnMoveDirAndButton(InputAction.CallbackContext context) {
+        if(!context.performed) {
+            return;
+        }
+        
+        Vector2 val = context.ReadValue<Vector2>();
+        Debug.Log(val);
+        if(val != Vector2.zero) {
+            moveDir = val;
+            bhd.PressButton(ButtonPress.MOVE);
+        }
+    }
+
 }
