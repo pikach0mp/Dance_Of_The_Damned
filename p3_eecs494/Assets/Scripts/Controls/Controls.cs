@@ -41,6 +41,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""MoveDirAndButton"",
+                    ""type"": ""Value"",
+                    ""id"": ""1ae79571-74d2-48c6-b410-36a554146e49"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -52,6 +60,50 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MoveDir"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""faf6e617-dd59-4a79-93cf-9148027471c6"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6a45d7a-74f6-4f3a-a615-ba1e4cddfd3c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d2804db9-d240-4b0d-931a-ac115c91c2d9"",
+                    ""path"": ""<Keyboard>/period"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b0e5997f-e7c8-48b6-9c16-90bcd37f91ba"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -111,48 +163,114 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""faf6e617-dd59-4a79-93cf-9148027471c6"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""name"": ""D-Pad"",
+                    ""id"": ""6b165071-c1b1-4d98-9078-8f5ec83c3497"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveButton"",
-                    ""isComposite"": false,
+                    ""action"": ""MoveDirAndButton"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""e6a45d7a-74f6-4f3a-a615-ba1e4cddfd3c"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""name"": ""up"",
+                    ""id"": ""547279e4-d094-470a-b113-c330082629da"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveButton"",
+                    ""action"": ""MoveDirAndButton"",
                     ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""17ce5976-0744-4714-98a4-9d7bfd9ef1de"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveDirAndButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f3f70b15-ae28-42c4-bea3-2fe2f062b015"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveDirAndButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""4804f711-94fa-4712-920a-8b2bd41343ff"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveDirAndButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""IJKL"",
+                    ""id"": ""d77108f6-664e-44f5-ae09-e0605a4cdd73"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveDirAndButton"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""d2804db9-d240-4b0d-931a-ac115c91c2d9"",
-                    ""path"": ""<Keyboard>/period"",
+                    ""name"": ""up"",
+                    ""id"": ""865d0f5c-9217-4fa2-be32-2d1941b37d50"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackButton"",
+                    ""action"": ""MoveDirAndButton"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""b0e5997f-e7c8-48b6-9c16-90bcd37f91ba"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""name"": ""down"",
+                    ""id"": ""bc446f5e-435c-428b-aba3-a161cc15ed6c"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackButton"",
+                    ""action"": ""MoveDirAndButton"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d34b65ca-45e3-41eb-84f4-6720576ca0ba"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveDirAndButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""d0bae4a6-7fae-4cd6-9078-2a1284bd1027"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveDirAndButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -164,6 +282,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_PlayerControls_MoveDir = m_PlayerControls.FindAction("MoveDir", throwIfNotFound: true);
         m_PlayerControls_MoveButton = m_PlayerControls.FindAction("MoveButton", throwIfNotFound: true);
         m_PlayerControls_AttackButton = m_PlayerControls.FindAction("AttackButton", throwIfNotFound: true);
+        m_PlayerControls_MoveDirAndButton = m_PlayerControls.FindAction("MoveDirAndButton", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -216,6 +335,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerControls_MoveDir;
     private readonly InputAction m_PlayerControls_MoveButton;
     private readonly InputAction m_PlayerControls_AttackButton;
+    private readonly InputAction m_PlayerControls_MoveDirAndButton;
     public struct PlayerControlsActions
     {
         private @Controls m_Wrapper;
@@ -223,6 +343,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @MoveDir => m_Wrapper.m_PlayerControls_MoveDir;
         public InputAction @MoveButton => m_Wrapper.m_PlayerControls_MoveButton;
         public InputAction @AttackButton => m_Wrapper.m_PlayerControls_AttackButton;
+        public InputAction @MoveDirAndButton => m_Wrapper.m_PlayerControls_MoveDirAndButton;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -241,6 +362,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @AttackButton.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnAttackButton;
                 @AttackButton.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnAttackButton;
                 @AttackButton.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnAttackButton;
+                @MoveDirAndButton.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMoveDirAndButton;
+                @MoveDirAndButton.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMoveDirAndButton;
+                @MoveDirAndButton.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnMoveDirAndButton;
             }
             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -254,6 +378,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @AttackButton.started += instance.OnAttackButton;
                 @AttackButton.performed += instance.OnAttackButton;
                 @AttackButton.canceled += instance.OnAttackButton;
+                @MoveDirAndButton.started += instance.OnMoveDirAndButton;
+                @MoveDirAndButton.performed += instance.OnMoveDirAndButton;
+                @MoveDirAndButton.canceled += instance.OnMoveDirAndButton;
             }
         }
     }
@@ -263,5 +390,6 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnMoveDir(InputAction.CallbackContext context);
         void OnMoveButton(InputAction.CallbackContext context);
         void OnAttackButton(InputAction.CallbackContext context);
+        void OnMoveDirAndButton(InputAction.CallbackContext context);
     }
 }
