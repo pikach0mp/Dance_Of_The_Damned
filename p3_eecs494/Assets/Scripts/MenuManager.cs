@@ -38,7 +38,7 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("FinalLayout");
     }
 
-    public void loadTevel()
+    public void loadTutorial()
     {
         SceneManager.LoadScene("Tutorial");
     }
