@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
             BeatGenerator.ToggleBeatSystem(false);
             Animator anim = canv.GetComponent<Animator>();
             anim.SetTrigger("Die");
-            AudioSource.PlayClipAtPoint(deathnoise, transform.position);
+            AudioSource.PlayClipAtPoint(deathnoise, transform.position, .25f);
             StartCoroutine(WaitForFadeOut());
             
         }
@@ -122,6 +122,19 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     void Controls.IPlayerControlsActions.OnMoveDir(InputAction.CallbackContext context) {
         moveDir = context.ReadValue<Vector2>();
+    }
+
+    void Controls.IPlayerControlsActions.OnMoveDirAndButton(InputAction.CallbackContext context) {
+        if(!context.performed) {
+            return;
+        }
+        
+        Vector2 val = context.ReadValue<Vector2>();
+        Debug.Log(val);
+        if(val != Vector2.zero) {
+            moveDir = val;
+            bhd.PressButton(ButtonPress.MOVE);
+        }
     }
 
 }
