@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 0
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.17
+  m_FogDensity: 0.3
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -6877,8 +6877,8 @@ Transform:
   - {fileID: 298340711}
   - {fileID: 1866289950}
   - {fileID: 611172312}
-  - {fileID: 570571472}
   - {fileID: 542535883}
+  - {fileID: 570571472}
   m_Father: {fileID: 2105194950}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8369,8 +8369,8 @@ Transform:
   - {fileID: 1133797660}
   - {fileID: 957822187}
   - {fileID: 1982143519}
-  - {fileID: 107350244}
   - {fileID: 1719035057}
+  - {fileID: 107350244}
   - {fileID: 36953918}
   m_Father: {fileID: 2105194950}
   m_RootOrder: 5
