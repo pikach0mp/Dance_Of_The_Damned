@@ -165,6 +165,7 @@ public class ChaseEnemy : MonoBehaviour
                 {
                     scream.Play();
                     scream.time = 2.9f;
+                    GameObject.FindObjectOfType<PlayerMovement>().VibrateController(2F);
                 }
                 spotted = true;
                 return true;

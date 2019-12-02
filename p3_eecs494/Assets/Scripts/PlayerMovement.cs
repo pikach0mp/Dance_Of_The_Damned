@@ -137,4 +137,19 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         }
     }
 
+    public void VibrateController(float time) {
+        StartCoroutine(_VibrateController(time));
+    }
+
+    private IEnumerator _VibrateController(float time) {
+        Gamepad gamepad = Gamepad.current;
+        if(gamepad != null) {
+            Debug.Log("Starting Vibration");
+            gamepad.SetMotorSpeeds(0.5F, 0.5F);
+            gamepad.ResumeHaptics();
+            yield return new WaitForSeconds(time);
+            gamepad.ResetHaptics();
+            Debug.Log("Stop Vibration");
+        }
+    }
 }
