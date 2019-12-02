@@ -2168,7 +2168,7 @@ MonoBehaviour:
   chaseEnemies:
   - {fileID: 1197051608}
   TimeB4Enemy: 1
-  cutSceneLength: 9
+  cutSceneLength: 8.5
   level: 1
   track: {fileID: 0}
 --- !u!65 &298383051
