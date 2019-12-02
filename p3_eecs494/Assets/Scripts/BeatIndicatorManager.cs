@@ -59,7 +59,7 @@ public class BeatIndicatorManager : MonoBehaviour
     }
 
     private IEnumerator addToAvailable(BeatIndicator indicator) {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3F);
         indicator.gameObject.SetActive(false);
         indicator.Reset();
         availableIndicators.Push(indicator);

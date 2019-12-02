@@ -37,9 +37,15 @@ public class BeatHitDetector : MonoBehaviour {
 			OnBeatHit.Invoke((lastHit.Item1, info));
 			lastHitResolved = true;
 		} else {
+			if (lastBeatAvailable) {
+				OnBeatMissed.Invoke(lastBeat.Item1);
+			}
+			
 			lastBeat = (info, BeatGenerator.GetTime());
 			lastBeatAvailable = true;
 		}
+
+
 	}
 
 	public void PressButton(ButtonPress buttonPress) {
