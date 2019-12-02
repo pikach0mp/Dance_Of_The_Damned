@@ -9,8 +9,9 @@ public class BeginChase : MonoBehaviour
     public GameObject Camera;
     public List<GameObject> chaseEnemies;
     public float TimeB4Enemy = 1;
+    public float cutSceneLength;
 
-    private LevelTransitions transitions;
+    private LevelTransition transition;
     public int level = 1;
     private bool first = true;
 
@@ -18,7 +19,15 @@ public class BeginChase : MonoBehaviour
 
     private void Start()
     {
-        transitions = Camera.GetComponent<LevelTransitions>();
+        transition = Camera.GetComponent<LevelTransition>();
+    }
+
+    private IEnumerator PerformCutScene()
+    {
+        Camera.SetActive(true);
+        StartCoroutine(transition.PerformCutScene());
+        yield return new WaitForSeconds(cutSceneLength);
+        Camera.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,28 +35,21 @@ public class BeginChase : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && first)
         {
             first = false;
-            // Disable Player Controls
-            // PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
-            // movement.OnDisable();
             if (level != 3)
+            {
                 BeatGenerator.ToggleBeatSystem(false);
                 door.SetActive(true);
 
                 //Cut Scene
-                Camera.SetActive(true);
-                StartCoroutine(transitions.TransitionFrom(level));
-                //nextDoor.GetComponent<DoorController>().OpenDoor();
-
-            //Re - Enable Player Controls
-            // movement.OnEnable();
+                StartCoroutine(PerformCutScene());
+            }
 
             //enable enemies
-            StartCoroutine(startEnemies());
-
+            StartCoroutine(StartEnemies());
         }
     }
 
-    IEnumerator startEnemies()
+    IEnumerator StartEnemies()
     {
         yield return new WaitForSeconds(TimeB4Enemy);
         foreach(var enemy in chaseEnemies)

@@ -7,6 +7,8 @@ public class DoorController : MonoBehaviour
     public GameObject StopLevel;
     private bool isLerp;
     Vector3 target_pos;
+    public bool startsOpen = false;
+
     private AudioSource audioS;
     public bool IsBackDoor = false;
 
@@ -15,6 +17,10 @@ public class DoorController : MonoBehaviour
     {
         target_pos = transform.position;
         audioS = GetComponent<AudioSource>();
+        if (startsOpen)
+        {
+            OpenDoor();
+        }
     }
 
     private void Update()
@@ -33,7 +39,10 @@ public class DoorController : MonoBehaviour
             isLerp = true;
             other.gameObject.GetComponent<Health>().ResetHealth();
             if (!IsBackDoor)
+            {
+                ManageGame.IncrementLevel();
                 StopLevel.SetActive(false);
+            }
             gameObject.layer = 8;
         }
     }
@@ -44,7 +53,14 @@ public class DoorController : MonoBehaviour
         target_pos.y = 3.75f;
         gameObject.layer = 0;
         StartCoroutine(MoveToPosition(true));
-     }
+    }
+
+    public void CloseDoor()
+    {
+        target_pos.y = 1.25f;
+        isLerp = true;
+        gameObject.layer = 8;
+    }
 
     private IEnumerator MoveToPosition(bool opening)
     {
@@ -68,7 +84,5 @@ public class DoorController : MonoBehaviour
             this.gameObject.SetActive(false);
             gameObject.layer = 0;
         }
-
     }
-
 }
