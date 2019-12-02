@@ -46,9 +46,10 @@ public class BeatLevelSystem : MonoBehaviour {
 		OnUpdated();
 	}
 
+
 	private void OnUpdated() {
 		BeatGenerator.SetLevel(health >= healthNeeded ? 1 : 0);
-		health = Mathf.Clamp(health, 0, healthCap);
+        health = Mathf.Clamp(health, 0, healthCap);
 		healthTransfrom.sizeDelta = new Vector2(healthTransfrom.sizeDelta.x, Mathf.Lerp(0, maxHeight, (float)health/(float)healthCap));
-	}
+    }
 }
