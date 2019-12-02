@@ -11,6 +11,8 @@ public class ManageGame : MonoBehaviour
 
     private int level = 1;
 
+    bool playerSeenCurtains;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -21,6 +23,7 @@ public class ManageGame : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += BeginAtCheckpoint;
         level = 1;
+        playerSeenCurtains = false; 
         DontDestroyOnLoad(gameObject);
 
     }
@@ -58,5 +61,20 @@ public class ManageGame : MonoBehaviour
     {
         instance.level += 1;
         Debug.Log(instance.level);
+    }
+
+    public static void FirstTimeCurtain()
+    {
+        if (instance.playerSeenCurtains)
+        {
+            return;
+        }
+        else
+        {
+            //    PlayOneShot(hide, 0.8);
+            //    Debug.Log("tried playing");
+            //    instance.playerSeenCurtains = true;
+            //}
+        }
     }
 }

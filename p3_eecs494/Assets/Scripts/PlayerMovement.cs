@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         transform.position = Vector3.Lerp(transform.position, target_pos, Time.deltaTime * 15);
     }
 
-    public void OnBeatHit((ButtonPress, BeatInfo) info)
+	public void OnBeatHit((ButtonPress, BeatInfo) info)
     {
         if(!update) {
             return;
