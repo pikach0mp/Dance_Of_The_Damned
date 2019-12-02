@@ -30,6 +30,7 @@ public class ChaseEnemy : MonoBehaviour
     private Vector3 lastSeen;
     private bool patroling;
     private bool spotted;
+    private bool going2last;
 
     public void trigger(bool onOff)
     {
@@ -54,6 +55,7 @@ public class ChaseEnemy : MonoBehaviour
         target_pos = transform.position;
         original_pos = transform.position;
         spotted = false;
+        going2last = false;
     }
 
     // Update is called once per frame
@@ -71,6 +73,7 @@ public class ChaseEnemy : MonoBehaviour
             //player spotted
             if (look_for_player())
             {
+                going2last = false;
                 patroling = false;
                 lastSeen = target.transform.position;
 
@@ -80,13 +83,15 @@ public class ChaseEnemy : MonoBehaviour
             else
             {
                 //go to last seen place if previously was chasing
-                if (lastSeen.y!=999)
+                if (lastSeen.y!=999 && !going2last)
                 {
+                    going2last = true;
                     set_direction();
                 }
                 //previously was going to last seen place, switch to patrolling
                 else if(lastSeen.y == 999 && !patroling)
                 {
+                    going2last = false;
                     patroling = true;
                     patrol();
                 }
@@ -100,7 +105,6 @@ public class ChaseEnemy : MonoBehaviour
     }
     public void OnBeatMissed(BeatInfo info)
     {
-        //Debug.LogWarning(info.noteInPattern);
         if (info.noteInPattern != 1)
         {
             return;
@@ -119,7 +123,9 @@ public class ChaseEnemy : MonoBehaviour
         }
         else
         {
+
             travelDir *= -1;
+            lastSeen.y = 999;
             target_pos += travelDir * stepSize;
         }
     }
@@ -145,6 +151,7 @@ public class ChaseEnemy : MonoBehaviour
         else
         {
             travelDir *= -1;
+            lastSeen.y = 999;
             target_pos += travelDir * stepSize;
         }
     }

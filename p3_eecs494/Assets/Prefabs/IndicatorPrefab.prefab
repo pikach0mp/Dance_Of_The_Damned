@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5779427274635346360}
   - component: {fileID: 5779427274635346363}
   - component: {fileID: 2992502099102295508}
+  - component: {fileID: 8980595158110456675}
   m_Layer: 5
   m_Name: IndicatorPrefab
   m_TagString: Untagged
@@ -128,3 +129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeOnScreen: 3
+--- !u!114 &8980595158110456675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779427274635346367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1

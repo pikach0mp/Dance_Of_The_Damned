@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.3
@@ -569,11 +569,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7133644071742352537, guid: 5d34d1f24630542d79bc4f9a93725ef2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.499
-      objectReference: {fileID: 0}
     - target: {fileID: 5518370125573712088, guid: 5d34d1f24630542d79bc4f9a93725ef2,
         type: 3}
       propertyPath: m_Size.y
@@ -593,6 +588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.499
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133644071742352537, guid: 5d34d1f24630542d79bc4f9a93725ef2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.499
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8717022219654106724, guid: 5d34d1f24630542d79bc4f9a93725ef2, type: 3}
@@ -950,6 +950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -1333,7 +1338,7 @@ PrefabInstance:
         type: 3}
       propertyPath: track
       value: 
-      objectReference: {fileID: 11400000, guid: 672800ae332374996b9c6c86139299c2,
+      objectReference: {fileID: 11400000, guid: 816e82ed81d31473f82b966756030eec,
         type: 2}
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
@@ -1499,6 +1504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
+      objectReference: {fileID: 8300000, guid: de08461bd3fdf43fa9d089d1c92430e6, type: 3}
+    - target: {fileID: 6904408545989408082, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3c839d041a3f48e89df0143232c8088, type: 3}
@@ -2168,7 +2178,7 @@ MonoBehaviour:
   chaseEnemies:
   - {fileID: 1197051608}
   TimeB4Enemy: 1
-  cutSceneLength: 9
+  cutSceneLength: 8.5
   level: 1
   track: {fileID: 0}
 --- !u!65 &298383051
@@ -4649,6 +4659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 887867754}
   - component: {fileID: 887867753}
+  - component: {fileID: 887867755}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4682,6 +4693,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &887867755
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887867752}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 52c70b56c4dbb4dbeb81a8e9169fbee6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.752
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &888104465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4854,6 +4961,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtain (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4927,6 +5039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -6263,11 +6380,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.18
       objectReference: {fileID: 0}
-    - target: {fileID: 1332728905364529078, guid: 91ab5ff751f210842812d66420915a0f,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 1332728905861755393, guid: 91ab5ff751f210842812d66420915a0f,
         type: 3}
       propertyPath: m_Range
@@ -6287,6 +6399,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.6536134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332728905364529078, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91ab5ff751f210842812d66420915a0f, type: 3}
@@ -7102,6 +7219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -8431,6 +8553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtain (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8982,6 +9109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -9794,6 +9926,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 45a69fc07f200459a92884c7b4e04938, type: 2}
+    - target: {fileID: 1106033153230617201, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cf9462d2f4013429b72672cbfca31b, type: 3}
 --- !u!4 &1866289950 stripped
@@ -10199,7 +10336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961944286}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -1.5, y: 1.25, z: -0.5}
+  m_LocalPosition: {x: -1.49, y: 1.25, z: -0.5}
   m_LocalScale: {x: 0.1, y: 1, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1910419667}
@@ -10822,6 +10959,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 196393260, guid: 258d7b39533144244b04ecb764398c48, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4995867222057698948, guid: 258d7b39533144244b04ecb764398c48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10947,10 +11088,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 196393260, guid: 258d7b39533144244b04ecb764398c48, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 335464291, guid: 258d7b39533144244b04ecb764398c48, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -11031,6 +11168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae54f38b07af9424fa55f147ad3a69dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forever: {fileID: 0}
 --- !u!1001 &2038677403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11117,6 +11255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -11544,7 +11687,7 @@ GameObject:
   - component: {fileID: 2136464703}
   - component: {fileID: 2136464702}
   - component: {fileID: 2136464706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Level1Door
   m_TagString: Door
   m_Icon: {fileID: 0}
