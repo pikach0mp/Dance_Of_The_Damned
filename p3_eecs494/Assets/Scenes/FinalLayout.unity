@@ -569,11 +569,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7133644071742352537, guid: 5d34d1f24630542d79bc4f9a93725ef2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.499
-      objectReference: {fileID: 0}
     - target: {fileID: 5518370125573712088, guid: 5d34d1f24630542d79bc4f9a93725ef2,
         type: 3}
       propertyPath: m_Size.y
@@ -593,6 +588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.499
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133644071742352537, guid: 5d34d1f24630542d79bc4f9a93725ef2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.499
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8717022219654106724, guid: 5d34d1f24630542d79bc4f9a93725ef2, type: 3}
@@ -950,6 +950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -1333,7 +1338,7 @@ PrefabInstance:
         type: 3}
       propertyPath: track
       value: 
-      objectReference: {fileID: 11400000, guid: 672800ae332374996b9c6c86139299c2,
+      objectReference: {fileID: 11400000, guid: 816e82ed81d31473f82b966756030eec,
         type: 2}
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
@@ -3899,6 +3904,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Torch
+      objectReference: {fileID: 0}
     - target: {fileID: 2299020478952063067, guid: 40920f736bc8645fa921540852104ea8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3953,11 +3963,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Torch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40920f736bc8645fa921540852104ea8, type: 3}
@@ -4689,6 +4694,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Torch (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2299020478952063067, guid: 40920f736bc8645fa921540852104ea8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4743,11 +4753,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Torch (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40920f736bc8645fa921540852104ea8, type: 3}
@@ -4854,6 +4859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtain (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4927,6 +4937,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -6228,10 +6243,20 @@ PrefabInstance:
       propertyPath: healthNeeded
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 1332728905364529078, guid: 91ab5ff751f210842812d66420915a0f,
+    - target: {fileID: 1332728905861755394, guid: 91ab5ff751f210842812d66420915a0f,
         type: 3}
-      propertyPath: near clip plane
-      value: 0.2
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332728905861755394, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332728905861755394, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1332728905364529080, guid: 91ab5ff751f210842812d66420915a0f,
         type: 3}
@@ -6253,21 +6278,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.18
       objectReference: {fileID: 0}
-    - target: {fileID: 1332728905861755394, guid: 91ab5ff751f210842812d66420915a0f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332728905861755394, guid: 91ab5ff751f210842812d66420915a0f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332728905861755394, guid: 91ab5ff751f210842812d66420915a0f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1332728905861755393, guid: 91ab5ff751f210842812d66420915a0f,
         type: 3}
       propertyPath: m_Range
@@ -6287,6 +6297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.6536134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332728905364529078, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91ab5ff751f210842812d66420915a0f, type: 3}
@@ -6357,6 +6372,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Torch (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 2299020478952063067, guid: 40920f736bc8645fa921540852104ea8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6411,11 +6431,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Torch (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40920f736bc8645fa921540852104ea8, type: 3}
@@ -7102,6 +7117,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
@@ -7932,6 +7952,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Torch (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2299020478952063067, guid: 40920f736bc8645fa921540852104ea8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7986,11 +8011,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Torch (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40920f736bc8645fa921540852104ea8, type: 3}
@@ -8431,6 +8451,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtain (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8734,6 +8759,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Torch (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2299020478952063067, guid: 40920f736bc8645fa921540852104ea8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8788,11 +8818,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Torch (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40920f736bc8645fa921540852104ea8, type: 3}
@@ -8983,6 +9008,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtain (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9053,6 +9083,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Torch (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2299020478952063067, guid: 40920f736bc8645fa921540852104ea8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9107,11 +9142,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2299020478952063063, guid: 40920f736bc8645fa921540852104ea8,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Torch (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40920f736bc8645fa921540852104ea8, type: 3}
@@ -10822,6 +10852,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 196393260, guid: 258d7b39533144244b04ecb764398c48, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4995867222057698948, guid: 258d7b39533144244b04ecb764398c48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10946,10 +10980,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 196393260, guid: 258d7b39533144244b04ecb764398c48, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 335464291, guid: 258d7b39533144244b04ecb764398c48, type: 3}
       propertyPath: m_LocalScale.x
@@ -11117,6 +11147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Curtain
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756012639131405013, guid: b277b12e75ca64888bd270b2b5b78640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6843040642159165221, guid: b277b12e75ca64888bd270b2b5b78640,
         type: 3}

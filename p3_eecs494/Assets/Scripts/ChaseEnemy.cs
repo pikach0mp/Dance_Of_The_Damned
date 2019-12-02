@@ -71,6 +71,7 @@ public class ChaseEnemy : MonoBehaviour
             //player spotted
             if (look_for_player())
             {
+                Debug.LogWarning("Spotted");
                 patroling = false;
                 lastSeen = target.transform.position;
 
@@ -82,6 +83,7 @@ public class ChaseEnemy : MonoBehaviour
                 //go to last seen place if previously was chasing
                 if (lastSeen.y!=999)
                 {
+                    Debug.LogWarning("Going to last place" + lastSeen.ToString());
                     set_direction();
                 }
                 //previously was going to last seen place, switch to patrolling
@@ -119,6 +121,7 @@ public class ChaseEnemy : MonoBehaviour
         }
         else
         {
+            lastSeen.y = 999;
             travelDir *= -1;
             target_pos += travelDir * stepSize;
         }
@@ -144,6 +147,7 @@ public class ChaseEnemy : MonoBehaviour
         }
         else
         {
+            lastSeen.y = 999;
             travelDir *= -1;
             target_pos += travelDir * stepSize;
         }
@@ -196,6 +200,7 @@ public class ChaseEnemy : MonoBehaviour
 
     private void patrol()
     {
+        Debug.LogWarning("Set patrol");
         List<Vector3> directions = new List<Vector3> { Vector3.forward, Vector3.right, Vector3.left, Vector3.back };
         List<float> raycastDis = new List<float>();
 
