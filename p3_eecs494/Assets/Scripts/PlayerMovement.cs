@@ -59,8 +59,6 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     void Update()
     {
-
-
         if (GetComponent<Health>().dead())
         {
             BeatGenerator.ToggleBeatSystem(false);
