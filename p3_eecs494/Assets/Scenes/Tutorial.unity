@@ -1134,7 +1134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1071914444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1389,7 +1389,7 @@ PrefabInstance:
     - target: {fileID: 8438295691444268207, guid: 390e5209b282694448eb6f2c9388948e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8438295691444268207, guid: 390e5209b282694448eb6f2c9388948e,
         type: 3}
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.578846, b: 0, a: 1}
+  m_Color: {r: 0.5647059, g: 0.02745098, b: 0, a: 0.57254905}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1851,8 +1851,9 @@ GameObject:
   - component: {fileID: 1643010265}
   - component: {fileID: 1643010267}
   - component: {fileID: 1643010266}
+  - component: {fileID: 1643010268}
   m_Layer: 5
-  m_Name: Health Outline
+  m_Name: Combo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1876,7 +1877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -20, y: 0}
   m_SizeDelta: {x: 20, y: 200}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1643010266
@@ -1897,7 +1898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: bbd35a1321a0b4b1a98523175128a9eb, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1912,6 +1913,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643010264}
   m_CullTransparentMesh: 0
+--- !u!114 &1643010268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643010264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1001 &1741539810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2486,7 +2500,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1980113173}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2979,8 +2993,8 @@ RectTransform:
   - {fileID: 552720810}
   - {fileID: 1643010265}
   - {fileID: 1390524843}
-  - {fileID: 1310163882}
   - {fileID: 1858840922}
+  - {fileID: 1310163882}
   - {fileID: 1190712493}
   - {fileID: 1762513022}
   - {fileID: 1931584642}
