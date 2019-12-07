@@ -19,7 +19,9 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     public LayerMask layerMask;
     private Controls controls;
     public GameObject canv;
-    public AudioClip deathnoise;
+    public AudioClip deathnoise, heartBeatIn, heartBeatOut;
+
+    private bool useHeartBeatIn = true;
 
     private bool update;
 
@@ -77,6 +79,9 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
         if(!update) {
             return;
         }
+
+        AudioSource.PlayClipAtPoint(useHeartBeatIn ? heartBeatIn : heartBeatOut, transform.position, 2);
+        useHeartBeatIn = !useHeartBeatIn;
 
         ButtonPress press = info.Item1;
         if (press == ButtonPress.MOVE)
