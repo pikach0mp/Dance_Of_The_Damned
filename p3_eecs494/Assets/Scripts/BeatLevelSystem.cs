@@ -4,7 +4,8 @@ using UnityEngine;
 public class BeatLevelSystem : MonoBehaviour {
 
 	public int healthCap = 30;
-	public int healthNeeded = 15;
+	public int level1Cutoff = 15;
+	public int level2Cutoff = 25;
 	private int health;
 	private bool update;
 
@@ -48,7 +49,14 @@ public class BeatLevelSystem : MonoBehaviour {
 
 
 	private void OnUpdated() {
-		BeatGenerator.SetLevel(health >= healthNeeded ? 1 : 0);
+		if(health >= level2Cutoff) {
+			BeatGenerator.SetLevel(2);
+		} else if (health >= level1Cutoff) {
+			BeatGenerator.SetLevel(1);
+		} else {
+			BeatGenerator.SetLevel(0);
+		}
+		
         health = Mathf.Clamp(health, 0, healthCap);
 		healthTransfrom.sizeDelta = new Vector2(healthTransfrom.sizeDelta.x, Mathf.Lerp(0, maxHeight, (float)health/(float)healthCap));
     }
