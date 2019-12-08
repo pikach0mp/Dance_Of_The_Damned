@@ -16,3 +16,4 @@ MonoBehaviour:
   beatData:
   - {fileID: 4900000, guid: 22fe33f68c35a49df81a94c2a91aaef3, type: 3}
   - {fileID: 4900000, guid: 373ef8f7195e24776b9398e4625af948, type: 3}
+  - {fileID: 4900000, guid: 5ed7b1deceb6c4f239ddf1150c23c6d7, type: 3}
