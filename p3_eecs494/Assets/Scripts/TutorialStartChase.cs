@@ -11,6 +11,8 @@ public class TutorialStartChase : MonoBehaviour
     public GameObject chase_enem;
     public float TimeB4Enemy = 1;
 
+    public GameObject moveInstr;
+
     public AudioSource funPart;
 
     bool activating = false;
@@ -59,6 +61,7 @@ public class TutorialStartChase : MonoBehaviour
 
             funPart.Play();
             BeatGenerator.ToggleBeatSystem(false);
+            moveInstr.SetActive(false);
             StartCoroutine(PerformCutScene());
         }
     }
