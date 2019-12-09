@@ -23,6 +23,8 @@ public class BeatGenerator : MonoBehaviour {
 	public float offset;
 
 	private AudioSource source;
+    public AudioSource upgrade;
+    public AudioSource downgrade;
     // private AudioSource music;
 
     // Specifies time between beats
@@ -124,28 +126,44 @@ public class BeatGenerator : MonoBehaviour {
 		return instance._GetLevel();
 	}
 
-	public static bool SetLevel(int newLevel) {
-		return instance._SetLevel(newLevel);
+	public static bool SetLevel(int newLevel, int isLoss) {
+		return instance._SetLevel(newLevel, isLoss);
 	}
 
 	private int _GetLevel() {
 		return level;
 	}
 
-	private bool _SetLevel(int newLevel) {
+	private bool _SetLevel(int newLevel, int isLoss) {
 		if(newLevel < 0 || newLevel >= track.NumLevels() || newLevel == level) {
 			return false;
 		}
+
 
 		int prevPattern = nextPattern - 1;
 		if(prevPattern < 0) {
 			prevPattern += track.NumBeats(level);
 		}
 
-		float prevTime = track.Get(level, prevPattern).Item1;
+        if (isLoss == 0)
+        {
+            Debug.Log("upgrade");
+            upgrade.Play();
+        }
+        else if (isLoss == 1)
+        {
+            downgrade.Play();
+            Debug.Log("downgrade");
+        }
+        else
+        {
+            Debug.Log("neither");
+        }
+
+        float prevTime = track.Get(level, prevPattern).Item1;
 
 		level = newLevel;
-		nextPattern = track.FindNextBeat(level, (lastTimeAdded + 0.3F) % track.audio.length);
+        nextPattern = track.FindNextBeat(level, (lastTimeAdded + 0.3F) % track.audio.length);
 
 		float nextTime = track.Get(level, nextPattern).Item1;
 

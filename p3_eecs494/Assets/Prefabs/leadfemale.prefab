@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1332728905364529080}
   - component: {fileID: 1332728905364529078}
   - component: {fileID: 1332728905364529079}
+  - component: {fileID: 1203001312}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332728905364529081}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.375, z: -0.3}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 1.375, z: -0.18}
   m_LocalScale: {x: 1.2500006, y: 1.25, z: 1.2500006}
   m_Children: []
   m_Father: {fileID: 7131335193544003927}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!20 &1332728905364529078
 Camera:
   m_ObjectHideFlags: 0
@@ -55,7 +56,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.2
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -83,6 +84,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332728905364529081}
   m_Enabled: 1
+--- !u!114 &1203001312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332728905364529081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8eec12d2a03864ab5a73c0e40e0ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1332728905861755395
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332728905861755395}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.5, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1.2500006, y: 1.25, z: 1.2500006}
   m_Children: []
   m_Father: {fileID: 7131335193544003927}
@@ -124,9 +137,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.6536134, b: 0.6536134, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 3.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -542,8 +555,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1.1522783, z: 0.5}
-  m_Center: {x: 0, y: 0.6238609, z: 0}
+  m_Size: {x: 0.5, y: 1.1902773, z: 0.5}
+  m_Center: {x: 0, y: 0.6048614, z: 0}
 --- !u!54 &6101478420304651072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -609,10 +622,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: OnBeatHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnBadInput:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6101478420304651134}
+        m_MethodName: OnBadInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_MethodName: OnBadInput
         m_Mode: 0
         m_Arguments:
@@ -648,6 +683,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: OnBeatMiss
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6101478420304651074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,8 +709,11 @@ MonoBehaviour:
   stepSize: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 790
   canv: {fileID: 0}
+  deathnoise: {fileID: 8300000, guid: 83780ec9b1ee0499d8cd55be5018bf3c, type: 3}
+  heartBeatIn: {fileID: 8300000, guid: 22fa3a0dcc75d47c39c492b734824ea8, type: 3}
+  heartBeatOut: {fileID: 8300000, guid: 4cf1a508d22174c979406f049bf8a98c, type: 3}
 --- !u!114 &6101478420304651073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,9 +727,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  healthDisplay: {fileID: 4075978190691944957, guid: fe6e337a8be1bf447934b99bb9ca86ca,
-    type: 3}
-  cam: {fileID: 0}
+  healthDisplay: {fileID: 0}
+  cam: {fileID: 1332728905364529081}
 --- !u!114 &6101478420304651134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthCap: 30
-  healthNeeded: 15
+  level1Cutoff: 15
+  level2Cutoff: 25
   healthTransfrom: {fileID: 0}
 --- !u!1 &6887857324642795117
 GameObject:

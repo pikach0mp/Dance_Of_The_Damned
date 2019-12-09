@@ -8,7 +8,7 @@ public class BeatLevelSystem : MonoBehaviour {
 	public int level2Cutoff = 25;
 	private int health;
 	private bool update;
-
+    bool isUpgrade;
 	public RectTransform healthTransfrom;
 	private float maxHeight;
 
@@ -27,8 +27,10 @@ public class BeatLevelSystem : MonoBehaviour {
 		if(!update) {
 			return;
 		}
-		health += 2;
-		OnUpdated();
+        health += 2;
+
+        isUpgrade = true;
+        OnUpdated();
 	}
 
 	public void OnBadInput(ButtonPress press) {
@@ -36,25 +38,30 @@ public class BeatLevelSystem : MonoBehaviour {
 			return;
 		}
 		health -= 2;
-		OnUpdated();
+
+        isUpgrade = false;
+        OnUpdated();
 	}
 
 	public void OnBeatMiss(BeatInfo info) {
 		if(!update) {
 			return;
 		}
-		health -= 2;
+
+        isUpgrade = false;
+        health -= 2;
 		OnUpdated();
 	}
 
 
 	private void OnUpdated() {
-		if(health >= level2Cutoff) {
-			BeatGenerator.SetLevel(2);
+        if (health >= level2Cutoff) {
+			BeatGenerator.SetLevel(2, 0);
 		} else if (health >= level1Cutoff) {
-			BeatGenerator.SetLevel(1);
+            int isDown = isUpgrade ? 0 : 1;
+            BeatGenerator.SetLevel(1, isDown);
 		} else {
-			BeatGenerator.SetLevel(0);
+			BeatGenerator.SetLevel(0, 1);
 		}
 		
         health = Mathf.Clamp(health, 0, healthCap);

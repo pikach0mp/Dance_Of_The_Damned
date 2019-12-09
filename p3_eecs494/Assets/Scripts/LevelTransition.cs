@@ -42,17 +42,10 @@ public class LevelTransition : MonoBehaviour
         door1.SetActive(true);
         backdoor1.SetActive(false);
         backdoor2.SetActive(true);
-
-
-        //    case 3:
-        //        enemyLevel3.transform.GetChild(11).gameObject.SetActive(false);
-        //        this.gameObject.SetActive(false);
-        //        break;
     }
 
     public void OnDisable()
     {
-        //StartCoroutine(FadeOutAndIn());
         Debug.Log("END");
         BeatGenerator.ToggleBeatSystem(true);
     }

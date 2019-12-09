@@ -35,7 +35,7 @@ public class MenuManager : MonoBehaviour
 
     public void loadLevel()
     {
-        SceneManager.LoadScene("FinalLayout");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void loadTutorial()
