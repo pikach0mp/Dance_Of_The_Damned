@@ -23,37 +23,41 @@ public class ManageGame : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += BeginAtCheckpoint;
         level = 1;
-        playerSeenCurtains = false; 
+        playerSeenCurtains = false;
         DontDestroyOnLoad(gameObject);
-
     }
 
     void BeginAtCheckpoint(Scene scene, LoadSceneMode mode)
     {
-        doors = GameObject.Find("Doors");
-        Transform t = doors.transform;
-
-        switch (level)
+        if (scene.name == "FinalLayout")
         {
-            case 1:
-                Debug.Log("starting at level 1");
-                
-                GameObject.Find("Level1Door").GetComponent<DoorController>().startsOpen = true;
-                t.Find("Level1BackDoor").gameObject.SetActive(true);
-                break;
-            case 2:
-                Debug.Log("starting at level 2");
-                GameObject.Find("Level2Door").GetComponent<DoorController>().startsOpen = true;
-                t.Find("Level2BackDoor").gameObject.SetActive(true);
-                break;
-            case 3:
-                Debug.Log("starting at level 3");
-                GameObject.Find("Level3Door").GetComponent<DoorController>().startsOpen = true;
-                t.Find("Level3BackDoor").gameObject.SetActive(true);
-                break;
-            default:
-                Debug.Log("something is very, very wrong");
-                break;
+            Debug.Log(scene.name);
+            doors = GameObject.Find("Doors");
+            Transform t = doors.transform;
+
+
+            switch (level)
+            {
+                case 1:
+                    Debug.Log("starting at level 1");
+
+                    GameObject.Find("Level1Door").GetComponent<DoorController>().startsOpen = true;
+                    t.Find("Level1BackDoor").gameObject.SetActive(true);
+                    break;
+                case 2:
+                    Debug.Log("starting at level 2");
+                    GameObject.Find("Level2Door").GetComponent<DoorController>().startsOpen = true;
+                    t.Find("Level2BackDoor").gameObject.SetActive(true);
+                    break;
+                case 3:
+                    Debug.Log("starting at level 3");
+                    GameObject.Find("Level3Door").GetComponent<DoorController>().startsOpen = true;
+                    t.Find("Level3BackDoor").gameObject.SetActive(true);
+                    break;
+                default:
+                    Debug.Log("something is very, very wrong");
+                    break;
+            }
         }
     }
 
@@ -61,6 +65,11 @@ public class ManageGame : MonoBehaviour
     {
         instance.level += 1;
         Debug.Log(instance.level);
+    }
+
+    public static void ResetLevel()
+    {
+        instance.level = 1;
     }
 
     public static void FirstTimeCurtain()
