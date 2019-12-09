@@ -95,6 +95,13 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
                         if(!Physics.Raycast(transform.position, move, move.magnitude, layerMask, QueryTriggerInteraction.Ignore)) {
                             target_pos += move;
                         }
+                        else
+                        {
+                            target_pos += (move);
+                            transform.position = Vector3.Lerp(transform.position, target_pos, Time.deltaTime * 4);
+                            target_pos -= (move); 
+                            transform.position = Vector3.Lerp(transform.position, target_pos, Time.deltaTime * 4);
+                        }
                     } else {
                         target_rot = Quaternion.AngleAxis(180 * Mathf.Sign(moveDir.x), Vector3.up) * target_rot;
                     }
