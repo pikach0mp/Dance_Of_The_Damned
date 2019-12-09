@@ -84,7 +84,6 @@ public class BeatGenerator : MonoBehaviour {
 			lastTimeAdded = next.Item1 + track.audio.length * loops;
 
 			if(generateBeats) {
-				Debug.Log("New Beat at "+lastTimeAdded);
 				times.Enqueue((next.Item2, lastTimeAdded));
 				onBeatAddedToQueue.Invoke((next.Item2, lastTimeAdded));
 			}
