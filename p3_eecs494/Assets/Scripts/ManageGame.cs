@@ -9,7 +9,7 @@ public class ManageGame : MonoBehaviour
     static ManageGame instance;
     GameObject doors;
 
-    private int level = 1;
+    private int level;
 
     bool playerSeenCurtains;
 
