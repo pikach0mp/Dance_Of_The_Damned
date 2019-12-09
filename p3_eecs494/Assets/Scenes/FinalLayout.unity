@@ -430,7 +430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &44194296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11703,11 +11703,6 @@ PrefabInstance:
       propertyPath: triggered
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1106033153230617201, guid: 59cf9462d2f4013429b72672cbfca31b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1962007941073110777, guid: 59cf9462d2f4013429b72672cbfca31b,
         type: 3}
       propertyPath: OnBeatHit.m_PersistentCalls.m_Calls.Array.size
@@ -11798,6 +11793,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 45a69fc07f200459a92884c7b4e04938, type: 2}
+    - target: {fileID: 1106033153230617201, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cf9462d2f4013429b72672cbfca31b, type: 3}
 --- !u!4 &1866289950 stripped
