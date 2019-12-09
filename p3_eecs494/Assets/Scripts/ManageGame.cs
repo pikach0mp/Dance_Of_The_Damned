@@ -8,10 +8,13 @@ public class ManageGame : MonoBehaviour
     // Start is called before the first frame update
     static ManageGame instance;
     GameObject doors;
+    public AudioSource hiding;
+    public AudioSource escape;
 
     private int level;
 
     bool playerSeenCurtains;
+    bool beginGame = true;
 
     private void Awake()
     {
@@ -24,6 +27,7 @@ public class ManageGame : MonoBehaviour
         SceneManager.sceneLoaded += BeginAtCheckpoint;
         level = 1;
         playerSeenCurtains = false;
+        beginGame = true;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -32,9 +36,13 @@ public class ManageGame : MonoBehaviour
         if (scene.name == "FinalLayout")
         {
             Debug.Log(scene.name);
+            if (beginGame)
+            {
+                instance.escape.Play();
+            }
+
             doors = GameObject.Find("Doors");
             Transform t = doors.transform;
-
 
             switch (level)
             {
@@ -70,6 +78,8 @@ public class ManageGame : MonoBehaviour
     public static void ResetLevel()
     {
         instance.level = 1;
+        instance.beginGame = true;
+        instance.playerSeenCurtains = false;
     }
 
     public static void FirstTimeCurtain()
@@ -80,10 +90,9 @@ public class ManageGame : MonoBehaviour
         }
         else
         {
-            //    PlayOneShot(hide, 0.8);
-            //    Debug.Log("tried playing");
-            //    instance.playerSeenCurtains = true;
-            //}
+            instance.hiding.Play();
+            Debug.Log("tried playing");
+            instance.playerSeenCurtains = true;
         }
     }
 }

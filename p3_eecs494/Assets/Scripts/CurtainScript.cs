@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class CurtainScript : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider col)
     {
-        Debug.Log(other.gameObject.tag);
-        if (other.gameObject.CompareTag("Player"))
+        Debug.Log(col.gameObject.tag);
+        if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("in curtain");
             ManageGame.FirstTimeCurtain();
         }
     }
