@@ -10,14 +10,15 @@ public class CurtainRaiseTrigger : MonoBehaviour {
 		return triggered;
 	}
 
-	void OnTriggerEnter(Collider collider) {
-		if(collider.GetComponent<PlayerMovement>() != null) {
-			triggered = true;
+	void OnTriggerEnter(Collider col) {
+		if(col.GetComponent<PlayerMovement>() != null) {
+            ManageGame.FirstTimeCurtain();
+            triggered = true;
 		}
 	}
 
-	void OnTriggerExit(Collider collider) {
-		if(collider.GetComponent<PlayerMovement>() != null) {
+	void OnTriggerExit(Collider col) {
+		if(col.GetComponent<PlayerMovement>() != null) {
 			triggered = false;
 		}
 	}

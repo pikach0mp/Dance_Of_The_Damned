@@ -825,6 +825,11 @@ PrefabInstance:
       propertyPath: heartBeatOut
       value: 
       objectReference: {fileID: 8300000, guid: 4cf1a508d22174c979406f049bf8a98c, type: 3}
+    - target: {fileID: 6101478420304651074, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: togetherForever
+      value: 
+      objectReference: {fileID: 210613708}
     - target: {fileID: 7131335193544003927, guid: 91ab5ff751f210842812d66420915a0f,
         type: 3}
       propertyPath: m_LocalPosition.x

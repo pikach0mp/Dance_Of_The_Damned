@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
             BeatGenerator.ToggleBeatSystem(false);
             Animator anim = canv.GetComponent<Animator>();
             anim.SetTrigger("Die");
-            AudioSource.PlayClipAtPoint(deathnoise, transform.position, .25f);
+            AudioSource.PlayClipAtPoint(deathnoise, transform.position, .05f);
             StartCoroutine(WaitForFadeOut());
             
         }
