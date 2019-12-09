@@ -84,6 +84,7 @@ public class BeatGenerator : MonoBehaviour {
 			lastTimeAdded = next.Item1 + track.audio.length * loops;
 
 			if(generateBeats) {
+				Debug.Log("New Beat at "+lastTimeAdded);
 				times.Enqueue((next.Item2, lastTimeAdded));
 				onBeatAddedToQueue.Invoke((next.Item2, lastTimeAdded));
 			}
@@ -137,9 +138,21 @@ public class BeatGenerator : MonoBehaviour {
 			return false;
 		}
 
+		int prevPattern = nextPattern - 1;
+		if(prevPattern < 0) {
+			prevPattern += track.NumBeats(level);
+		}
+
+		float prevTime = track.Get(level, prevPattern).Item1;
 
 		level = newLevel;
 		nextPattern = track.FindNextBeat(level, (lastTimeAdded + 0.3F) % track.audio.length);
+
+		float nextTime = track.Get(level, nextPattern).Item1;
+
+		if(prevTime > nextTime) {
+			loops++;
+		}
 
 		return true;
 	}
