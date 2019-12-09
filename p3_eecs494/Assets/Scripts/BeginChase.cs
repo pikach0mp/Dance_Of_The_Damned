@@ -35,6 +35,7 @@ public class BeginChase : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && first)
         {
             first = false;
+            BeatGenerator.SwitchTrack(track, true);
             if (level != 3)
             {
                 BeatGenerator.ToggleBeatSystem(false);

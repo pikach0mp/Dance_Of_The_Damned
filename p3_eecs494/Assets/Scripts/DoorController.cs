@@ -12,6 +12,8 @@ public class DoorController : MonoBehaviour
     private AudioSource audioS;
     public bool IsBackDoor = false;
 
+    public AudioTrack track;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,7 @@ public class DoorController : MonoBehaviour
             if (!IsBackDoor)
             {
                 ManageGame.IncrementLevel();
+                BeatGenerator.SwitchTrack(track, true);
                 StopLevel.SetActive(false);
             }
             gameObject.layer = 8;

@@ -1166,6 +1166,7 @@ MonoBehaviour:
   StopLevel: {fileID: 822054097}
   startsOpen: 0
   IsBackDoor: 0
+  track: {fileID: 0}
 --- !u!65 &165421775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1971,7 +1972,7 @@ MonoBehaviour:
   TimeB4Enemy: 14
   cutSceneLength: 13
   level: 2
-  track: {fileID: 0}
+  track: {fileID: 11400000, guid: ae3c33311afb94c09991505f64d637fc, type: 2}
 --- !u!65 &240983547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2261,6 +2262,7 @@ MonoBehaviour:
   StopLevel: {fileID: 822054097}
   startsOpen: 0
   IsBackDoor: 1
+  track: {fileID: 11400000, guid: 26534db5b1ad2494e9a5715288ac4de6, type: 2}
 --- !u!65 &277120347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2572,7 +2574,7 @@ MonoBehaviour:
   TimeB4Enemy: 1
   cutSceneLength: 8.5
   level: 1
-  track: {fileID: 0}
+  track: {fileID: 11400000, guid: ae3c33311afb94c09991505f64d637fc, type: 2}
 --- !u!65 &298383051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4161,6 +4163,7 @@ MonoBehaviour:
   StopLevel: {fileID: 586619507}
   startsOpen: 0
   IsBackDoor: 1
+  track: {fileID: 11400000, guid: 26534db5b1ad2494e9a5715288ac4de6, type: 2}
 --- !u!65 &590710037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4542,7 +4545,7 @@ MonoBehaviour:
   TimeB4Enemy: 0
   cutSceneLength: 0
   level: 3
-  track: {fileID: 0}
+  track: {fileID: 11400000, guid: ae3c33311afb94c09991505f64d637fc, type: 2}
 --- !u!65 &611172314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8247,6 +8250,7 @@ MonoBehaviour:
   StopLevel: {fileID: 844251374}
   startsOpen: 0
   IsBackDoor: 1
+  track: {fileID: 11400000, guid: 26534db5b1ad2494e9a5715288ac4de6, type: 2}
 --- !u!65 &1344877065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9125,6 +9129,7 @@ MonoBehaviour:
   StopLevel: {fileID: 822054097}
   startsOpen: 0
   IsBackDoor: 0
+  track: {fileID: 11400000, guid: 26534db5b1ad2494e9a5715288ac4de6, type: 2}
 --- !u!65 &1475166728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12564,6 +12569,7 @@ MonoBehaviour:
   StopLevel: {fileID: 844251374}
   startsOpen: 0
   IsBackDoor: 0
+  track: {fileID: 11400000, guid: 26534db5b1ad2494e9a5715288ac4de6, type: 2}
 --- !u!65 &1961944289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14243,6 +14249,7 @@ MonoBehaviour:
   StopLevel: {fileID: 586619507}
   startsOpen: 0
   IsBackDoor: 0
+  track: {fileID: 11400000, guid: 26534db5b1ad2494e9a5715288ac4de6, type: 2}
 --- !u!65 &2136464703
 BoxCollider:
   m_ObjectHideFlags: 0
