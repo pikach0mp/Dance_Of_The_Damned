@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -261,7 +261,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2108,6 +2108,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4584529258283778119, guid: f89222af6e48340e68d8f186bad79183,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f89222af6e48340e68d8f186bad79183, type: 3}
 --- !u!1001 &1441136730
@@ -2557,12 +2562,12 @@ PrefabInstance:
         type: 3}
       propertyPath: upgrade
       value: 
-      objectReference: {fileID: 1741539814}
+      objectReference: {fileID: 1741539813}
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: downgrade
       value: 
-      objectReference: {fileID: 1741539813}
+      objectReference: {fileID: 1741539814}
     - target: {fileID: 6904408545989408084, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2653,8 +2658,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 507f01bfb18114fdd92247c325db46a9, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: f0ad1ef3077d344478f8bd0f386c9876, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2749,7 +2754,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f0ad1ef3077d344478f8bd0f386c9876, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 507f01bfb18114fdd92247c325db46a9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
