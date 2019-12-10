@@ -39,6 +39,7 @@ public class ManageGame : MonoBehaviour
             if (beginGame)
             {
                 instance.escape.Play();
+                beginGame = false;
             }
 
             doors = GameObject.Find("Doors");
