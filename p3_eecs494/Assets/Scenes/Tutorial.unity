@@ -661,6 +661,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 210613707}
+    - target: {fileID: 1962007941073110780, guid: 59cf9462d2f4013429b72672cbfca31b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cf9462d2f4013429b72672cbfca31b, type: 3}
 --- !u!1 &552720809
@@ -1004,7 +1009,22 @@ PrefabInstance:
         type: 3}
       propertyPath: healthTransfrom
       value: 
-      objectReference: {fileID: 1310163882}
+      objectReference: {fileID: 1491187919}
+    - target: {fileID: 6101478420304651134, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: level1Cutoff
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101478420304651134, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: level2Cutoff
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101478420304651134, guid: 91ab5ff751f210842812d66420915a0f,
+        type: 3}
+      propertyPath: healthCap
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1332728905364529078, guid: 91ab5ff751f210842812d66420915a0f,
         type: 3}
       propertyPath: m_BackGroundColor.r
@@ -2598,7 +2618,7 @@ PrefabInstance:
         type: 3}
       propertyPath: combo
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1643010264}
     - target: {fileID: 6904408545989408084, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: m_LocalPosition.x
