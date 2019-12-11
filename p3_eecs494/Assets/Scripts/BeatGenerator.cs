@@ -236,12 +236,6 @@ public class BeatGenerator : MonoBehaviour {
 			return false;
 		}
 
-
-		int prevPattern = nextPattern - 1;
-		if(prevPattern < 0) {
-			prevPattern += tracks[currentAudio].NumBeats(level);
-		}
-
         if (isLoss == 0)
         {
             Debug.Log("upgrade");
@@ -259,15 +253,19 @@ public class BeatGenerator : MonoBehaviour {
             Debug.Log("neither");
         }
 
-        float prevTime = tracks[currentAudio].Get(level, prevPattern).Item1;
+        int prevLevel = level;
+		int prevPattern = nextPattern - 1;
 
 		level = newLevel;
         nextPattern = tracks[currentAudio].FindNextBeat(level, (lastTimeAdded + 0.3F) % tracks[currentAudio].audio.length);
 
-		float nextTime = tracks[currentAudio].Get(level, nextPattern).Item1;
+        if(prevPattern != -1) {
+	        float prevTime = tracks[currentAudio].Get(prevLevel, prevPattern).Item1;
+			float nextTime = tracks[currentAudio].Get(level, nextPattern).Item1;
 
-		if(prevTime > nextTime) {
-			loops++;
+			if(prevTime > nextTime) {
+				loops++;
+			}
 		}
 
 		return true;
