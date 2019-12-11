@@ -45,6 +45,8 @@ public class BeginChase : MonoBehaviour
 
                 StartCoroutine(PerformCutScene());
             } else {
+                AudioSource source = GetComponent<AudioSource>();
+                source.Play();
                 BeatGenerator.StartAudio(1);
             }
 
