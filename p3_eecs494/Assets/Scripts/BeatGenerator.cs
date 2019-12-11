@@ -238,14 +238,14 @@ public class BeatGenerator : MonoBehaviour {
 
         if (isLoss == 0)
         {
-            Debug.Log("upgrade");
+            // Debug.Log("upgrade");
             upgrade.Play();
             StartCoroutine(Scale(true));
         }
         else if (isLoss == 1)
         {
             downgrade.Play();
-            Debug.Log("downgrade");
+            // Debug.Log("downgrade");
             StartCoroutine(Scale(false));
         }
         else
@@ -253,19 +253,28 @@ public class BeatGenerator : MonoBehaviour {
             Debug.Log("neither");
         }
 
+
         int prevLevel = level;
 		int prevPattern = nextPattern - 1;
+
+        Debug.Log(prevPattern);
 
 		level = newLevel;
         nextPattern = tracks[currentAudio].FindNextBeat(level, (lastTimeAdded + 0.3F) % tracks[currentAudio].audio.length);
 
+        Debug.Log(nextPattern);
+
         if(prevPattern != -1) {
 	        float prevTime = tracks[currentAudio].Get(prevLevel, prevPattern).Item1;
 			float nextTime = tracks[currentAudio].Get(level, nextPattern).Item1;
+        	Debug.Log(prevTime);
+        	Debug.Log(nextTime);
 
 			if(prevTime > nextTime) {
 				loops++;
 			}
+		} else {
+			nextPattern = 0;
 		}
 
 		return true;
