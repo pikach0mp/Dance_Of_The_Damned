@@ -15,5 +15,5 @@ MonoBehaviour:
   audio: {fileID: 8300000, guid: dca38c21386dd48f99f20f1c3405faa5, type: 3}
   beatData:
   - {fileID: 4900000, guid: 1fd2db82afa32445a94fa44dd2c989a1, type: 3}
-  - {fileID: 4900000, guid: 4952865cedc8f4dddb96572a773ed9b9, type: 3}
-  - {fileID: 4900000, guid: 6fecbf3c697da45418959928ef0f8f1a, type: 3}
+  - {fileID: 4900000, guid: 8f8de8e3866d9413e80d4f29a2a5eda2, type: 3}
+  - {fileID: 4900000, guid: 8d21883ed7ce748f4a66a132f3eed79e, type: 3}
