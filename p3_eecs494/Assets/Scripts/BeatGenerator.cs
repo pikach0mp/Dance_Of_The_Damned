@@ -48,7 +48,13 @@ public class BeatGenerator : MonoBehaviour {
 
     private bool generateBeats;
 
-	public static float GetTime() {
+    public GameObject combo;
+    float growFactor = 2f;
+    float maxSize = 1.1f;
+    float minSize = 0.9f;
+    float waitTime = 0.1f;
+
+    public static float GetTime() {
 		return (float)(AudioSettings.dspTime - instance.offset - instance.startTime);
 	}
 
@@ -126,7 +132,7 @@ public class BeatGenerator : MonoBehaviour {
 		return instance._GetLevel();
 	}
 
-	public static bool SetLevel(int newLevel, int isLoss) {
+    public static bool SetLevel(int newLevel, int isLoss) {
 		return instance._SetLevel(newLevel, isLoss);
 	}
 
@@ -134,7 +140,57 @@ public class BeatGenerator : MonoBehaviour {
 		return level;
 	}
 
-	private bool _SetLevel(int newLevel, int isLoss) {
+    IEnumerator Scale(bool up)
+    {
+        float timer = 0;
+        RectTransform comboTransform = combo.GetComponent<RectTransform>();
+
+        // we scale all axis, so they will have the same value, 
+        // so we can work with a float instead of comparing vectors
+        if (up)
+        {
+            while (maxSize > comboTransform.localScale.x)
+            {
+                timer += Time.deltaTime;
+                comboTransform.localScale += new Vector3(1, 1, 1) * Time.deltaTime * growFactor;
+                yield return null;
+            }
+            // reset the timer
+
+            yield return new WaitForSeconds(waitTime);
+
+            timer = 0;
+            while (1 < comboTransform.localScale.x)
+            {
+                timer += Time.deltaTime;
+                comboTransform.localScale -= new Vector3(1, 1, 1) * Time.deltaTime * growFactor;
+                yield return null;
+            }
+        }
+        else
+        {
+            while (minSize < comboTransform.localScale.x)
+            {
+                timer += Time.deltaTime;
+                comboTransform.localScale -= new Vector3(1, 1, 1) * Time.deltaTime * growFactor;
+                yield return null;
+            }
+            // reset the timer
+
+            yield return new WaitForSeconds(waitTime);
+
+            timer = 0;
+            while (1 > comboTransform.localScale.x)
+            {
+                timer += Time.deltaTime;
+                comboTransform.localScale += new Vector3(1, 1, 1) * Time.deltaTime * growFactor;
+                yield return null;
+            }
+        }
+
+    }
+
+    private bool _SetLevel(int newLevel, int isLoss) {
 		if(newLevel < 0 || newLevel >= track.NumLevels() || newLevel == level) {
 			return false;
 		}
@@ -149,11 +205,13 @@ public class BeatGenerator : MonoBehaviour {
         {
             Debug.Log("upgrade");
             upgrade.Play();
+            StartCoroutine(Scale(true));
         }
         else if (isLoss == 1)
         {
             downgrade.Play();
             Debug.Log("downgrade");
+            StartCoroutine(Scale(false));
         }
         else
         {
