@@ -15,29 +15,45 @@ public class BeginChase : MonoBehaviour
     public int level = 1;
     private bool first = true;
     private bool fogDecrease = false;
+    private float originalFogDensity;
 
     public AudioTrack track;
 
     private void Start()
     {
         transition = Camera.GetComponent<LevelTransition>();
+        originalFogDensity = RenderSettings.fogDensity;
     }
 
     private void Update()
     {
         if(fogDecrease)
         {
-            RenderSettings.fogDensity = Mathf.Lerp(RenderSettings.fogDensity, .2f, Time.deltaTime * 100);
+            if (level == 2) 
+                RenderSettings.fogDensity = Mathf.Lerp(RenderSettings.fogDensity, 0f, Time.deltaTime * 200);
+            else
+                RenderSettings.fogDensity = Mathf.Lerp(RenderSettings.fogDensity, .2f, Time.deltaTime * 100);
         }
+
+        //else
+        //{
+        //    RenderSettings.fogDensity = originalFogDensity;
+        //}
     }
 
     private IEnumerator PerformCutScene()
     {
         Camera.SetActive(true);
+        if (level == 2)
+        {
+            fogDecrease = true;
+        }
         StartCoroutine(transition.PerformCutScene());
         yield return new WaitForSeconds(cutSceneLength);
-        Camera.SetActive(false);
 
+        Camera.SetActive(false);
+        Debug.Log("setting to original");
+        RenderSettings.fogDensity = originalFogDensity;
         BeatGenerator.StartAudio(1);
     }
 

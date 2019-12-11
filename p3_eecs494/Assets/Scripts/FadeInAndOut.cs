@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadeInAndOut : MonoBehaviour
 {
     private Animator anim;
-    public AudioSource forever;
+    public AudioSource safe;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +23,8 @@ public class FadeInAndOut : MonoBehaviour
         StartCoroutine(Fades());
     }
 
-    public void playForever()
+    public void playSafe()
     {
-        forever.Play();
+        safe.Play();
     }
 }
