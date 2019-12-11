@@ -28,6 +28,8 @@ public class BeginChase : MonoBehaviour
         StartCoroutine(transition.PerformCutScene());
         yield return new WaitForSeconds(cutSceneLength);
         Camera.SetActive(false);
+
+        BeatGenerator.StartAudio(1);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,14 +37,17 @@ public class BeginChase : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && first)
         {
             first = false;
-            BeatGenerator.SwitchTrack(track, true);
             if (level != 3)
             {
+                BeatGenerator.StartAudio(2);
                 BeatGenerator.ToggleBeatSystem(false);
                 door.SetActive(true);
 
-                //Cut Scene
                 StartCoroutine(PerformCutScene());
+            } else {
+                AudioSource source = GetComponent<AudioSource>();
+                source.Play();
+                BeatGenerator.StartAudio(1);
             }
 
             //enable enemies

@@ -36,7 +36,9 @@ public class TutorialStartChase : MonoBehaviour
 
         Camera.GetComponent<Animator>().SetTrigger("triggered");
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        funPart.Play();
+        yield return new WaitForSeconds(1f);
         activating = true;
 
         yield return new WaitForSeconds(2.5f);
@@ -59,7 +61,6 @@ public class TutorialStartChase : MonoBehaviour
             first = false;
             canv.GetComponent<Animator>().SetTrigger("StartCutScene");
 
-            funPart.Play();
             BeatGenerator.ToggleBeatSystem(false);
             moveInstr.SetActive(false);
             StartCoroutine(PerformCutScene());
