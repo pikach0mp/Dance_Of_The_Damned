@@ -2573,6 +2573,11 @@ PrefabInstance:
       propertyPath: downgrade
       value: 
       objectReference: {fileID: 1741539814}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: combo
+      value: 
+      objectReference: {fileID: 1643010264}
     - target: {fileID: 6904408545989408084, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: m_LocalPosition.x
