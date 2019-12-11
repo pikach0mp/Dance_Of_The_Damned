@@ -78,7 +78,7 @@ public class BeatGenerator : MonoBehaviour {
 			audioSources[i].clip = tracks[i].audio;
 			audioSources[i].loop = true;
 		}
-		audioSources[0].volume = 1;
+		audioSources[0].volume = audioVolume;
 		level = 0;
 
 		offset = PlayerPrefs.GetFloat("AudioOffset", 0);
