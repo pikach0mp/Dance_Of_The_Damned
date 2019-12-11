@@ -63,16 +63,16 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            AudioSource.PlayClipAtPoint(deathnoise1, transform.position, .5f);
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    AudioSource.PlayClipAtPoint(deathnoise1, transform.position, .5f);
 
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            AudioSource.PlayClipAtPoint(deathnoise2, transform.position, 1.0f);
+        //}
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    AudioSource.PlayClipAtPoint(deathnoise2, transform.position, 1.0f);
 
-        }
+        //}
         if (GetComponent<Health>().dead())
         {
             BeatGenerator.ToggleBeatSystem(false);

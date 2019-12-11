@@ -14,12 +14,21 @@ public class BeginChase : MonoBehaviour
     private LevelTransition transition;
     public int level = 1;
     private bool first = true;
+    private bool fogDecrease = false;
 
     public AudioTrack track;
 
     private void Start()
     {
         transition = Camera.GetComponent<LevelTransition>();
+    }
+
+    private void Update()
+    {
+        if(fogDecrease)
+        {
+            RenderSettings.fogDensity = Mathf.Lerp(RenderSettings.fogDensity, .2f, Time.deltaTime * 100);
+        }
     }
 
     private IEnumerator PerformCutScene()
@@ -45,6 +54,7 @@ public class BeginChase : MonoBehaviour
 
                 StartCoroutine(PerformCutScene());
             } else {
+                fogDecrease = true;
                 AudioSource source = GetComponent<AudioSource>();
                 source.Play();
                 BeatGenerator.StartAudio(1);
