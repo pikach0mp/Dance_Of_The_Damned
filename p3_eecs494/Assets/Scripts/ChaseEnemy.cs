@@ -123,10 +123,16 @@ public class ChaseEnemy : MonoBehaviour
         }
         else
         {
-
             travelDir *= -1;
             lastSeen.y = 999;
-            target_pos += travelDir * stepSize;
+            //target_pos += travelDir * stepSize;
+            if (!patroling)
+            {
+                patroling = true;
+                spotted = false;
+                going2last = false;
+                patrol();
+            }   
         }
     }
 
@@ -152,7 +158,7 @@ public class ChaseEnemy : MonoBehaviour
         {
             travelDir *= -1;
             lastSeen.y = 999;
-            target_pos += travelDir * stepSize;
+            //target_pos += travelDir * stepSize;
         }
     }
 
