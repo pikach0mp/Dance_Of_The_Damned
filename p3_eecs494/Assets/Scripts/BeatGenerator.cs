@@ -103,7 +103,7 @@ public class BeatGenerator : MonoBehaviour {
 			(float, BeatInfo) next = tracks[currentAudio].Get(level, nextPattern);
 			Debug.Assert(next.Item1 != -1);
 
-			lastTimeAdded = next.Item1 + tracks[currentAudio].audio.length * loops;
+			lastTimeAdded = next.Item1 + tracks[0].audio.length * loops;
 
 			if(generateBeats) {
 				times.Enqueue((next.Item2, lastTimeAdded));
@@ -128,7 +128,6 @@ public class BeatGenerator : MonoBehaviour {
 
 	private IEnumerator _CrossFadeAudio(int toTrack, float toVolume) {
 		float t = 0;
-		Debug.Log(audioSources[toTrack].clip.name+", "+toVolume);
 		float currentVolume = audioSources[currentAudio].volume;
 		while(t < 1) {
 			t += Time.deltaTime;
@@ -139,26 +138,6 @@ public class BeatGenerator : MonoBehaviour {
 		}
 		currentAudio = toTrack;
 	}
-
-	// public static void SwitchTrack(AudioTrack track, bool dontResetTime) {
-	// 	if(dontResetTime) {
-	// 		Debug.Assert(instance.source.clip.length == track.audio.length);
-	// 		float prevTime = instance.source.time;
-	// 		instance.track = track;
-	// 		instance.source.clip = track.audio;
-	// 		instance.source.Stop();
-	// 		instance.source.Play();
-	// 		instance.source.time = prevTime;
-	// 	}else {
-	// 		instance.source.Stop();
-	// 		instance.running = false;
-	// 		instance.track = track;
-
-	// 		// Reset using a toggle off and on
-	// 		ToggleBeatSystem(false);
-	// 		ToggleBeatSystem(true);
-	// 	}
-	// }
 
 	public static void StartAudio(int i) {
 		StopAudio();
