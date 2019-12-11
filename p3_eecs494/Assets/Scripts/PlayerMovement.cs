@@ -19,7 +19,9 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
     public LayerMask layerMask;
     private Controls controls;
     public GameObject canv;
-    public AudioClip deathnoise, heartBeatIn, heartBeatOut;
+    public AudioClip deathnoise1, deathnoise2, heartBeatIn, heartBeatOut;
+
+    private bool playedNoise = false;
 
     private bool useHeartBeatIn = true;
 
@@ -61,12 +63,29 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerControlsActions
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            AudioSource.PlayClipAtPoint(deathnoise1, transform.position, .5f);
+
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            AudioSource.PlayClipAtPoint(deathnoise2, transform.position, 1.0f);
+
+        }
         if (GetComponent<Health>().dead())
         {
             BeatGenerator.ToggleBeatSystem(false);
             Animator anim = canv.GetComponent<Animator>();
             anim.SetTrigger("Die");
-            AudioSource.PlayClipAtPoint(deathnoise, transform.position, .05f);
+            if (!playedNoise)
+            {
+                AudioSource.PlayClipAtPoint(deathnoise1, transform.position, .5f);
+                AudioSource.PlayClipAtPoint(deathnoise2, transform.position, 1.0f);
+                playedNoise = true;
+            }
+            
+
             StartCoroutine(WaitForFadeOut());
             
         }
