@@ -1255,6 +1255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
+      propertyPath: onBeatAddedToQueue.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
       propertyPath: onBeat.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1203001311}
@@ -1442,7 +1447,7 @@ PrefabInstance:
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: offset
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
@@ -1554,6 +1559,26 @@ PrefabInstance:
       propertyPath: downgrade
       value: 
       objectReference: {fileID: 176867162}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: lookAheadTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: combo
+      value: 
+      objectReference: {fileID: 2035194128}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onBeatAddedToQueue.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904408545989408085, guid: d3c839d041a3f48e89df0143232c8088,
+        type: 3}
+      propertyPath: onBeatAddedToQueue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6904408545989408084, guid: d3c839d041a3f48e89df0143232c8088,
         type: 3}
       propertyPath: m_LocalPosition.x
